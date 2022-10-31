@@ -8,6 +8,9 @@
   "scripts": {
     "serve": "npx backlight@latest serve hSAEtELKuZc4zA63KHpB --open"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "token-transformer": "^0.0.23",
+    "style-dictionary": "^3.7.0"
+  },
   "dependencies": {}
 }
