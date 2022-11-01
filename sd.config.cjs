@@ -7,7 +7,8 @@ module.exports = {
   },
   platforms: {
     css: {
-      transformGroup: 'css',
+      transforms: ["attribute/cti", "name/cti/kebab", 
+      "color/css","size/px","type/fontFamilies"],
       buildPath: 'tokens/',
       prefix: 'figma',
       files: [
@@ -21,4 +22,10 @@ module.exports = {
       ],
     },
   },
+  'type/fontFamilies':{
+    type:'value',
+    matcher: (token) => token.type === 'fontFamily',
+    transformer: (token) => `'${token.value}'`,
+  }
 };
+

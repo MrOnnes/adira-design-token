@@ -420,7 +420,7 @@
     },
     "fontFamilies": {
       "Inter": {
-        "value": "Inter",
+        "value": "'Inter'",
         "type": "fontFamilies"
       }
     },
@@ -857,7 +857,7 @@
         "button": {
           "primary": {
             "active": {
-              "value": "{palette.success.300}",
+              "value": "{palette.primary.300}",
               "type": "color"
             },
             "hover": {
@@ -1007,7 +1007,7 @@
           "type": "sizing"
         },
         "radius": {
-          "value": "{corner.full}",
+          "value": "{corner.extra-large}",
           "type": "borderRadius"
         },
         "gap": {
