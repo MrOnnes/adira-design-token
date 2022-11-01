@@ -7,7 +7,7 @@ module.exports = {
   },
   platforms: {
     css: {
-      transformsGroup: 'css',
+      transformGroup: 'css',
       buildPath: 'tokens/',
       prefix: 'figma',
       files: [
