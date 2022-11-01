@@ -5,14 +5,16 @@
    [
     "TOKENS",
     [
-     "tokens"
+     "tokens",
+     "colors"
     ]
    ],
    [
     "COMPONENTS",
     [
      "button-comp",
-     "button"
+     "button",
+     "colors"
     ]
    ],
    [

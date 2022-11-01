@@ -1,3 +1,17 @@
+label {
+  font-family: var(--figma-font-label-font-family);
+  font-style: normal;
+  font-weight: var(--figma-font-label-font-weight);
+  font-size: var(--figma-size-font-label);
+  line-height: var(--figma-size-line-height-label);
+
+  text-transform: var(--figma-font-label-text-case);
+
+  /* Gray/700 */
+
+  color: var(--figma-color-text-normal);
+}
+
 .typo-button1 {
   font-family: var(--figma-font-button1-font-family);
   font-style: normal;
@@ -77,4 +91,36 @@
 
 .btn-text:hover {
   background: var(--figma-color-background-button-secondary-hover);
+}
+
+.input_field .content {
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: var(--figma-size-field-padding-top-bottom)
+    var(--figma-size-field-padding-right-left);
+  gap: var(--figma-size-field-gap);
+
+  height: 44px;
+
+  background: var(--figma-color-background-base-light);
+
+  border: 1px solid var(--figma-color-border-base);
+  border-radius: var(--figma-size-field-radius);
+}
+
+input {
+  border: none;
+  /* Body1 */
+
+  font-family: var(--figma-font-body1-font-family);
+  font-style: normal;
+  font-weight: var(--figma-font-body1-font-weight);
+  font-size: var(--figma-size-font-body-1);
+  line-height: var(--figma-size-line-height-body1);
+  background: none;
 }
