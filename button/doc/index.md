@@ -25,3 +25,14 @@ export const textbtn = () => html`
   <button class="btn-text typo-button2">Text</button>
 `;
 ```
+
+```js preview-story
+export const input = () => html`
+  <form class="input_field">
+    <label for="Label">Label</label>
+    <div class="content">
+      <input type="text" id="id" name="name" placeholder="Placeholder" />
+    </div>
+  </form>
+`;
+```
