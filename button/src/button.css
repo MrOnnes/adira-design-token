@@ -1,4 +1,5 @@
-@import url(../../tokens/variables.css);
+/*@import url(../../tokens/variables.css);
+*/
 
 label {
   font-family: var(--figma-font-label-font-family);
