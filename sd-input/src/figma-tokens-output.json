@@ -1130,6 +1130,12 @@
           "value": "{space.7}",
           "type": "spacing"
         }
+      },
+      "lineHeight": {
+        "button1": {
+          "value": "{lineHeights.4}",
+          "type": "lineHeights"
+        }
       }
     }
   },
