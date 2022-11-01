@@ -1007,7 +1007,7 @@
           "type": "sizing"
         },
         "radius": {
-          "value": "{corner.large}",
+          "value": "{corner.extra-small}",
           "type": "borderRadius"
         },
         "gap": {
