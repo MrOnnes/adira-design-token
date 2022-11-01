@@ -1132,8 +1132,56 @@
         }
       },
       "lineHeight": {
-        "button1": {
+        "h1": {
+          "value": "{lineHeights.0}",
+          "type": "lineHeights"
+        },
+        "h2": {
+          "value": "{lineHeights.1}",
+          "type": "lineHeights"
+        },
+        "h3": {
+          "value": "{lineHeights.2}",
+          "type": "lineHeights"
+        },
+        "h4": {
+          "value": "{lineHeights.3}",
+          "type": "lineHeights"
+        },
+        "h5": {
           "value": "{lineHeights.4}",
+          "type": "lineHeights"
+        },
+        "Subtitle1": {
+          "value": "{lineHeights.4}",
+          "type": "lineHeights"
+        },
+        "Subtitle2": {
+          "value": "{lineHeights.5}",
+          "type": "lineHeights"
+        },
+        "Body1": {
+          "value": "{lineHeights.4}",
+          "type": "lineHeights"
+        },
+        "Body2": {
+          "value": "{lineHeights.5}",
+          "type": "lineHeights"
+        },
+        "Button1": {
+          "value": "{lineHeights.4}",
+          "type": "lineHeights"
+        },
+        "Button2": {
+          "value": "{lineHeights.5}",
+          "type": "lineHeights"
+        },
+        "Label": {
+          "value": "{lineHeights.6}",
+          "type": "lineHeights"
+        },
+        "Caption": {
+          "value": "{lineHeights.6}",
           "type": "lineHeights"
         }
       }
@@ -1145,7 +1193,7 @@
         "value": {
           "fontFamily": "{font.family.sans}",
           "fontWeight": "{font.weight.semibold}",
-          "lineHeight": "{font.line-height.0}",
+          "lineHeight": "{size.lineHeight.h1}",
           "fontSize": "{size.font.heading.1}",
           "letterSpacing": "{letterSpacing.0}",
           "paragraphSpacing": "{paragraphSpacing.6}",
