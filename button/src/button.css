@@ -1,14 +1,36 @@
+.typo-button1 {
+  font-family: var(--figma-font-button1-font-family);
+  font-style: normal;
+  font-weight: var(--figma-font-button1-font-weight);
+  font-size: var(--figma-size-font-button-1);
+  line-height: var(--figma-size-line-height-button1);
+}
+
+.typo-button2 {
+  font-family: var(--figma-font-button2-font-family);
+  font-style: normal;
+  font-weight: var(--figma-font-button2-font-weight);
+  font-size: var(--figma-size-font-button-2);
+  line-height: var(--figma-size-line-height-button2);
+}
+
 .btn-primary {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 8px 24px;
-  gap: 8px;
+  padding: var(--figma-size-button-padding-top-bottom)
+    var(--figma-size-button-padding-right-left);
+  gap: var(--figma-size-button-gap);
 
   background: var(--figma-color-background-button-primary-active);
+  color: var(--figma-color-text-button-primary);
+  border-radius: var(--figma-size-button-radius);
+  border: none;
+}
 
-  border-radius: 100px;
+.btn-primary:hover {
+  background: var(--figma-color-background-button-primary-hover);
 }
 
 .btn-secondary {
@@ -20,11 +42,39 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 8px 24px;
-  gap: 8px;
+  padding: var(--figma-size-button-padding-top-bottom)
+    var(--figma-size-button-padding-right-left);
+  gap: var(--figma-size-button-gap);
 
-  background: #fcfcfd;
+  background: var(--figma-color-background-button-secondary-active);
+  color: var(--figma-color-text-button-secondary);
+  border: 1px solid var(--figma-color-border-button-link);
+  border-radius: var(--figma-size-button-radius);
+}
 
-  border: 1px solid #b2ddff;
-  border-radius: 100px;
+.btn-secondary:hover {
+  background: var(--figma-color-background-button-secondary-hover);
+}
+
+.btn-text {
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: var(--figma-size-button-padding-top-bottom)
+    var(--figma-size-button-padding-right-left);
+  gap: var(--figma-size-button-gap);
+
+  background: none;
+  color: var(--figma-color-text-button-secondary);
+  border: none;
+  border-radius: var(--figma-size-button-radius);
+}
+
+.btn-text:hover {
+  background: var(--figma-color-background-button-secondary-hover);
 }
