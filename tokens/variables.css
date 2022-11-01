@@ -3,7 +3,7 @@
  */
 
 :root {
-  --figma-font-h1-font-family: Inter;
+  --figma-font-h1-font-family: Roboto;
   --figma-font-h1-font-weight: 600;
   --figma-font-h1-line-height: 38;
   --figma-font-h1-font-size: 30;
@@ -11,7 +11,7 @@
   --figma-font-h1-paragraph-spacing: 30;
   --figma-font-h1-text-case: none;
   --figma-font-h1-text-decoration: none;
-  --figma-font-h2-font-family: Inter;
+  --figma-font-h2-font-family: Roboto;
   --figma-font-h2-font-weight: 600;
   --figma-font-h2-line-height: 32;
   --figma-font-h2-font-size: 24;
@@ -19,7 +19,7 @@
   --figma-font-h2-paragraph-spacing: 24;
   --figma-font-h2-text-case: none;
   --figma-font-h2-text-decoration: none;
-  --figma-font-h3-font-family: Inter;
+  --figma-font-h3-font-family: Roboto;
   --figma-font-h3-font-weight: 600;
   --figma-font-h3-line-height: 30;
   --figma-font-h3-font-size: 20;
@@ -27,7 +27,7 @@
   --figma-font-h3-paragraph-spacing: 20;
   --figma-font-h3-text-case: none;
   --figma-font-h3-text-decoration: none;
-  --figma-font-h4-font-family: Inter;
+  --figma-font-h4-font-family: Roboto;
   --figma-font-h4-font-weight: 600;
   --figma-font-h4-line-height: 28;
   --figma-font-h4-font-size: 18;
@@ -35,7 +35,7 @@
   --figma-font-h4-paragraph-spacing: 18;
   --figma-font-h4-text-case: none;
   --figma-font-h4-text-decoration: none;
-  --figma-font-h5-font-family: Inter;
+  --figma-font-h5-font-family: Roboto;
   --figma-font-h5-font-weight: 500;
   --figma-font-h5-line-height: 24;
   --figma-font-h5-font-size: 16;
@@ -43,7 +43,7 @@
   --figma-font-h5-paragraph-spacing: 16;
   --figma-font-h5-text-case: none;
   --figma-font-h5-text-decoration: none;
-  --figma-font-subtitle1-font-family: Inter;
+  --figma-font-subtitle1-font-family: Roboto;
   --figma-font-subtitle1-font-weight: 700;
   --figma-font-subtitle1-line-height: 24;
   --figma-font-subtitle1-font-size: 16;
@@ -51,7 +51,7 @@
   --figma-font-subtitle1-paragraph-spacing: 16;
   --figma-font-subtitle1-text-case: none;
   --figma-font-subtitle1-text-decoration: none;
-  --figma-font-subtitle2-font-family: Inter;
+  --figma-font-subtitle2-font-family: Roboto;
   --figma-font-subtitle2-font-weight: 700;
   --figma-font-subtitle2-line-height: 20;
   --figma-font-subtitle2-font-size: 14;
@@ -59,7 +59,7 @@
   --figma-font-subtitle2-paragraph-spacing: 14;
   --figma-font-subtitle2-text-case: none;
   --figma-font-subtitle2-text-decoration: none;
-  --figma-font-body1-font-family: Inter;
+  --figma-font-body1-font-family: Roboto;
   --figma-font-body1-font-weight: 400;
   --figma-font-body1-line-height: 24;
   --figma-font-body1-font-size: 16;
@@ -67,7 +67,7 @@
   --figma-font-body1-paragraph-spacing: 16;
   --figma-font-body1-text-case: none;
   --figma-font-body1-text-decoration: none;
-  --figma-font-body2-font-family: Inter;
+  --figma-font-body2-font-family: Roboto;
   --figma-font-body2-font-weight: 400;
   --figma-font-body2-line-height: 20;
   --figma-font-body2-font-size: 14;
@@ -75,7 +75,7 @@
   --figma-font-body2-paragraph-spacing: 14;
   --figma-font-body2-text-case: none;
   --figma-font-body2-text-decoration: none;
-  --figma-font-button1-font-family: Inter;
+  --figma-font-button1-font-family: Roboto;
   --figma-font-button1-font-weight: 600;
   --figma-font-button1-line-height: 24;
   --figma-font-button1-font-size: 12;
@@ -83,7 +83,7 @@
   --figma-font-button1-paragraph-spacing: 16;
   --figma-font-button1-text-case: none;
   --figma-font-button1-text-decoration: none;
-  --figma-font-button2-font-family: Inter;
+  --figma-font-button2-font-family: Roboto;
   --figma-font-button2-font-weight: 500;
   --figma-font-button2-line-height: 20;
   --figma-font-button2-font-size: 14;
@@ -91,7 +91,7 @@
   --figma-font-button2-paragraph-spacing: 14;
   --figma-font-button2-text-case: none;
   --figma-font-button2-text-decoration: none;
-  --figma-font-label-font-family: Inter;
+  --figma-font-label-font-family: Roboto;
   --figma-font-label-font-weight: 600;
   --figma-font-label-line-height: 18;
   --figma-font-label-font-size: 12;
@@ -99,7 +99,7 @@
   --figma-font-label-paragraph-spacing: 12;
   --figma-font-label-text-case: none;
   --figma-font-label-text-decoration: none;
-  --figma-font-caption-font-family: Inter;
+  --figma-font-caption-font-family: Roboto;
   --figma-font-caption-font-weight: 400;
   --figma-font-caption-line-height: 18;
   --figma-font-caption-font-size: 12;
@@ -107,7 +107,7 @@
   --figma-font-caption-paragraph-spacing: 12;
   --figma-font-caption-text-case: none;
   --figma-font-caption-text-decoration: none;
-  --figma-font-family-sans: Inter;
+  --figma-font-family-sans: Roboto;
   --figma-font-weight-regular: 400;
   --figma-font-weight-medium: 500;
   --figma-font-weight-semibold: 600;
