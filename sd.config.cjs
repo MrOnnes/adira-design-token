@@ -22,10 +22,5 @@ module.exports = {
       ],
     },
   },
-  'type/fontFamilies':{
-    type:'value',
-    matcher: (token) => token.type === 'fontFamily',
-    transformer: (token) => `'${token.value}'`,
-  }
 };
 
