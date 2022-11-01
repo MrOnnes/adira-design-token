@@ -705,6 +705,60 @@
         "value": 32,
         "type": "spacing"
       }
+    },
+    "lineHeight": {
+      "h1": {
+        "value": 38,
+        "type": "lineHeights"
+      },
+      "h2": {
+        "value": 32,
+        "type": "lineHeights"
+      },
+      "h3": {
+        "value": 30,
+        "type": "lineHeights"
+      },
+      "h4": {
+        "value": 28,
+        "type": "lineHeights"
+      },
+      "h5": {
+        "value": 24,
+        "type": "lineHeights"
+      },
+      "Subtitle1": {
+        "value": 24,
+        "type": "lineHeights"
+      },
+      "Subtitle2": {
+        "value": 20,
+        "type": "lineHeights"
+      },
+      "Body1": {
+        "value": 24,
+        "type": "lineHeights"
+      },
+      "Body2": {
+        "value": 20,
+        "type": "lineHeights"
+      },
+      "Button1": {
+        "value": 24,
+        "type": "lineHeights"
+      },
+      "Button2": {
+        "value": 20,
+        "type": "lineHeights"
+      },
+      "Label": {
+        "value": 18,
+        "type": "lineHeights"
+      },
+      "Caption": {
+        "value": 18,
+        "type": "lineHeights"
+      }
     }
   },
   "color": {
