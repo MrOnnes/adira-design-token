@@ -563,7 +563,7 @@
     },
     "background": {
       "primary": {
-        "value": "{palette.primary.300}",
+        "value": "{palette.success.300}",
         "type": "color"
       },
       "base": {
