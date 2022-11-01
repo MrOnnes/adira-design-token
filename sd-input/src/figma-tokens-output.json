@@ -420,7 +420,7 @@
     },
     "fontFamilies": {
       "Inter": {
-        "value": "Roboto",
+        "value": "'Inter'",
         "type": "fontFamilies"
       }
     },
