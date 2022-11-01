@@ -2,7 +2,7 @@
   "font": {
     "H1": {
       "fontFamily": {
-        "value": "Roboto",
+        "value": "'Inter'",
         "type": "fontFamily"
       },
       "fontWeight": {
@@ -36,7 +36,7 @@
     },
     "H2": {
       "fontFamily": {
-        "value": "Roboto",
+        "value": "'Inter'",
         "type": "fontFamily"
       },
       "fontWeight": {
@@ -70,7 +70,7 @@
     },
     "H3": {
       "fontFamily": {
-        "value": "Roboto",
+        "value": "'Inter'",
         "type": "fontFamily"
       },
       "fontWeight": {
@@ -104,7 +104,7 @@
     },
     "H4": {
       "fontFamily": {
-        "value": "Roboto",
+        "value": "'Inter'",
         "type": "fontFamily"
       },
       "fontWeight": {
@@ -138,7 +138,7 @@
     },
     "H5": {
       "fontFamily": {
-        "value": "Roboto",
+        "value": "'Inter'",
         "type": "fontFamily"
       },
       "fontWeight": {
@@ -172,7 +172,7 @@
     },
     "Subtitle1": {
       "fontFamily": {
-        "value": "Roboto",
+        "value": "'Inter'",
         "type": "fontFamily"
       },
       "fontWeight": {
@@ -206,7 +206,7 @@
     },
     "Subtitle2": {
       "fontFamily": {
-        "value": "Roboto",
+        "value": "'Inter'",
         "type": "fontFamily"
       },
       "fontWeight": {
@@ -240,7 +240,7 @@
     },
     "Body1": {
       "fontFamily": {
-        "value": "Roboto",
+        "value": "'Inter'",
         "type": "fontFamily"
       },
       "fontWeight": {
@@ -274,7 +274,7 @@
     },
     "Body2": {
       "fontFamily": {
-        "value": "Roboto",
+        "value": "'Inter'",
         "type": "fontFamily"
       },
       "fontWeight": {
@@ -308,7 +308,7 @@
     },
     "Button1": {
       "fontFamily": {
-        "value": "Roboto",
+        "value": "'Inter'",
         "type": "fontFamily"
       },
       "fontWeight": {
@@ -342,7 +342,7 @@
     },
     "Button2": {
       "fontFamily": {
-        "value": "Roboto",
+        "value": "'Inter'",
         "type": "fontFamily"
       },
       "fontWeight": {
@@ -376,7 +376,7 @@
     },
     "Label": {
       "fontFamily": {
-        "value": "Roboto",
+        "value": "'Inter'",
         "type": "fontFamily"
       },
       "fontWeight": {
@@ -410,7 +410,7 @@
     },
     "Caption": {
       "fontFamily": {
-        "value": "Roboto",
+        "value": "'Inter'",
         "type": "fontFamily"
       },
       "fontWeight": {
@@ -444,7 +444,7 @@
     },
     "family": {
       "sans": {
-        "value": "Roboto",
+        "value": "'Inter'",
         "type": "fontFamilies"
       }
     },
@@ -582,7 +582,7 @@
         "type": "sizing"
       },
       "radius": {
-        "value": 100,
+        "value": 28,
         "type": "borderRadius"
       },
       "gap": {
@@ -750,7 +750,7 @@
     },
     "background": {
       "primary": {
-        "value": "#FFDD00",
+        "value": "#6CE9A6",
         "type": "color"
       },
       "base": {

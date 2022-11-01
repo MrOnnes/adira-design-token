@@ -3,7 +3,7 @@
  */
 
 :root {
-  --figma-font-h1-font-family: Roboto;
+  --figma-font-h1-font-family: 'Inter';
   --figma-font-h1-font-weight: 600;
   --figma-font-h1-line-height: 38;
   --figma-font-h1-font-size: 30;
@@ -11,7 +11,7 @@
   --figma-font-h1-paragraph-spacing: 30;
   --figma-font-h1-text-case: none;
   --figma-font-h1-text-decoration: none;
-  --figma-font-h2-font-family: Roboto;
+  --figma-font-h2-font-family: 'Inter';
   --figma-font-h2-font-weight: 600;
   --figma-font-h2-line-height: 32;
   --figma-font-h2-font-size: 24;
@@ -19,7 +19,7 @@
   --figma-font-h2-paragraph-spacing: 24;
   --figma-font-h2-text-case: none;
   --figma-font-h2-text-decoration: none;
-  --figma-font-h3-font-family: Roboto;
+  --figma-font-h3-font-family: 'Inter';
   --figma-font-h3-font-weight: 600;
   --figma-font-h3-line-height: 30;
   --figma-font-h3-font-size: 20;
@@ -27,7 +27,7 @@
   --figma-font-h3-paragraph-spacing: 20;
   --figma-font-h3-text-case: none;
   --figma-font-h3-text-decoration: none;
-  --figma-font-h4-font-family: Roboto;
+  --figma-font-h4-font-family: 'Inter';
   --figma-font-h4-font-weight: 600;
   --figma-font-h4-line-height: 28;
   --figma-font-h4-font-size: 18;
@@ -35,7 +35,7 @@
   --figma-font-h4-paragraph-spacing: 18;
   --figma-font-h4-text-case: none;
   --figma-font-h4-text-decoration: none;
-  --figma-font-h5-font-family: Roboto;
+  --figma-font-h5-font-family: 'Inter';
   --figma-font-h5-font-weight: 500;
   --figma-font-h5-line-height: 24;
   --figma-font-h5-font-size: 16;
@@ -43,7 +43,7 @@
   --figma-font-h5-paragraph-spacing: 16;
   --figma-font-h5-text-case: none;
   --figma-font-h5-text-decoration: none;
-  --figma-font-subtitle1-font-family: Roboto;
+  --figma-font-subtitle1-font-family: 'Inter';
   --figma-font-subtitle1-font-weight: 700;
   --figma-font-subtitle1-line-height: 24;
   --figma-font-subtitle1-font-size: 16;
@@ -51,7 +51,7 @@
   --figma-font-subtitle1-paragraph-spacing: 16;
   --figma-font-subtitle1-text-case: none;
   --figma-font-subtitle1-text-decoration: none;
-  --figma-font-subtitle2-font-family: Roboto;
+  --figma-font-subtitle2-font-family: 'Inter';
   --figma-font-subtitle2-font-weight: 700;
   --figma-font-subtitle2-line-height: 20;
   --figma-font-subtitle2-font-size: 14;
@@ -59,7 +59,7 @@
   --figma-font-subtitle2-paragraph-spacing: 14;
   --figma-font-subtitle2-text-case: none;
   --figma-font-subtitle2-text-decoration: none;
-  --figma-font-body1-font-family: Roboto;
+  --figma-font-body1-font-family: 'Inter';
   --figma-font-body1-font-weight: 400;
   --figma-font-body1-line-height: 24;
   --figma-font-body1-font-size: 16;
@@ -67,7 +67,7 @@
   --figma-font-body1-paragraph-spacing: 16;
   --figma-font-body1-text-case: none;
   --figma-font-body1-text-decoration: none;
-  --figma-font-body2-font-family: Roboto;
+  --figma-font-body2-font-family: 'Inter';
   --figma-font-body2-font-weight: 400;
   --figma-font-body2-line-height: 20;
   --figma-font-body2-font-size: 14;
@@ -75,7 +75,7 @@
   --figma-font-body2-paragraph-spacing: 14;
   --figma-font-body2-text-case: none;
   --figma-font-body2-text-decoration: none;
-  --figma-font-button1-font-family: Roboto;
+  --figma-font-button1-font-family: 'Inter';
   --figma-font-button1-font-weight: 600;
   --figma-font-button1-line-height: 24;
   --figma-font-button1-font-size: 12;
@@ -83,7 +83,7 @@
   --figma-font-button1-paragraph-spacing: 16;
   --figma-font-button1-text-case: none;
   --figma-font-button1-text-decoration: none;
-  --figma-font-button2-font-family: Roboto;
+  --figma-font-button2-font-family: 'Inter';
   --figma-font-button2-font-weight: 500;
   --figma-font-button2-line-height: 20;
   --figma-font-button2-font-size: 14;
@@ -91,7 +91,7 @@
   --figma-font-button2-paragraph-spacing: 14;
   --figma-font-button2-text-case: none;
   --figma-font-button2-text-decoration: none;
-  --figma-font-label-font-family: Roboto;
+  --figma-font-label-font-family: 'Inter';
   --figma-font-label-font-weight: 600;
   --figma-font-label-line-height: 18;
   --figma-font-label-font-size: 12;
@@ -99,7 +99,7 @@
   --figma-font-label-paragraph-spacing: 12;
   --figma-font-label-text-case: none;
   --figma-font-label-text-decoration: none;
-  --figma-font-caption-font-family: Roboto;
+  --figma-font-caption-font-family: 'Inter';
   --figma-font-caption-font-weight: 400;
   --figma-font-caption-line-height: 18;
   --figma-font-caption-font-size: 12;
@@ -107,7 +107,7 @@
   --figma-font-caption-paragraph-spacing: 12;
   --figma-font-caption-text-case: none;
   --figma-font-caption-text-decoration: none;
-  --figma-font-family-sans: Roboto;
+  --figma-font-family-sans: 'Inter';
   --figma-font-weight-regular: 400;
   --figma-font-weight-medium: 500;
   --figma-font-weight-semibold: 600;
@@ -137,7 +137,7 @@
   --figma-size-font-label: 12px;
   --figma-size-font-caption: 12px;
   --figma-size-button-height: 40px;
-  --figma-size-button-radius: 100px;
+  --figma-size-button-radius: 28px;
   --figma-size-button-gap: 8px;
   --figma-size-button-padding-top-bottom: 8px;
   --figma-size-button-padding-right-left: 24px;
@@ -172,23 +172,23 @@
   --figma-color-text-button-secondary: #175cd3;
   --figma-color-text-sidebar: #344054;
   --figma-color-text-disable: #98a2b3;
-  --figma-color-background-primary: #ffdd00;
+  --figma-color-background-primary: #6ce9a6;
   --figma-color-background-base-light: #fcfcfd;
   --figma-color-background-base-grey: #f2f4f7;
   --figma-color-background-base-dark: #101828;
-  --figma-color-background-error: #fee4e2;
-  --figma-color-background-link: #d1e9ff;
-  --figma-color-background-success: #d1fadf;
-  --figma-color-background-disable: #f2f4f7;
-  --figma-color-background-button-primary-active: #ffdd00;
-  --figma-color-background-button-primary-hover: #ffeb74;
-  --figma-color-background-button-primary-selected: #f2b705;
-  --figma-color-background-button-error-active: #f04438;
-  --figma-color-background-button-error-hover: #fda29b;
-  --figma-color-background-button-error-selected: #d92d20;
-  --figma-color-background-button-secondary-active: #fcfcfd;
-  --figma-color-background-button-secondary-hover: #f5faff;
-  --figma-color-background-button-secondary-selected: #d1e9ff;
+  --figma-color-background-error: #FEE4E2;
+  --figma-color-background-link: #D1E9FF;
+  --figma-color-background-success: #D1FADF;
+  --figma-color-background-disable: #F2F4F7;
+  --figma-color-background-button-primary-active: #6CE9A6;
+  --figma-color-background-button-primary-hover: #FFEB74;
+  --figma-color-background-button-primary-selected: #F2B705;
+  --figma-color-background-button-error-active: #F04438;
+  --figma-color-background-button-error-hover: #FDA29B;
+  --figma-color-background-button-error-selected: #D92D20;
+  --figma-color-background-button-secondary-active: #FCFCFD;
+  --figma-color-background-button-secondary-hover: #F5FAFF;
+  --figma-color-background-button-secondary-selected: #D1E9FF;
   --figma-color-shadow: #101828;
   --figma-color-border-base: #98a2b3;
   --figma-color-border-error: #f97066;

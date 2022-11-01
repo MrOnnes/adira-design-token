@@ -821,7 +821,7 @@
       },
       "background": {
         "primary": {
-          "value": "{palette.primary.300}",
+          "value": "{palette.success.300}",
           "type": "color"
         },
         "base": {
@@ -1007,7 +1007,7 @@
           "type": "sizing"
         },
         "radius": {
-          "value": "{corner.extra-small}",
+          "value": "{corner.extra-large}",
           "type": "borderRadius"
         },
         "gap": {
