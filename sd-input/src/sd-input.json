@@ -705,6 +705,12 @@
         "value": 32,
         "type": "spacing"
       }
+    },
+    "lineHeight": {
+      "button1": {
+        "value": 24,
+        "type": "lineHeights"
+      }
     }
   },
   "color": {
