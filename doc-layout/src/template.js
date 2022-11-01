@@ -25,6 +25,8 @@ export const docLayoutTemplate = (content, context) => html`
     /** 
      * Double attr selector to beat dockit-layout's selector specificity
      * We want height of auto here. TODO: Fix in dockit-layout?
+
+     initial-color-scheme = warna background
      */
     [slot='logo'][slot='logo'] > svg {
       height: auto;
@@ -32,12 +34,12 @@ export const docLayoutTemplate = (content, context) => html`
   </style>
   <dockit-layout
     disable-color-scheme-change
-    initial-color-scheme="dark"
+    initial-color-scheme="light"
     .context="${context}"
   >
     <div slot="logo">
       ${unsafeHTML(logoSvg)}<span>Figma Tokens Starter</span>
     </div>
-    <div class="dark:prose-invert">${unsafeHTML(content)}</div>
+    <div class="prose">${unsafeHTML(content)}</div>
   </dockit-layout>
 `;
