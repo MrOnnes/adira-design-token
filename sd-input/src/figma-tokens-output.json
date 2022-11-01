@@ -821,7 +821,7 @@
       },
       "background": {
         "primary": {
-          "value": "{palette.primary.300}",
+          "value": "{palette.primary.200}",
           "type": "color"
         },
         "base": {
