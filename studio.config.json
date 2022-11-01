@@ -18,7 +18,8 @@
    [
     "INFRASTRUCTURE",
     [
-     "sd-input"
+     "sd-input",
+     "doc-layout"
     ]
    ]
   ]
