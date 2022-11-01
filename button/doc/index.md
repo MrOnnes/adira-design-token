@@ -6,7 +6,7 @@ import '../src/button.css';
 ```
 
 ```js preview-story
-export const main = () => ` <button class="btn">test</button> `;
+export const main = () => ` <button class="btn-primary">test</button> `;
 ```
 
 ```html preview-story
