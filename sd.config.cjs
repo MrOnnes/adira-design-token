@@ -7,7 +7,9 @@ module.exports = {
   },
   platforms: {
     css: {
-      transformGroup: 'css',
+      transforms: ["attribute/cti", "name/cti/kebab", 
+      "color/css","size/px"],
+
       buildPath: 'tokens/',
       prefix: 'figma',
       files: [
