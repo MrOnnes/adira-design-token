@@ -1,3 +1,30 @@
 .btn-primary {
-  background-color: var(--figma-color-background-button-primary-active);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  gap: 8px;
+
+  background: var(--figma-color-background-button-primary-active);
+
+  border-radius: 100px;
+}
+
+.btn-secondary {
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  gap: 8px;
+
+  background: #fcfcfd;
+
+  border: 1px solid #b2ddff;
+  border-radius: 100px;
 }
