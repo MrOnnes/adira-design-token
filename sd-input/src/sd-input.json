@@ -563,7 +563,7 @@
     },
     "background": {
       "primary": {
-        "value": "{palette.success.300}",
+        "value": "{palette.primary.300}",
         "type": "color"
       },
       "base": {
@@ -599,7 +599,7 @@
       "button": {
         "primary": {
           "active": {
-            "value": "{palette.primary.300}",
+            "value": "{palette.success.300}",
             "type": "color"
           },
           "hover": {

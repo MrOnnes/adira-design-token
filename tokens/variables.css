@@ -102,7 +102,7 @@
   --figma-color-text-button-secondary: #175CD3;
   --figma-color-text-sidebar: #344054;
   --figma-color-text-disable: #98A2B3;
-  --figma-color-background-primary: #6CE9A6;
+  --figma-color-background-primary: #FFDD00;
   --figma-color-background-base-light: #FCFCFD;
   --figma-color-background-base-grey: #F2F4F7;
   --figma-color-background-base-dark: #101828;
@@ -110,7 +110,7 @@
   --figma-color-background-link: #D1E9FF;
   --figma-color-background-success: #D1FADF;
   --figma-color-background-disable: #F2F4F7;
-  --figma-color-background-button-primary-active: #FFDD00;
+  --figma-color-background-button-primary-active: #6CE9A6;
   --figma-color-background-button-primary-hover: #FFEB74;
   --figma-color-background-button-primary-selected: #F2B705;
   --figma-color-background-button-error-active: #F04438;
