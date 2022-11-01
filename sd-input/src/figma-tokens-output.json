@@ -1258,7 +1258,7 @@
         "value": {
           "fontFamily": "{font.family.sans}",
           "fontWeight": "{font.weight.bold}",
-          "lineHeight": "{size.lineHeight.subtitle1}",
+          "lineHeight": "{size.lineHeight.Subtitle1}",
           "fontSize": "{size.font.subtitle.1}",
           "letterSpacing": "$letterSpacing.0",
           "paragraphSpacing": "$paragraphSpacing.2",
@@ -1271,7 +1271,7 @@
         "value": {
           "fontFamily": "{font.family.sans}",
           "fontWeight": "{font.weight.bold}",
-          "lineHeight": "{size.lineHeight.subtitle2}",
+          "lineHeight": "{size.lineHeight.Subtitle2}",
           "fontSize": "{size.font.subtitle.2}",
           "letterSpacing": "$letterSpacing.0",
           "paragraphSpacing": "$paragraphSpacing.1",
@@ -1284,7 +1284,7 @@
         "value": {
           "fontFamily": "{font.family.sans}",
           "fontWeight": "{font.weight.regular}",
-          "lineHeight": "{size.lineHeight.body1}",
+          "lineHeight": "{size.lineHeight.Body1}",
           "fontSize": "{size.font.body.1}",
           "letterSpacing": "$letterSpacing.0",
           "paragraphSpacing": "$paragraphSpacing.2",
@@ -1297,7 +1297,7 @@
         "value": {
           "fontFamily": "{font.family.sans}",
           "fontWeight": "{font.weight.regular}",
-          "lineHeight": "{size.lineHeight.body2}",
+          "lineHeight": "{size.lineHeight.Body2}",
           "fontSize": "{size.font.body.2}",
           "letterSpacing": "$letterSpacing.0",
           "paragraphSpacing": "$paragraphSpacing.1",
@@ -1310,7 +1310,7 @@
         "value": {
           "fontFamily": "{font.family.sans}",
           "fontWeight": "{font.weight.semibold}",
-          "lineHeight": "{size.lineHeight.button1}",
+          "lineHeight": "{size.lineHeight.Button1}",
           "fontSize": "{size.font.button.1}",
           "letterSpacing": "$letterSpacing.0",
           "paragraphSpacing": "$paragraphSpacing.2",
@@ -1323,7 +1323,7 @@
         "value": {
           "fontFamily": "{font.family.sans}",
           "fontWeight": "{font.weight.medium}",
-          "lineHeight": "{size.lineHeight.button2}",
+          "lineHeight": "{size.lineHeight.Button2}",
           "fontSize": "{size.font.button.2}",
           "letterSpacing": "$letterSpacing.0",
           "paragraphSpacing": "$paragraphSpacing.1",
@@ -1335,8 +1335,8 @@
       "Label": {
         "value": {
           "fontFamily": "{font.family.sans}",
-          "fontWeight": "{font.weight.label}",
-          "lineHeight": "{size.lineHeight.h1}",
+          "fontWeight": "{font.weight.semibold}",
+          "lineHeight": "{size.lineHeight.Label}",
           "fontSize": "{size.font.label}",
           "letterSpacing": "$letterSpacing.0",
           "paragraphSpacing": "$paragraphSpacing.0",
@@ -1349,7 +1349,7 @@
         "value": {
           "fontFamily": "{font.family.sans}",
           "fontWeight": "{font.weight.regular}",
-          "lineHeight": "{size.lineHeight.caption}",
+          "lineHeight": "{size.lineHeight.Caption}",
           "fontSize": "{size.font.caption}",
           "letterSpacing": "$letterSpacing.0",
           "paragraphSpacing": "$paragraphSpacing.0",
