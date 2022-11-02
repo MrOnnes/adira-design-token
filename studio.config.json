@@ -6,7 +6,8 @@
     "TOKENS",
     [
      "tokens",
-     "colors"
+     "colors",
+     "size"
     ]
    ],
    [
