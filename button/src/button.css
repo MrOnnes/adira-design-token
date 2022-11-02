@@ -28,7 +28,7 @@ label {
   line-height: var(--figma-size-line-height-button2);
 }
 
-.btn-primary {
+.btn {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -43,11 +43,11 @@ label {
   border: none;
 }
 
-.btn-primary:hover {
+.btn:hover {
   background: var(--figma-color-background-button-primary-hover);
 }
 
-.btn-secondary {
+.btn[secondary] {
   box-sizing: border-box;
 
   /* Auto layout */
@@ -66,11 +66,11 @@ label {
   border-radius: var(--figma-size-button-radius);
 }
 
-.btn-secondary:hover {
+.btn[secondary]:hover {
   background: var(--figma-color-background-button-secondary-hover);
 }
 
-.btn-text {
+.btn[text] {
   box-sizing: border-box;
 
   /* Auto layout */
@@ -89,7 +89,7 @@ label {
   border-radius: var(--figma-size-button-radius);
 }
 
-.btn-text:hover {
+.btn[text]:hover {
   background: var(--figma-color-background-button-secondary-hover);
 }
 

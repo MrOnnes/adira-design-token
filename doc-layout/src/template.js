@@ -6,7 +6,7 @@ import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 import logoSvg from './logo.svg?raw';
 
 // Needed for now, initial-color-scheme isn't enough
-document.documentElement.classList.add('dark');
+//document.documentElement.classList.add('dark');
 
 export const docLayoutTemplate = (content, context) => html`
   <style>

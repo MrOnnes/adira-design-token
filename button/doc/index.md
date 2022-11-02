@@ -8,21 +8,32 @@ import '~/tokens/variables.css';
 import '../src/button.css';
 ```
 
+Button CSS-only component
+
+## Usage
+
+At this moment, our button component is just a combination of some CSS Custom Properties representing the Design Tokens behind the button.
+The other CSS file implements those design tokens onto any element with `.btn` class.
+
+```html
+<link rel="stylesheet" href="...." /> <button class="btn"></button>
+```
+
 ```js preview-story
 export const primary = () => html`
-  <button class="btn-primary typo-button1">Primary</button>
+  <button class="btn typo-button1">Primary</button>
 `;
 ```
 
 ```js preview-story
 export const secondary = () => html`
-  <button class="btn-secondary typo-button2">Secondary</button>
+  <button class="btn" secondary typo-button2">Secondary</button>
 `;
 ```
 
 ```js preview-story
 export const textbtn = () => html`
-  <button class="btn-text typo-button2">Text</button>
+  <button class="btn" text typo-button2">Text</button>
 `;
 ```
 
