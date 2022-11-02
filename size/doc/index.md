@@ -9,7 +9,32 @@ Component to visualize different design tokens implemented as CSS custom propert
 ## Setup
 
 ```js
-import '..Coming Soon..';
+import '@divriots/dockit-core/css-showcases/dockit-css-showcases.define.js';
+```
+
+## Demos
+
+We need the following styles for the demos below:
+
+```html preview-story
+<p>Check the styles code 👇</p>
+<style>
+  .box {
+    width: 6rem;
+    height: 6rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    background-color: #ffcc00;
+    border-radius: 0.2rem;
+  }
+
+  .wide {
+    width: 10rem;
+  }
+
+  .white {
+    background-color: #ffffff;
+  }
+</style>
 ```
 
 ### Border-radius
