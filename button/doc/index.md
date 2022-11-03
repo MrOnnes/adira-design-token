@@ -16,8 +16,11 @@ At this moment, our button component is just a combination of some CSS Custom Pr
 The other CSS file implements those design tokens onto any element with `.btn` class.
 
 ```html
-<link rel="stylesheet" href="...." /> <button class="btn"></button>
+<link rel="stylesheet" href="...." />
+<button class="btn" [button type]></button>
 ```
+
+### Primary
 
 ```js preview-story
 export const primary = () => html`
@@ -25,25 +28,42 @@ export const primary = () => html`
 `;
 ```
 
+### Error
+
 ```js preview-story
-export const secondary = () => html`
-  <button class="btn" secondary typo-button2">Secondary</button>
+export const error = () => html`
+  <button class="btn typo-button1" error>Primary</button>
 `;
 ```
+
+### Secondary
+
+```js preview-story
+export const secondary = () => html`
+  <button class="btn typo-button2" secondary>Secondary</button>
+`;
+```
+
+### Secondary-error
+
+```js preview-story
+export const secondaryError = () => html`
+  <button class="btn typo-button2" secondary-error>Secondary</button>
+`;
+```
+
+### text
 
 ```js preview-story
 export const textbtn = () => html`
-  <button class="btn" text typo-button2">Text</button>
+  <button class="btn typo-button2" text>Text</button>
 `;
 ```
 
+### text-error
+
 ```js preview-story
-export const input = () => html`
-  <form class="input_field">
-    <label for="Label">Label</label>
-    <div class="content">
-      <input type="text" id="id" name="name" placeholder="Placeholder" />
-    </div>
-  </form>
+export const textErrorBtn = () => html`
+  <button class="btn typo-button2" text-error>Text</button>
 `;
 ```
