@@ -52,10 +52,17 @@ label {
   background: var(--figma-color-background-button-primary-hover);
 }
 
+.btn[error] {
+  background: var(--figma-color-background-button-error-active);
+  color: var(--figma-color-text-white);
+}
+
+.btn[error]:hover {
+  background: var(--figma-color-background-button-error-hover);
+}
+
 .btn[secondary] {
   box-sizing: border-box;
-
-  /* Auto layout */
 
   display: flex;
   flex-direction: row;
@@ -73,6 +80,16 @@ label {
 
 .btn[secondary]:hover {
   background: var(--figma-color-background-button-secondary-hover);
+}
+
+.btn[secondary-error] {
+  background: var(--figma-color-background-button-secondary-active);
+  color: var(--figma-color-text-error);
+  border: 1px solid var(--figma-color-border-error);
+}
+
+.btn[secondary-error]:hover {
+  background: var(--figma-color-background-button-error-hover);
 }
 
 .btn[text] {
@@ -94,6 +111,17 @@ label {
 
 .btn[text]:hover {
   background: var(--figma-color-background-button-secondary-hover);
+}
+
+.btn[text-error] {
+  background: none;
+  color: var(--figma-color-text-error);
+  border: none;
+  border-radius: var(--figma-size-button-radius);
+}
+
+.btn[text-error]:hover {
+  background: var(--figma-color-background-button-error-hover);
 }
 
 .input_field .content {

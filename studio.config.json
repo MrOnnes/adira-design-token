@@ -14,7 +14,8 @@
     "COMPONENTS",
     [
      "button-comp",
-     "button"
+     "button",
+     "Fields"
     ]
    ],
    [
