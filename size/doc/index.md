@@ -1,5 +1,5 @@
 ```js script
-import '@divriots/dockit-core/css-showcases/dockit-css-showcases.define.js';
+import './styles.css';
 ```
 
 # token-css-showcases
@@ -9,7 +9,7 @@ Component to visualize different design tokens implemented as CSS custom propert
 ## Setup
 
 ```js
-import '..Coming Soon..';
+
 ```
 
 ### Border-radius
