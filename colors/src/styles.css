@@ -1,6 +1,6 @@
 .box {
-  width: 4rem;
-  height: 4rem;
+  width: 6rem;
+  height: 6rem;
   border-radius: 0.2rem;
   --shadow-color: 0deg 0% 63%;
   box-shadow: 0.3px 0.5px 0.5px hsl(var(--shadow-color) / 0.5),
@@ -11,4 +11,13 @@
     13.6px 19.6px 22.4px -2.7px hsl(var(--shadow-color) / 0.29),
     21.9px 31.4px 35.9px -3.2px hsl(var(--shadow-color) / 0.25),
     33.4px 47.9px 54.7px -3.7px hsl(var(--shadow-color) / 0.21);
+}
+
+._boxes_xuqjg_1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+._boxes_xuqjg_1 div {
+  gap: 1rem;
 }

@@ -12,7 +12,7 @@ import logoSvg from './logo.svg?raw';
 export const docLayoutTemplate = (content, context) => html`
   <style>
     ${unsafeHTML(styles)} [slot='logo'] span {
-      color: var(--figma-core-colors-primary-500);
+      color: var(--figma-color-text-normal);
     }
 
     [slot='logo'] {

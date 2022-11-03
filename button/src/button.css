@@ -40,6 +40,8 @@ label {
     var(--figma-size-button-padding-right-left);
   gap: var(--figma-size-button-gap);
 
+  height: 40px;
+
   background: var(--figma-color-background-button-primary-active);
   color: var(--figma-color-text-button-primary);
   border-radius: var(--figma-size-button-radius);
@@ -76,8 +78,6 @@ label {
 .btn[text] {
   box-sizing: border-box;
 
-  /* Auto layout */
-
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -99,8 +99,6 @@ label {
 .input_field .content {
   box-sizing: border-box;
 
-  /* Auto layout */
-
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -118,7 +116,6 @@ label {
 
 input {
   border: none;
-  /* Body1 */
 
   font-family: var(--figma-font-body1-font-family);
   font-style: normal;
@@ -126,4 +123,8 @@ input {
   font-size: var(--figma-size-font-body-1);
   line-height: var(--figma-size-line-height-body1);
   background: none;
+}
+
+input:focus {
+  outline: none;
 }

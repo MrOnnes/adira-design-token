@@ -9,7 +9,7 @@ Component to visualize different design tokens implemented as CSS custom propert
 ## Setup
 
 ```js
-
+--coming soon--
 ```
 
 ### Border-radius
@@ -32,40 +32,29 @@ Component to visualize different design tokens implemented as CSS custom propert
 ></dockit-css-showcases>
 ```
 
-### Shadow (Coming soon)
+### Letter-spacing
 
 ```html preview-story
 <style>
   :root {
-    --shadow-x-small: 0 1px 0 #0d131e0d;
-    --shadow-small: 0 1px 2px #0d131e1a;
-    --shadow-medium: 0 2px 4px #0d131e1a;
-    --shadow-large: 0 2px 8px #0d131e1a;
-    --shadow-x-large: 0 4px 16px #0d131e1a;
-    --shadow-outline: 0 0 0 3px #4299e14c;
+    --figma-font-h1-letter-spacing: 0%;
+    --figma-font-h2-letter-spacing: 0%;
+    --figma-font-h3-letter-spacing: 0%;
+    --figma-font-h4-letter-spacing: 0%;
+    --figma-font-h5-letter-spacing: 0%;
+    --figma-font-subitle1-letter-spacing: 0%;
+    --figma-font-subitle2-letter-spacing: 0%;
+    --figma-font-body1-letter-spacing: 0%;
+    --figma-font-body2-letter-spacing: 0%;
+    --figma-font-button1-letter-spacing: 0%;
+    --figma-font-button2-letter-spacing: 0%;
+    --figma-font-label-letter-spacing: 0%;
+    --figma-font-caption-letter-spacing: 0%;
   }
 </style>
 <dockit-css-showcases
-  css-props-prefix="--shadow"
-  component-class="box white"
-  style-key="box-shadow"
-></dockit-css-showcases>
-```
-
-### Letter-spacing (Coming soon)
-
-```html preview-story
-<style>
-  :root {
-    --letter-spacing-dense: -0.075em;
-    --letter-spacing-normal: normal;
-    --letter-spacing-loose: 0.075em;
-    --letter-spacing-percentage: 5%;
-    --letter-spacing-num: 20;
-  }
-</style>
-<dockit-css-showcases
-  css-props-prefix="--letter-spacing"
+  css-props-names="--figma-font-h1-letter-spacing,--figma-font-h2-letter-spacing,--figma-font-h3-letter-spacing--figma-font-h4-letter-spacing--figma-font-h5-letter-spacing,--figma-font-subtitle1-letter-spacing,--figma-font-subtitle2-letter-spacing,--figma-font-body1-letter-spacing,--figma-font-body2-letter-spacing,--figma-font-button1-letter-spacing,--figma-font-button2-letter-spacing,--figma-font-label-letter-spacing,--figma-font-caption-letter-spacing"
+  css-props-names="--color-white,"
   component-type="text"
   style-key="letter-spacing"
 ></dockit-css-showcases>
@@ -148,57 +137,20 @@ Component to visualize different design tokens implemented as CSS custom propert
 ></dockit-css-showcases>
 ```
 
-### Font-family (Coming Soon)
+### Font-family
 
 ```html preview-story
 <style>
   :root {
-    --font-family-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-      Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-      'Segoe UI Symbol';
-    --font-family-serif: Georgia, 'Times New Roman', serif;
-    --font-family-mono: Menlo, Monaco, 'Courier New', monospace;
+    --figma-font-family-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+      Inter, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+      'Segoe UI Emoji', 'Segoe UI Symbol';
   }
 </style>
 <dockit-css-showcases
-  css-props-prefix="--font-family"
+  css-props-prefix="--figma-font-family"
   component-type="text"
   style-key="font-family"
-></dockit-css-showcases>
-```
-
-### Z-index (Coming Soon)
-
-With a standard prefix:
-
-```html preview-story
-<style>
-  :root {
-    --z-index-drawer: 700;
-    --z-index-dialog: 800;
-    --z-index-dropdown: 900;
-    --z-index-toast: 950;
-    --z-index-tooltip: 1000;
-  }
-</style>
-<dockit-css-showcases css-props-prefix="--z-index"></dockit-css-showcases>
-```
-
-With a custom prefix and explicit mode:
-
-```html preview-story
-<style>
-  :root {
-    --layer-drawer: 700;
-    --layer-dialog: 800;
-    --layer-dropdown: 900;
-    --layer-toast: 950;
-    --layer-tooltip: 1000;
-  }
-</style>
-<dockit-css-showcases
-  css-props-prefix="--layer"
-  mode="z-index"
 ></dockit-css-showcases>
 ```
 
