@@ -1,35 +1,13 @@
-/*@import url(../../tokens/variables.css);
-*/
-
 label {
   font-family: var(--figma-font-label-font-family);
   font-style: normal;
   font-weight: var(--figma-font-label-font-weight);
   font-size: var(--figma-size-font-label);
   line-height: var(--figma-size-line-height-label);
-
   text-transform: var(--figma-font-label-text-case);
-
-  /* Gray/700 */
-
   color: var(--figma-color-text-normal);
 }
 
-.typo-button1 {
-  font-family: var(--figma-font-button1-font-family);
-  font-style: normal;
-  font-weight: var(--figma-font-button1-font-weight);
-  font-size: var(--figma-size-font-button-1);
-  line-height: var(--figma-size-line-height-button1);
-}
-
-.typo-button2 {
-  font-family: var(--figma-font-button2-font-family);
-  font-style: normal;
-  font-weight: var(--figma-font-button2-font-weight);
-  font-size: var(--figma-size-font-button-2);
-  line-height: var(--figma-size-line-height-button2);
-}
 .bd-example {
   display: flex;
   width: inherit;
@@ -44,7 +22,7 @@ label {
     var(--figma-size-button-padding-right-left);
   gap: var(--figma-size-button-gap);
   height: 40px;
-  margin: 8px;
+  margin: 4px;
   border-radius: var(--figma-size-button-radius);
   border: none;
 

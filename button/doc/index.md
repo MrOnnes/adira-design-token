@@ -1,15 +1,10 @@
 # Button
 
-This is buttons component
-
 ```js script
 import { html } from 'lit';
 import '~/tokens/variables.css';
 import '~/tokens/src/styles.css';
-import '../src/button.css';
 ```
-
-Button CSS-only component
 
 ## Usage
 
@@ -75,11 +70,40 @@ export const disabledButton = () => html`
 
 ### Block Button
 
+Responsive "Block Button". Resize your browser to see them change.
+
 ```js preview-story
 export const blockButton = () => html`
-  <div class="bd-example">
-    <button type="button" class="btn btn-primary" disabled>Primary</button>
-    <button type="button" class="btn btn-secondary" disabled>Secondary</button>
+  <div class="bd-example d-grid gap">
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+  </div>
+`;
+```
+
+```js preview-story
+export const blockLeftButton = () => html`
+  <div class="bd-example d-grid gap d-md-flex">
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+  </div>
+`;
+```
+
+```js preview-story
+export const blockMidButton = () => html`
+  <div class="bd-example d-grid gap mx-auto col-6">
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+  </div>
+`;
+```
+
+```js preview-story
+export const blockRightButton = () => html`
+  <div class="bd-example d-grid gap d-md-flex justify-content-md-end">
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
   </div>
 `;
 ```
