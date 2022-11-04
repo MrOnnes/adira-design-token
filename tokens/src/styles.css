@@ -1,5 +1,5 @@
-@import '~/button/src/button.css';
-@import '~/typography/src/typo.css';
+@import '../../button/src/button.css';
+@import '../../typography/src/typo.css';
 
 @media (min-width: 768px) {
   .d-md-flex {
