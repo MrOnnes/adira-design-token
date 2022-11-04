@@ -1,10 +1,18 @@
 .code {
-  color: var(--figma-color-text-link); !important
+  color: var(--figma-color-text-link);
   word-wrap: break-word;
 }
-.d-grid{
-  display: grid!important;
+.d-grid {
+  display: grid !important;
 }
-.gap{
-  gap: 8px!important;
+.gap {
+  gap: 8px !important;
+}
+.col-6 {
+  flex: 0 0 auto;
+  width: 50% !important;
+}
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
 }

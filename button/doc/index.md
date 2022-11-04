@@ -77,9 +77,20 @@ export const disabledButton = () => html`
 
 ```js preview-story
 export const blockButton = () => html`
-  <div class="bd-example">
-    <button type="button" class="btn btn-primary" disabled>Primary</button>
-    <button type="button" class="btn btn-secondary" disabled>Secondary</button>
+  <div class="bd-example d-grid gap">
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
   </div>
 `;
 ```
+
+```js preview-story
+export const blockMidButton = () => html`
+  <div class="bd-example d-grid gap mx-auto col-6">
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+  </div>
+`;
+```
+
+## RESPONSIVE BUTTON LAYOUT COMMING SOON
