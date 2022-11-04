@@ -30,7 +30,11 @@ label {
   font-size: var(--figma-size-font-button-2);
   line-height: var(--figma-size-line-height-button2);
 }
-
+.bd-example {
+  display: flex;
+  width: inherit;
+  flex-wrap: wrap;
+}
 .btn {
   display: flex;
   flex-direction: row;
@@ -39,120 +43,131 @@ label {
   padding: var(--figma-size-button-padding-top-bottom)
     var(--figma-size-button-padding-right-left);
   gap: var(--figma-size-button-gap);
-
   height: 40px;
-
-  background: var(--figma-color-background-button-primary-active);
-  color: var(--figma-color-text-button-primary);
+  margin: 8px;
   border-radius: var(--figma-size-button-radius);
   border: none;
+
+  font-family: var(--figma-font-button1-font-family);
+  font-style: normal;
+  font-weight: var(--figma-font-button1-font-weight);
+  font-size: var(--figma-size-font-button-1);
+  line-height: var(--figma-size-line-height-button1);
 }
 
-.btn:hover {
-  background: var(--figma-color-background-button-primary-hover);
+.btn[disabled] {
+  pointer-events: none;
+  background: var(---figma-color-background-disable);
+  color: var(--figma-color-text-disable);
+  border-color: var(--figma-color-text-disable);
 }
 
-.btn[error] {
+.btn-primary {
+  background: var(--figma-color-background-button-primary-active);
+  color: var(--figma-color-text-button-primary);
+}
+
+.btn-secondary {
+  background: var(--figma-color-background-button-secondary-active);
+  color: var(--figma-color-text-button-secondary);
+  border: 1px solid var(--figma-color-border-button-link);
+}
+
+.btn-success {
+  background: var(--figma-color-background-success);
+  color: var(--figma-color-text-success);
+}
+
+.btn-danger {
   background: var(--figma-color-background-button-error-active);
   color: var(--figma-color-text-white);
 }
 
-.btn[error]:hover {
-  background: var(--figma-color-background-button-error-hover);
+.btn-warning {
+  background: var(--figma-color-background-warning);
+  color: var(--figma-color-text-warning);
 }
 
-.btn[secondary] {
-  box-sizing: border-box;
+.btn-info {
+  background: var(--figma-color-background-link);
+  color: var(--figma-color-text-link);
+}
 
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: var(--figma-size-button-padding-top-bottom)
-    var(--figma-size-button-padding-right-left);
-  gap: var(--figma-size-button-gap);
+.btn-light {
+  background: var(--figma-color-background-base-light);
+  color: var(--figma-color-text-button-primary);
+}
 
-  background: var(--figma-color-background-button-secondary-active);
+.btn-dark {
+  background: var(--figma-color-background-base-dark);
+  color: var(--figma-color-text-white);
+}
+
+.btn-link {
+  background: none;
+  color: var(--figma-color-text-button-secondary);
+  border: none;
+  border-radius: var(--figma-size-button-radius);
+}
+
+/* HOVER */
+
+.btn-primary:hover {
+  background: var(--figma-color-background-button-primary-hover);
+  color: var(--figma-color-text-button-primary);
+}
+
+.btn-secondary:hover {
+  background: var(--figma-color-background-button-secondary-hover);
   color: var(--figma-color-text-button-secondary);
   border: 1px solid var(--figma-color-border-button-link);
-  border-radius: var(--figma-size-button-radius);
 }
 
-.btn[secondary]:hover {
-  background: var(--figma-color-background-button-secondary-hover);
+.btn-success:hover {
+  background: var(--figma-color-background-success);
+  color: var(--figma-color-text-success);
 }
 
-.btn[secondary-error] {
-  background: var(--figma-color-background-button-secondary-active);
-  color: var(--figma-color-text-error);
-  border: 1px solid var(--figma-color-border-error);
-}
-
-.btn[secondary-error]:hover {
+.btn-danger:hover {
   background: var(--figma-color-background-button-error-hover);
+  color: var(--figma-color-text-white);
 }
 
-.btn[text] {
-  box-sizing: border-box;
+.btn-warning:hover {
+  background: var(--figma-color-background-hover);
+  color: var(--figma-color-text-warning);
+}
 
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: var(--figma-size-button-padding-top-bottom)
-    var(--figma-size-button-padding-right-left);
-  gap: var(--figma-size-button-gap);
+.btn-info:hover {
+  background: var(--figma-color-background-link);
+  color: var(--figma-color-text-link);
+}
 
-  background: none;
+.btn-light:hover {
+  background: var(--figma-color-background-base-light);
+  color: var(--figma-color-text-button-primary);
+}
+
+.btn-dark:hover {
+  background: var(--figma-color-background-base-dark);
+  color: var(--figma-color-text-white);
+}
+
+.btn-link:hover {
+  background: var(--figma-color-background-button-secondary-hover);
   color: var(--figma-color-text-button-secondary);
   border: none;
   border-radius: var(--figma-size-button-radius);
 }
 
-.btn[text]:hover {
-  background: var(--figma-color-background-button-secondary-hover);
-}
-
-.btn[text-error] {
-  background: none;
-  color: var(--figma-color-text-error);
-  border: none;
+/* SIZE */
+.btn-lg {
+  padding: 0.5rem 1rem;
+  font-size: var(--figma-size-font-subtitle-1);
   border-radius: var(--figma-size-button-radius);
 }
-
-.btn[text-error]:hover {
-  background: var(--figma-color-background-button-error-hover);
-}
-
-.input_field .content {
-  box-sizing: border-box;
-
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: var(--figma-size-field-padding-top-bottom)
-    var(--figma-size-field-padding-right-left);
-  gap: var(--figma-size-field-gap);
-
-  height: 44px;
-
-  background: var(--figma-color-background-base-light);
-
-  border: 1px solid var(--figma-color-border-base);
-  border-radius: var(--figma-size-field-radius);
-}
-
-input {
-  border: none;
-
-  font-family: var(--figma-font-body1-font-family);
-  font-style: normal;
-  font-weight: var(--figma-font-body1-font-weight);
-  font-size: var(--figma-size-font-body-1);
-  line-height: var(--figma-size-line-height-body1);
-  background: none;
-}
-
-input:focus {
-  outline: none;
+.btn-sm {
+  padding: 4px 12px;
+  font-size: var(--figma-size-font-caption);
+  border-radius: var(--figma-size-radius-medium);
 }

@@ -1,7 +1,7 @@
 ```js script
 import { html } from 'lit';
 import '~/tokens/variables.css';
-import '../src/styles.css';
+import '../src/fields.css';
 ```
 
 ## Input Field

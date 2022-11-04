@@ -1,0 +1,5 @@
+.code {
+  font-size: 0.875em;
+  color: var(--figma-color-text-link);
+  word-wrap: break-word;
+}
