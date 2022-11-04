@@ -1,10 +1,30 @@
+@import '~/button/src/button.css';
+@import '~/typography/src/typo.css';
+
+@media (min-width: 768px) {
+  .d-md-flex {
+    display: flex !important;
+  }
+  .justify-content-md-end {
+    justify-content: flex-end;
+  }
+}
+
 .code {
-  color: var(--figma-color-text-link); !important
+  color: var(--figma-color-text-link);
   word-wrap: break-word;
 }
-.d-grid{
-  display: grid!important;
+.d-grid {
+  display: grid;
 }
-.gap{
-  gap: 8px!important;
+.gap {
+  gap: 2px !important;
+}
+.col-6 {
+  flex: 0 0 auto;
+  width: 50% !important;
+}
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
 }

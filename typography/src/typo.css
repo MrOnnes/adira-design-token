@@ -1,0 +1,166 @@
+.h1 {
+  font-family: var(--figma-font-h1-font-family);
+  font-style: normal;
+  font-weight: var(--figma-font-h1-font-weight);
+  line-height: var(--figma-size-line-height-h1);
+  font-size: var(--figma-size-font-heading-1);
+  letter-spacing: var(--figma-font-h1-letter-spacing);
+  word-spacing: var(--figma-font-h1-paragraph-spacing);
+  text-transform: var(--figma-font-h1-text-case);
+  text-decoration: var(--figma-font-h1-text-decoration);
+}
+.h2 {
+  font-family: var(--figma-font-h2-font-family);
+  font-style: normal;
+  font-weight: var(--figma-font-h2-font-weight);
+  line-height: var(--figma-size-line-height-h2);
+  font-size: var(--figma-size-font-heading-2);
+  letter-spacing: var(--figma-font-h2-letter-spacing);
+  word-spacing: var(--figma-font-h2-paragraph-spacing);
+  text-transform: var(--figma-font-h2-text-case);
+  text-decoration: var(--figma-font-h2-text-decoration);
+}
+
+.h3 {
+  font-family: var(--figma-font-h3-font-family);
+  font-style: normal;
+  font-weight: var(--figma-font-h3-font-weight);
+  line-height: var(--figma-size-line-height-h3);
+  font-size: var(--figma-size-font-heading-3);
+  letter-spacing: var(--figma-font-h3-letter-spacing);
+  word-spacing: var(--figma-font-h3-paragraph-spacing);
+  text-transform: var(--figma-font-h3-text-case);
+  text-decoration: var(--figma-font-h3-text-decoration);
+}
+
+.h4 {
+  font-family: var(--figma-font-h4-font-family);
+  font-style: normal;
+  font-weight: var(--figma-font-h4-font-weight);
+  line-height: var(--figma-size-line-height-h4);
+  font-size: var(--figma-size-font-heading-4);
+  letter-spacing: var(--figma-font-h4-letter-spacing);
+  word-spacing: var(--figma-font-h4-paragraph-spacing);
+  text-transform: var(--figma-font-h4-text-case);
+  text-decoration: var(--figma-font-h4-text-decoration);
+}
+
+.h5 {
+  font-family: var(--figma-font-h5-font-family);
+  font-style: normal;
+  font-weight: var(--figma-font-h5-font-weight);
+  line-height: var(--figma-size-line-height-h5);
+  font-size: var(--figma-size-font-heading-5);
+  letter-spacing: var(--figma-font-h5-letter-spacing);
+  word-spacing: var(--figma-font-h5-paragraph-spacing);
+  text-transform: var(--figma-font-h5-text-case);
+  text-decoration: var(--figma-font-h5-text-decoration);
+}
+
+.h6 {
+  font-family: var(--figma-font-h6-font-family);
+  font-style: normal;
+  font-weight: var(--figma-font-h6-font-weight);
+  line-height: var(--figma-size-line-height-h6);
+  font-size: var(--figma-size-font-heading-6);
+  letter-spacing: var(--figma-font-h6-letter-spacing);
+  word-spacing: var(--figma-font-h6-paragraph-spacing);
+  text-transform: var(--figma-font-h6-text-case);
+  text-decoration: var(--figma-font-h6-text-decoration);
+}
+
+.body1 {
+  font-family: var(--figma-font-body1-font-family);
+  font-style: normal;
+  font-weight: var(--figma-font-body1-font-weight);
+  line-height: var(--figma-size-line-height-body1);
+  font-size: var(--figma-size-font-body-1);
+  letter-spacing: var(--figma-font-body1-letter-spacing);
+  word-spacing: var(--figma-font-body1-paragraph-spacing);
+  text-transform: var(--figma-font-body1-text-case);
+  text-decoration: var(--figma-font-body1-text-decoration);
+}
+.body2 {
+  font-family: var(--figma-font-body2-font-family);
+  font-style: normal;
+  font-weight: var(--figma-font-body2-font-weight);
+  line-height: var(--figma-size-line-height-body2);
+  font-size: var(--figma-size-font-body-2);
+  letter-spacing: var(--figma-font-body2-letter-spacing);
+  word-spacing: var(--figma-font-body2-paragraph-spacing);
+  text-transform: var(--figma-font-body2-text-case);
+  text-decoration: var(--figma-font-body2-text-decoration);
+}
+.subtitle1 {
+  font-family: var(--figma-font-subtitle1-font-family);
+  font-style: normal;
+  font-weight: var(--figma-font-subtitle1-font-weight);
+  line-height: var(--figma-size-line-height-subtitle1);
+  font-size: var(--figma-size-font-subtitle-1);
+  letter-spacing: var(--figma-font-subtitle1-letter-spacing);
+  word-spacing: var(--figma-font-subtitle1-paragraph-spacing);
+  text-transform: var(--figma-font-subtitle1-text-case);
+  text-decoration: var(--figma-font-subtitle1-text-decoration);
+}
+.subtitle2 {
+  font-family: var(--figma-font-subtitle2-font-family);
+  font-style: normal;
+  font-weight: var(--figma-font-subtitle2-font-weight);
+  line-height: var(--figma-size-line-height-subtitle2);
+  font-size: var(--figma-size-font-subtitle-2);
+  letter-spacing: var(--figma-font-subtitle2-letter-spacing);
+  word-spacing: var(--figma-font-subtitle2-paragraph-spacing);
+  text-transform: var(--figma-font-subtitle2-text-case);
+  text-decoration: var(--figma-font-subtitle2-text-decoration);
+}
+.button1 {
+  font-family: var(--figma-font-button1-font-family);
+  font-style: normal;
+  font-weight: var(--figma-font-button1-font-weight);
+  line-height: var(--figma-size-line-height-button1);
+  font-size: var(--figma-size-font-button-1);
+  letter-spacing: var(--figma-font-button1-letter-spacing);
+  word-spacing: var(--figma-font-button1-paragraph-spacing);
+  text-transform: var(--figma-font-button1-text-case);
+  text-decoration: var(--figma-font-button1-text-decoration);
+}
+.button2 {
+  font-family: var(--figma-font-button2-font-family);
+  font-style: normal;
+  font-weight: var(--figma-font-button2-font-weight);
+  line-height: var(--figma-size-line-height-button2);
+  font-size: var(--figma-size-font-button-2);
+  letter-spacing: var(--figma-font-button2-letter-spacing);
+  word-spacing: var(--figma-font-button2-paragraph-spacing);
+  text-transform: var(--figma-font-button2-text-case);
+  text-decoration: var(--figma-font-button2-text-decoration);
+}
+.label {
+  font-family: var(--figma-font-label-font-family);
+  font-style: normal;
+  font-weight: var(--figma-font-label-font-weight);
+  line-height: var(--figma-size-line-height-label);
+  font-size: var(--figma-size-font-label);
+  letter-spacing: var(--figma-font-label-letter-spacing);
+  word-spacing: var(--figma-font-label-paragraph-spacing);
+  text-transform: var(--figma-font-label-text-case);
+  text-decoration: var(--figma-font-label-text-decoration);
+}
+.caption {
+  font-family: var(--figma-font-caption-font-family);
+  font-style: normal;
+  font-weight: var(--figma-font-caption-font-weight);
+  line-height: var(--figma-size-line-height-caption);
+  font-size: var(--figma-size-font-caption);
+  letter-spacing: var(--figma-font-caption-letter-spacing);
+  word-spacing: var(--figma-font-caption-paragraph-spacing);
+  text-transform: var(--figma-font-caption-text-case);
+  text-decoration: var(--figma-font-caption-text-decoration);
+}
+
+.text-center {
+  text-align: center !important;
+}
+.text-end {
+  text-align: right !important;
+}
