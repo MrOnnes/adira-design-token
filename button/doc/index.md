@@ -5,6 +5,7 @@ This is buttons component
 ```js script
 import { html } from 'lit';
 import '~/tokens/variables.css';
+import '~/tokens/src/styles.css';
 import '../src/button.css';
 ```
 
@@ -16,54 +17,69 @@ At this moment, our button component is just a combination of some CSS Custom Pr
 The other CSS file implements those design tokens onto any element with `.btn` class.
 
 ```html
-<link rel="stylesheet" href="...." />
-<button class="btn" [button type]></button>
+<link rel="stylesheet" href="...." /> <button class="btn btn-primary"></button>
 ```
 
-### Primary
+### Example
 
 ```js preview-story
-export const primary = () => html`
-  <button class="btn typo-button1">Primary</button>
+export const exampleButton = () => html`
+  <div class="bd-example">
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-light">Light</button>
+    <button type="button" class="btn btn-dark">Dark</button>
+    <button type="button" class="btn btn-link">Link</button>
+  </div>
 `;
 ```
 
-### Error
+### Size
+
+Fancy larger or smaller buttons? Add <span class="code">.btn-lg</span> or <span class="code">.btn-sm</span> for additional sizes.
 
 ```js preview-story
-export const error = () => html`
-  <button class="btn typo-button1" error>Primary</button>
+export const sizeButtonLg = () => html`
+  <div class="bd-example">
+    <button type="button" class="btn btn-primary btn-lg">Primary</button>
+    <button type="button" class="btn btn-secondary btn-lg">Secondary</button>
+  </div>
 `;
 ```
 
-### Secondary
-
 ```js preview-story
-export const secondary = () => html`
-  <button class="btn typo-button2" secondary>Secondary</button>
+export const sizeButtonSm = () => html`
+  <div class="bd-example">
+    <button type="button" class="btn btn-primary btn-sm">Primary</button>
+    <button type="button" class="btn btn-secondary btn-sm">Secondary</button>
+  </div>
 `;
 ```
 
-### Secondary-error
+### Disabled
+
+Make buttons look inactive by adding the <span class="code">disabled</span> boolean attribute
 
 ```js preview-story
-export const secondaryError = () => html`
-  <button class="btn typo-button2" secondary-error>Secondary</button>
+export const disabledButton = () => html`
+  <div class="bd-example">
+    <button type="button" class="btn btn-primary" disabled>Primary</button>
+    <button type="button" class="btn btn-secondary" disabled>Secondary</button>
+  </div>
 `;
 ```
 
-### text
+### Block Button
 
 ```js preview-story
-export const textbtn = () => html`
-  <button class="btn typo-button2" text>Text</button>
-`;
-```
-
-### text-error
-
-```js preview-story
-export const textErrorBtn = () => html`
-  <button class="btn typo-button2" text-error>Text</button>
+export const blockButton = () => html`
+  <div class="bd-example">
+    <button type="button" class="btn btn-primary" disabled>Primary</button>
+    <button type="button" class="btn btn-secondary" disabled>Secondary</button>
+  </div>
 `;
 ```

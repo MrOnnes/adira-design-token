@@ -1,0 +1,10 @@
+.code {
+  color: var(--figma-color-text-link); !important
+  word-wrap: break-word;
+}
+.d-grid{
+  display: grid!important;
+}
+.gap{
+  gap: 8px!important;
+}
