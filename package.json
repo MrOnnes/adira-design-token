@@ -1,18 +1,4 @@
 {
-  "name": "@backlight-dev/ragged-fiction-fhfxu.blank-l9wkeayq",
-  "version": "0.0.1",
-  "description": "",
-  "license": "MIT",
-  "type": "module",
-  "homepage": "{{ homepage }}",
-  "scripts": {
-    "serve": "npx backlight@latest serve hSAEtELKuZc4zA63KHpB --open"
-  },
-  "devDependencies": {
-    "token-transformer": "^0.0.27",
-    "style-dictionary": "^3.7.1",
-    "@divriots/dockit-core": "^0.9.4",
-    "lit": "^2.2.2"
-  },
-  "dependencies": {}
+ "name": "@backlight-dev/adira-design-system.adira-design-token",
+ "version": "0.0.0"
 }
