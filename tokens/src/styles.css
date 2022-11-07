@@ -1,5 +1,9 @@
 @import '../../button/src/button.css';
 @import '../../typography/src/typo.css';
+@import '../../field/src/form.css';
+@import '../../select/src/form-select.css';
+@import '../../checks-radios/src/form-check.css';
+@import '../../tokens/variables.css';
 
 @media (min-width: 768px) {
   .d-md-flex {
@@ -10,6 +14,10 @@
   }
 }
 
+[hidden] {
+  display: none !important;
+}
+
 .code {
   color: var(--figma-color-text-link);
   word-wrap: break-word;
@@ -17,8 +25,14 @@
 .d-grid {
   display: grid;
 }
+.d-flex {
+  display: flex;
+}
 .gap {
   gap: 2px !important;
+}
+.gap-med {
+  gap: var(--figma-size-space-12);
 }
 .col-6 {
   flex: 0 0 auto;
@@ -27,4 +41,10 @@
 .mx-auto {
   margin-left: auto !important;
   margin-right: auto !important;
+}
+.mb-2 {
+  margin-bottom: var(--figma-size-space-8) !important;
+}
+.w-full {
+  width: 100%;
 }

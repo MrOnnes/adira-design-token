@@ -1,18 +1,13 @@
-label {
-  font-family: var(--figma-font-label-font-family);
-  font-style: normal;
-  font-weight: var(--figma-font-label-font-weight);
-  font-size: var(--figma-size-font-label);
-  line-height: var(--figma-size-line-height-label);
-  text-transform: var(--figma-font-label-text-case);
-  color: var(--figma-color-text-normal);
-}
-
 .bd-example {
   display: flex;
   width: inherit;
   flex-wrap: wrap;
 }
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
 .btn {
   display: flex;
   flex-direction: row;

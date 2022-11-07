@@ -15,8 +15,16 @@
     [
      "button-comp",
      "button",
-     "Fields",
-     "typography"
+     "fields",
+     "typography",
+     "field"
+    ]
+   ],
+   [
+    "Forms",
+    [
+     "select",
+     "checks-radios"
     ]
    ],
    [
