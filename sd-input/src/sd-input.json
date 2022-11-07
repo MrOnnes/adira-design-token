@@ -840,7 +840,7 @@
       "button": {
         "primary": {
           "active": {
-            "value": "#FFDD00",
+            "value": "#6CE9A6",
             "type": "color"
           },
           "hover": {
