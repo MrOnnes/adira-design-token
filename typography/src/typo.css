@@ -1,3 +1,4 @@
+h1,
 .h1 {
   font-family: var(--figma-font-h1-font-family);
   font-style: normal;
@@ -9,6 +10,7 @@
   text-transform: var(--figma-font-h1-text-case);
   text-decoration: var(--figma-font-h1-text-decoration);
 }
+h2,
 .h2 {
   font-family: var(--figma-font-h2-font-family);
   font-style: normal;
@@ -21,6 +23,7 @@
   text-decoration: var(--figma-font-h2-text-decoration);
 }
 
+h3,
 .h3 {
   font-family: var(--figma-font-h3-font-family);
   font-style: normal;
@@ -33,6 +36,7 @@
   text-decoration: var(--figma-font-h3-text-decoration);
 }
 
+h4,
 .h4 {
   font-family: var(--figma-font-h4-font-family);
   font-style: normal;
@@ -45,6 +49,7 @@
   text-decoration: var(--figma-font-h4-text-decoration);
 }
 
+h5,
 .h5 {
   font-family: var(--figma-font-h5-font-family);
   font-style: normal;
@@ -57,6 +62,7 @@
   text-decoration: var(--figma-font-h5-text-decoration);
 }
 
+h6,
 .h6 {
   font-family: var(--figma-font-h6-font-family);
   font-style: normal;
@@ -135,7 +141,8 @@
   text-transform: var(--figma-font-button2-text-case);
   text-decoration: var(--figma-font-button2-text-decoration);
 }
-.label {
+.label,
+label {
   font-family: var(--figma-font-label-font-family);
   font-style: normal;
   font-weight: var(--figma-font-label-font-weight);
@@ -156,6 +163,18 @@
   word-spacing: var(--figma-font-caption-paragraph-spacing);
   text-transform: var(--figma-font-caption-text-case);
   text-decoration: var(--figma-font-caption-text-decoration);
+}
+a,
+.a {
+  text-decoration: none;
+
+  font-family: var(--figma-font-family-sans);
+  font-style: normal;
+  font-weight: var(--figma-font-button2-font-weight);
+  font-size: var(--figma-size-font-button-2);
+  line-height: var(--figma-size-line-height-button2);
+
+  color: var(--figma-color-text-link);
 }
 
 .text-center {

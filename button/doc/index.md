@@ -2,8 +2,7 @@
 
 ```js script
 import { html } from 'lit';
-import '~/tokens/variables.css';
-import '~/tokens/src/styles.css';
+import '../../tokens/src/styles.css';
 ```
 
 ## Usage

@@ -1,0 +1,199 @@
+.form-check-inline {
+  display: flex;
+  gap: 8px;
+}
+/*
+*
+Checkbox
+*
+*/
+
+.checkbox {
+  display: block;
+  position: relative;
+  padding-left: 26px;
+  padding-top: 1px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #fff;
+  border: 1px solid var(--figma-color-border-base);
+  border-radius: var(--figma-size-checkbox-radius);
+}
+
+.checkbox:hover input ~ .checkmark {
+  background-color: var(--figma-color-background-base-grey);
+}
+
+.checkbox:disabled input ~ .checkmark {
+  background-color: #fff;
+  color: var(--figma-color-text-disable);
+}
+.checkbox[disabled] {
+  background-color: #fff;
+  color: var(--figma-color-text-disable);
+}
+
+.checkbox input:checked ~ .checkmark {
+  background-color: #fff;
+}
+
+.checkmark::after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.checkbox input:checked ~ .checkmark::after {
+  display: block;
+}
+
+.checkbox .checkmark::after {
+  position: absolute;
+  left: 26%;
+  top: 0%;
+  bottom: 29.17%;
+  width: 5px;
+  height: 10px;
+  border: 2px solid var(--figma-color-border-success);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.checkbox .indeterminate.checkmark::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0d6efd;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
+  border: none;
+  border-radius: 2px;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+/* RADIO */
+.radio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+.radio input {
+  opacity: 0;
+  cursor: pointer;
+}
+.radio .checkmark {
+  height: 16px;
+  width: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.radio:hover input ~ .checkmark {
+  background-color: #f2f4f7;
+}
+
+.radio input:checked ~ .checkmark {
+  background-color: #fff;
+  border: 1px solid #53b1fd;
+}
+
+.radio input:checked ~ .checkmark::after {
+  display: block;
+  background: #2e90fa;
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.radio:disabled input ~ .checkmark {
+  background-color: #fff;
+  color: var(--figma-color-text-disable);
+}
+.radio[disabled] {
+  background-color: #fff;
+  color: var(--figma-color-text-disable);
+}
+
+/*
+*
+Switch
+*
+*/
+
+.switch {
+  display: flex;
+  align-items: center;
+}
+
+.switch[disabled] {
+  color: var(--figma-color-text-disable);
+}
+
+.switch input {
+  visibility: hidden;
+  width: 0px;
+}
+.switch .toggle {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 44px;
+  height: 24px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+  margin-right: 8px;
+}
+.toggle {
+  top: 0;
+}
+.switch .toggle::after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 100%;
+  transition: 0.3s;
+}
+input:checked + .toggle {
+  background: var(--figma-color-background-primary);
+}
+input:checked + .toggle::after {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+}
+.toggle:active::after {
+  width: 25px;
+}

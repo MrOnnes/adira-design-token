@@ -1,0 +1,74 @@
+.helper {
+  color: var(--figma-color-text-disable);
+}
+
+.form-control {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: var(--figma-size-field-padding-top-bottom)
+    var(--figma-size-field-padding-right-left);
+  gap: var(--figma-size-field-gap);
+
+  height: 44px;
+  width: 100%;
+
+  background: var(--figma-color-background-base-light);
+
+  border: 1px solid var(--figma-color-border-base);
+  border-radius: var(--figma-size-field-radius);
+}
+.form-control:focus {
+  outline: none;
+  border: 2px solid var(--figma-color-background-primary);
+  box-shadow: 0 0 10px var(var(--figma-color-background-primary));
+}
+textarea {
+  resize: vertical;
+}
+textarea.form-control {
+  min-height: 80px;
+}
+
+/* DISABLED */
+.form-control:disabled {
+  background-color: var(--figma-color-background-disable);
+}
+
+/* SIZING */
+.form-control-lg {
+  min-height: ;
+  padding: ;
+  font-size: ;
+  border-radius: ;
+}
+.form-control-sm {
+  min-height: ;
+  padding: ;
+  font-size: ;
+  border-radius: ;
+}
+
+/* PLAIN-TEXT */
+.form-control-plaintext {
+  box-sizing: border-box;
+
+  display: block;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: var(--figma-size-field-padding-top-bottom)
+    var(--figma-size-field-padding-right-left);
+
+  height: 44px;
+  width: 100%;
+
+  background: var(--figma-color-background-base-light);
+
+  border: 1px solid transparent;
+  border-radius: var(--figma-size-field-radius);
+}
+.form-control-plaintext:focus {
+  outline: none;
+}

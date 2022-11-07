@@ -4,7 +4,7 @@
 import { html } from 'lit';
 import '@divriots/dockit-core/css-showcases/dockit-css-showcases.define.js';
 import './styles.css';
-import '~/tokens/variables.css';
+import '../../tokens/variables.css';
 ```
 
 ## Background
