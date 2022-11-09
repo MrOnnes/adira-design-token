@@ -857,7 +857,7 @@
         "button": {
           "primary": {
             "active": {
-              "value": "{palette.success.300}",
+              "value": "{palette.primary.300}",
               "type": "color"
             },
             "hover": {
