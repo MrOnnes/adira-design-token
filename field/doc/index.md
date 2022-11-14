@@ -3,13 +3,14 @@
 ```js script
 import { html } from 'lit';
 import '../../tokens/src/styles.css';
+import 'https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css';
 ```
 
 ### Example
 
 ```js preview-story
 export const exampleField = () => html`
-  <form class="bd-example gap-med mb-2">
+  <form class="d-grid gap-med mb-2">
     <div class="w-full mb-2 ">
       <label for="Label">NIP</label>
       <input
@@ -38,7 +39,7 @@ export const exampleField = () => html`
     </div>
   </form>
 
-  <div class="bd-example d-grid gap">
+  <div class="d-grid gap">
     <button type="button" class="btn btn-primary">Primary</button>
   </div>
 `;
@@ -50,7 +51,7 @@ Add `input-icon` class on `<div>`
 
 ```js preview-story
 export const inputFieldWIcon = () => html`
-  <form class="bd-example">
+  <form>
     <div class="w-full input-icon">
       <label for="Label">NIP</label>
       <input
@@ -70,10 +71,10 @@ export const inputFieldWIcon = () => html`
 ### Password toggle button
 
 ```js preview-story
-import { showPassword } from './showpassword.js';
+import { showPassword } from './field.js';
 
 export const inputFieldPassEye = () => html`
-  <form class="bd-example">
+  <form>
     <div class="w-full input-icon">
       <label for="Label">Password</label>
       <input
@@ -84,30 +85,13 @@ export const inputFieldPassEye = () => html`
         placeholder="Masukan Password"
       />
       <i class="fa-solid fa-key prefix"></i>
-      <span class="suffix" onclick="showPassword()">
+      <span class="suffix" @click="${showPassword}">
         <i id="hide1" class="fa-solid fa-eye"></i>
         <i id="hide2" class="fa-solid fa-eye-slash"></i>
       </span>
       <div class="caption helper">Password min 8 karakter</div>
     </div>
   </form>
-
-  <script>
-    function showPassword() {
-      var x = document.getElementById('password');
-      var y = document.getElementById('hide1');
-      var z = document.getElementById('hide2');
-      if (x.type === 'password') {
-        x.type = 'text';
-        y.style.display = 'block';
-        z.style.display = 'none';
-      } else {
-        x.type = 'password';
-        y.style.display = 'none';
-        z.style.display = 'block';
-      }
-    }
-  </script>
 `;
 ```
 
@@ -117,7 +101,7 @@ Form text below inputs can be styled with .helper. If a block-level element will
 
 ```js preview-story
 export const inputField = () => html`
-  <form class="bd-example">
+  <form>
     <div class="w-full">
       <label for="Label">Label</label>
       <input
@@ -139,8 +123,8 @@ Add the `disabled` boolean attribute on an input to prevent user interactions an
 
 ```js preview-story
 export const inputFieldDisabled = () => html`
-  <form class="bd-example">
-    <div class="w-full">
+  <form>
+    <div class="d-grip w-full">
       <label for="Label">Label</label>
       <input
         class="form-control"
@@ -162,7 +146,7 @@ export const inputFieldDisabled = () => html`
 
 ```js preview-story
 export const inputFieldDisabledEx = () => html`
-  <form class="bd-example gap-med">
+  <form class="d-grid gap-med">
     <div class="w-full">
       <label for="Label">Disabled field</label>
       <input
@@ -205,7 +189,7 @@ Form text below inputs can be styled with .helper. If a block-level element will
 
 ```js preview-story
 export const inputFieldLarge = () => html`
-  <form class="bd-example">
+  <form>
     <div class="w-full">
       <label for="Label">Label</label>
       <input
@@ -223,7 +207,7 @@ export const inputFieldLarge = () => html`
 
 ```js preview-story
 export const inputFieldSmall = () => html`
-  <form class="bd-example">
+  <form>
     <div class="w-full">
       <label for="Label">Label</label>
       <input
@@ -255,7 +239,7 @@ and
 
 ```js preview-story
 export const inputFieldTextarea = () => html`
-  <form class="bd-example">
+  <form class="d-grid gap-med">
     <div class="w-full">
       <label for="Label">Email</label>
       <input
@@ -280,7 +264,7 @@ replace .form-control with .form-control-plaintext to remove the default form fi
 
 ```js preview-story
 export const inputFieldReadonly = () => html`
-  <form class="bd-example">
+  <form>
     <div class="w-full">
       <label for="Label">Email</label>
       <input
@@ -300,7 +284,7 @@ export const inputFieldReadonly = () => html`
 
 ```js preview-story
 export const inputFieldUpload = () => html`
-  <form class="bd-example gap-med">
+  <form class="d-grid gap-med">
     <div class="w-full ">
       <label for="Label">Upload KTP</label>
       <div class="d-flex gap-med">
@@ -380,7 +364,7 @@ export const inputFieldUpload = () => html`
 
 ```js preview-story
 export const inputDate = () => html`
-  <form class="bd-example gap-med">
+  <form>
     <div class="w-full">
       <label for="Label">Tanggal Lahir</label>
       <div class="d-flex gap-med">
@@ -391,6 +375,50 @@ export const inputDate = () => html`
           name="name"
           placeholder="Placeholder"
         />
+      </div>
+    </div>
+  </form>
+`;
+```
+
+#### Button style datepicker
+
+using jQuery UI Plugin
+
+```
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+```
+
+The input field ID (datepicker) needs to be specified as datepicker selector.
+
+```
+$(function(){
+    $("#datepicker").datepicker();
+});
+```
+
+```js preview-story
+import { showDate } from './field.js';
+export const exDate = () => html`
+  <form>
+    <div class="w-full">
+      <label for="date">Tanggal Lahir</label>
+      <div class="d-flex gap-med">
+        <input
+          class="form-control"
+          type="text"
+          id="date"
+          name="name"
+          placeholder="Select Date"
+          readonly
+        /><span class="suffix" @click="${showDate}">
+          <label class="btn btn-primary" for="date">
+            <i class="fa-solid fa-calendar"></i>
+          </label>
+        </span>
       </div>
     </div>
   </form>

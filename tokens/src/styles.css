@@ -6,7 +6,7 @@
 @import '../../field/src/form.css';
 @import '../../carousel/src/carousel.css';
 @import '../../pagination/src/pagination.css';
-@import '../../select/src/form-select.css';
+@import '../../dropdown/src/form-select.css';
 @import '../../checks-radios/src/form-check.css';
 @import '../../input-group/src/input-group.css';
 @import '../../navs-tabs/src/nav.css';
@@ -20,6 +20,19 @@
 ::before {
   box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+  font-family: var(--figma-font-body1-font-family);
+  font-size: var(--figma-size-font-body-1);
+  font-weight: var(--figma-font-body1-font-weight);
+  line-height: var(--figma-size-line-height-body1);
+  color: var(--figma-color-text-normal);
+  background-color: var(--figma-color-background-base-light);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 @media (min-width: 768px) {
   .d-md-flex {
     display: flex !important;

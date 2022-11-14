@@ -1,3 +1,6 @@
+@import url('http://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css');
+
+/* import 'https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css'; */
 .fa-solid {
 }
 #hide1 {
@@ -110,4 +113,37 @@ input[type='file'] {
   width: 0%;
   margin-left: -20px;
   margin-top: 3px;
+}
+
+input[type='date'] {
+  font-family: var(--figma-font-body2-font-family);
+  font-style: normal;
+  font-weight: var(--figma-font-body2-font-weight);
+  font-size: var(--figma-size-font-body-2);
+  line-height: var(--figma-size-line-height-body2);
+  /* identical to box height, or 143% */
+
+  /* text-transform: capitalize; */
+
+  /* palette/gray/700 */
+
+  color: var(--figma-color-text-normal);
+}
+::-webkit-calendar-picker-indicator {
+  /* visibility: hidden; */
+}
+[type='date'] {
+  /* background: #fff
+    url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)
+    97% 50% no-repeat; */
+}
+
+.input-date input[type='text'] {
+}
+[type='date']::-webkit-inner-spin-button {
+  display: none;
+}
+[type='date']::-webkit-calendar-picker-indicator {
+  /* opacity: 1;
+  width: 10%; */
 }
