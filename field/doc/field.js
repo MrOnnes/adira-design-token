@@ -1,3 +1,6 @@
+import 'https://code.jquery.com/jquery-3.6.0.js';
+import 'https://code.jquery.com/ui/1.13.1/jquery-ui.js';
+
 export function showPassword() {
   var x = document.getElementById('password');
   var y = document.getElementById('hide1');
@@ -13,8 +16,7 @@ export function showPassword() {
   }
 }
 
-export function showPassword1() {
-  console.log('contoh');
+export function showDate() {
+  console.log('function showDate');
+  $('#date').datepicker();
 }
-
-export default showPassword1;
