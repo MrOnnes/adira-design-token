@@ -1,0 +1,41 @@
+.cards {
+  border-radius: var(--figma-size-card-radius);
+  background-clip: border-box !important;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  min-width: 350px;
+  word-wrap: break-word;
+  background: #fff;
+}
+.cards img {
+  margin: 0 !important;
+  object-fit: cover;
+  height: 250px;
+}
+.placeholder-img {
+  background-color: gray;
+  border-top-left-radius: var(--figma-size-card-radius);
+  border-top-right-radius: var(--figma-size-card-radius);
+}
+
+.card-body {
+  padding: 16px;
+  color: var(--figma-color-text-normal);
+  align-self: stretch;
+}
+
+.card-action {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.card-title {
+}
+
+.card-subtitle {
+}
+
+.card-text {
+}

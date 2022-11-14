@@ -1,10 +1,25 @@
+@import '@fortawesome/fontawesome-free/css/fontawesome.css';
+@import '../../cards/src/cards.css';
+@import '../../breadcrumb/src/breadcrumb.css';
 @import '../../button/src/button.css';
 @import '../../typography/src/typo.css';
 @import '../../field/src/form.css';
+@import '../../carousel/src/carousel.css';
+@import '../../pagination/src/pagination.css';
 @import '../../select/src/form-select.css';
 @import '../../checks-radios/src/form-check.css';
+@import '../../input-group/src/input-group.css';
+@import '../../navs-tabs/src/nav.css';
+@import '../../navbar/src/navbar.css';
+@import '../../tags/src/tags.css';
+@import '../../shadows/src/shadows.css';
 @import '../../tokens/variables.css';
 
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
 @media (min-width: 768px) {
   .d-md-flex {
     display: flex !important;
@@ -18,25 +33,141 @@
   display: none !important;
 }
 
+.visible {
+  visibility: visible !important;
+}
+.invisible {
+  visibility: hidden !important;
+}
+
+.preview-box {
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 10px;
+  padding-bottom: 30px;
+}
 .code {
   color: var(--figma-color-text-link);
   word-wrap: break-word;
 }
+.d-inline {
+  display: inline !important;
+}
+
+.d-inline-block {
+  display: inline-block !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
 .d-grid {
-  display: grid;
+  display: grid !important;
 }
+
+.d-table {
+  display: table !important;
+}
+
+.d-table-row {
+  display: table-row !important;
+}
+
+.d-table-cell {
+  display: table-cell !important;
+}
+
 .d-flex {
-  display: flex;
+  display: flex !important;
 }
-.gap {
-  gap: 2px !important;
+
+.d-inline-flex {
+  display: inline-flex !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.gap-none {
+  gap: 0 !important;
+}
+.gap-sm {
+  gap: var(--figma-size-space-4) !important;
 }
 .gap-med {
-  gap: var(--figma-size-space-12);
+  gap: var(--figma-size-space-8) !important;
 }
+.gap-lg {
+  gap: var(--figma-size-space-20) !important;
+}
+.gap-xl {
+  gap: var(--figma-size-space-32) !important;
+}
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+.col-1 {
+  flex: 0 0 auto;
+  width: 8.33333333%;
+}
+
+.col-2 {
+  flex: 0 0 auto;
+  width: 16.66666667%;
+}
+
+.col-3 {
+  flex: 0 0 auto;
+  width: 25%;
+}
+
+.col-4 {
+  flex: 0 0 auto;
+  width: 33.33333333%;
+}
+
+.col-5 {
+  flex: 0 0 auto;
+  width: 41.66666667%;
+}
+
 .col-6 {
   flex: 0 0 auto;
-  width: 50% !important;
+  width: 50%;
+}
+
+.col-7 {
+  flex: 0 0 auto;
+  width: 58.33333333%;
+}
+
+.col-8 {
+  flex: 0 0 auto;
+  width: 66.66666667%;
+}
+
+.col-9 {
+  flex: 0 0 auto;
+  width: 75%;
+}
+
+.col-10 {
+  flex: 0 0 auto;
+  width: 83.33333333%;
+}
+
+.col-11 {
+  flex: 0 0 auto;
+  width: 91.66666667%;
+}
+
+.col-12 {
+  flex: 0 0 auto;
+  width: 100%;
 }
 .mx-auto {
   margin-left: auto !important;
@@ -47,4 +178,18 @@
 }
 .w-full {
   width: 100%;
+}
+
+dl,
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  display: block;
+  list-style-type: decimal;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
 }

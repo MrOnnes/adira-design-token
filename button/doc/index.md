@@ -18,7 +18,7 @@ The other CSS file implements those design tokens onto any element with `.btn` c
 
 ```js preview-story
 export const exampleButton = () => html`
-  <div class="bd-example">
+  <div class="bd-example gap-med">
     <button type="button" class="btn btn-primary">Primary</button>
     <button type="button" class="btn btn-secondary">Secondary</button>
     <button type="button" class="btn btn-success">Success</button>
@@ -32,13 +32,49 @@ export const exampleButton = () => html`
 `;
 ```
 
+#### With Icon
+
+```js preview-story
+export const exampleButtonIcon = () => html`
+  <div class="bd-example gap-med">
+    <button type="button" class="btn btn-primary">
+      <i class="fa-solid fa-download"></i>Primary
+    </button>
+    <button type="button" class="btn btn-secondary">
+      <i class="fa-solid fa-download"></i>Secondary
+    </button>
+    <button type="button" class="btn btn-success">
+      <i class="fa-solid fa-download"></i>Success
+    </button>
+    <button type="button" class="btn btn-danger">
+      <i class="fa-solid fa-download"></i>Danger
+    </button>
+    <button type="button" class="btn btn-warning">
+      <i class="fa-solid fa-download"></i>Warning
+    </button>
+    <button type="button" class="btn btn-info">
+      <i class="fa-solid fa-download"></i>Info
+    </button>
+    <button type="button" class="btn btn-light">
+      <i class="fa-solid fa-download"></i>Light
+    </button>
+    <button type="button" class="btn btn-dark">
+      <i class="fa-solid fa-download"></i>Dark
+    </button>
+    <button type="button" class="btn btn-link">
+      <i class="fa-solid fa-download"></i>Link
+    </button>
+  </div>
+`;
+```
+
 ### Size
 
 Fancy larger or smaller buttons? Add <span class="code">.btn-lg</span> or <span class="code">.btn-sm</span> for additional sizes.
 
 ```js preview-story
 export const sizeButtonLg = () => html`
-  <div class="bd-example">
+  <div class="bd-example gap-med">
     <button type="button" class="btn btn-primary btn-lg">Primary</button>
     <button type="button" class="btn btn-secondary btn-lg">Secondary</button>
   </div>
@@ -47,7 +83,7 @@ export const sizeButtonLg = () => html`
 
 ```js preview-story
 export const sizeButtonSm = () => html`
-  <div class="bd-example">
+  <div class="bd-example  gap-med">
     <button type="button" class="btn btn-primary btn-sm">Primary</button>
     <button type="button" class="btn btn-secondary btn-sm">Secondary</button>
   </div>
@@ -60,20 +96,20 @@ Make buttons look inactive by adding the <span class="code">disabled</span> bool
 
 ```js preview-story
 export const disabledButton = () => html`
-  <div class="bd-example">
+  <div class="bd-example gap-med">
     <button type="button" class="btn btn-primary" disabled>Primary</button>
     <button type="button" class="btn btn-secondary" disabled>Secondary</button>
   </div>
 `;
 ```
 
-### Block Button
+### Button Group
 
 Responsive "Block Button". Resize your browser to see them change.
 
 ```js preview-story
 export const blockButton = () => html`
-  <div class="bd-example d-grid gap">
+  <div class="bd-example d-grid  gap-med">
     <button type="button" class="btn btn-primary">Primary</button>
     <button type="button" class="btn btn-secondary">Secondary</button>
   </div>
@@ -82,7 +118,7 @@ export const blockButton = () => html`
 
 ```js preview-story
 export const blockLeftButton = () => html`
-  <div class="bd-example d-grid gap d-md-flex">
+  <div class="bd-example d-grid  gap-med d-md-flex">
     <button type="button" class="btn btn-primary">Primary</button>
     <button type="button" class="btn btn-secondary">Secondary</button>
   </div>
@@ -91,7 +127,7 @@ export const blockLeftButton = () => html`
 
 ```js preview-story
 export const blockMidButton = () => html`
-  <div class="bd-example d-grid gap mx-auto col-6">
+  <div class="bd-example d-grid  gap-med mx-auto col-6">
     <button type="button" class="btn btn-primary">Primary</button>
     <button type="button" class="btn btn-secondary">Secondary</button>
   </div>
@@ -100,7 +136,7 @@ export const blockMidButton = () => html`
 
 ```js preview-story
 export const blockRightButton = () => html`
-  <div class="bd-example d-grid gap d-md-flex justify-content-md-end">
+  <div class="bd-example d-grid  gap-med d-md-flex justify-content-md-end">
     <button type="button" class="btn btn-primary">Primary</button>
     <button type="button" class="btn btn-secondary">Secondary</button>
   </div>

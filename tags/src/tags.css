@@ -1,0 +1,36 @@
+.tags {
+  --ad-size-chip-radius: var(--figma-size-chip-radius);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 16px;
+  gap: 8px;
+
+  height: 32px;
+
+  background: var(--figma-color-background-base-light);
+  border-radius: var(--ad-size-chip-radius);
+}
+
+.tag-primary {
+  color: var(--figma-color-text-normal);
+  background: var(--figma-color-background-primary);
+}
+.tag-success {
+  color: var(--figma-color-text-success);
+  background: var(--figma-color-background-success);
+}
+.tag-error {
+  color: var(--figma-color-text-error);
+  background: var(--figma-color-background-error);
+}
+.tag-warning {
+  color: var(--figma-color-text-normal);
+  background: var(--figma-color-background-primary);
+}
+.tag-confirmed {
+  color: var(--figma-color-text-link);
+  background: var(--figma-color-background-link);
+}

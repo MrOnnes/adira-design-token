@@ -12,7 +12,12 @@
     "token-transformer": "^0.0.27",
     "style-dictionary": "^3.7.1",
     "@divriots/dockit-core": "^0.9.4",
-    "lit": "^2.2.2"
+    "lit": "^2.2.2",
+    "@fortawesome/fontawesome-free": "*",
+    "@fortawesome/free-solid-svg-icons": "*",
+    "@fortawesome/fontawesome-svg-core": "*",
+    "@rocket/create": "*",
+    "@mdjs/core": "*"
   },
   "dependencies": {}
 }
