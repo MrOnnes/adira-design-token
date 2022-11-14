@@ -8,15 +8,6 @@ Checkbox
 *
 */
 
-.checkbox {
-  display: block;
-  position: relative;
-  padding-left: 26px;
-  padding-top: 1px;
-  cursor: pointer;
-  user-select: none;
-}
-
 .checkbox input {
   position: absolute;
   opacity: 0;
@@ -40,15 +31,24 @@ Checkbox
   background-color: var(--figma-color-background-base-grey);
 }
 
-.checkbox:disabled input ~ .checkmark {
-  background-color: #fff;
-  color: var(--figma-color-text-disable);
-}
-.checkbox[disabled] {
-  background-color: #fff;
+input[type='checkbox'][disabled] label.checkbox {
   color: var(--figma-color-text-disable);
 }
 
+.checkbox.checkbox[disabled],
+.checkbox .checkmark::after {
+  background-color: #fff;
+  color: var(--figma-color-text-disable);
+}
+.checkbox {
+  display: block;
+  position: relative;
+  padding-left: 26px;
+  padding-top: 1px;
+  cursor: pointer;
+  user-select: none;
+  /*color: var(--figma-color-text-normal)!important;*/
+}
 .checkbox input:checked ~ .checkmark {
   background-color: #fff;
 }
@@ -65,13 +65,12 @@ Checkbox
 
 .checkbox .checkmark::after {
   position: absolute;
-  left: 26%;
-  top: 0%;
-  bottom: 29.17%;
+  left: 35%;
+  top: 6%;
   width: 5px;
   height: 10px;
   border: 2px solid var(--figma-color-border-success);
-  border-width: 0 3px 3px 0;
+  border-width: 0 2px 2px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -120,14 +119,14 @@ Checkbox
 
 .radio input:checked ~ .checkmark {
   background-color: #fff;
-  border: 1px solid #53b1fd;
+  border: 1px solid var(--figma-color-border-link);
 }
 
 .radio input:checked ~ .checkmark::after {
   display: block;
-  background: #2e90fa;
-  top: 4px;
-  left: 4px;
+  background: var(--figma-color-text-link);
+  top: 3px;
+  left: 3px;
   width: 8px;
   height: 8px;
   border-radius: 50%;

@@ -7,10 +7,12 @@ import '../../tokens/src/styles.css';
 
 ### Default
 
+eplaced with the help of .checkbox, a series of classes for both input types that improves the layout and behavior of their HTML elements, that provide greater customization and cross browser consistency. Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.Browser default checkboxes and radios are r
+
 ```js preview-story
 export const defaultCheck = () => html`
-  <label class="checkbox"
-    >Default Checkbox
+  <label class="checkbox">
+    Default Checkbox
     <input type="checkbox" checked="checked" />
     <span class="checkmark"></span>
   </label>
@@ -28,8 +30,8 @@ attribute) src:[MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/
 
 ```js preview-story
 export const indeterminate = () => html`
-  <label class="checkbox"
-    >Indeterminate Checkbox
+  <label class="checkbox">
+    Indeterminate Checkbox
     <input type="checkbox" checked="checked" />
     <span class="checkmark indeterminate"></span>
   </label>
@@ -38,16 +40,18 @@ export const indeterminate = () => html`
 
 ### Disabled
 
+Add the disabled attribute and the associated <label>s are automatically styled to match with a lighter color to help indicate the input’s state.
+
 ```js preview-story
 export const disabledCheck = () => html`
   <form class="d-grid gap-med">
-    <label class="checkbox" disabled
-      >Disabled Checkbox
-      <input type="checkbox" disabled />
+    <label class="checkbox" disabled>
+      Disabled Checkbox
+      <input type="checkbox" class="checkbox" disabled />
       <span class="checkmark"></span>
     </label>
-    <label class="checkbox" disabled
-      >Disabled Checkbox
+    <label class="checkbox" disabled>
+      Disabled Checkbox
       <input type="checkbox" checked="checked" disabled />
       <span class="checkmark"></span>
     </label>
@@ -60,12 +64,12 @@ export const disabledCheck = () => html`
 ```js preview-story
 export const defaultRadio = () => html`
   <div>
-    <label class="radio"
-      >Option 1<input type="radio" checked="checked" name="radio" />
+    <label class="radio">
+      Option 1<input type="radio" checked="checked" name="radio" />
       <span class="checkmark"></span>
     </label>
-    <label class="radio"
-      >Option 2<input type="radio" checked="checked" name="radio" />
+    <label class="radio">
+      Option 2<input type="radio" checked="checked" name="radio" />
       <span class="checkmark"></span>
     </label>
   </div>
@@ -74,15 +78,17 @@ export const defaultRadio = () => html`
 
 ### Disabled
 
+Add the disabled attribute and the associated <label>s are automatically styled to match with a lighter color to help indicate the input’s state.
+
 ```js preview-story
 export const disabledRadio = () => html`
   <div>
-    <label class="radio" disabled
-      >Option 1<input type="radio" name="radio" disabled />
+    <label class="radio" disabled>
+      Option 1<input type="radio" name="radio" disabled />
       <span class="checkmark"></span>
     </label>
-    <label class="radio" disabled
-      >Option 2<input type="radio" name="radio" disabled />
+    <label class="radio" disabled>
+      Option 2<input type="radio" name="radio" disabled />
       <span class="checkmark"></span>
     </label>
   </div>
@@ -125,13 +131,13 @@ By default, any number of checkboxes and radios that are immediate sibling will 
 ```js preview-story
 export const defaultStack = () => html`
   <div class="d-grid gap-med">
-    <label class="checkbox"
-      >Default Checkbox
+    <label class="checkbox">
+      Default Checkbox
       <input type="checkbox" checked="checked" />
       <span class="checkmark"></span>
     </label>
-    <label class="checkbox" disabled
-      >Disabled Checkbox
+    <label class="checkbox" disabled>
+      Disabled Checkbox
       <input type="checkbox" disabled />
       <span class="checkmark"></span>
     </label>
@@ -146,13 +152,13 @@ Group checkboxes or radios on the same horizontal row by adding .form-check-inli
 ```js preview-story
 export const defaultInline = () => html`
   <div class="form-check-inline">
-    <label class="checkbox"
-      >Default Checkbox
+    <label class="checkbox">
+      Default Checkbox
       <input type="checkbox" checked="checked" />
       <span class="checkmark"></span>
     </label>
-    <label class="checkbox" disabled
-      >Disabled Checkbox
+    <label class="checkbox" disabled>
+      Disabled Checkbox
       <input type="checkbox" disabled />
       <span class="checkmark"></span>
     </label>

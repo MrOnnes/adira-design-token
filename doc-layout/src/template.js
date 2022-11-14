@@ -1,10 +1,14 @@
 import '@divriots/dockit-core/layout/dockit-layout.define.js';
 import '@divriots/dockit-core/css-showcases/dockit-css-showcases.define.js';
 import { styles } from '@divriots/dockit-core/layout';
+import '@fortawesome/fontawesome-free/js/solid.js';
 import '~/tokens/variables.css';
+import '~/field/doc/showpassword.js';
 import { html } from 'lit';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 import logoSvg from './logo.svg?raw';
+
+import 'https://kit.fontawesome.com/5089d486f3.js';
 
 // Needed for now, initial-color-scheme isn't enough
 //document.documentElement.classList.add('dark');

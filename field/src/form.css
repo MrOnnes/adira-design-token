@@ -1,13 +1,44 @@
+.fa-solid {
+}
+#hide1 {
+  display: none;
+}
 .helper {
   color: var(--figma-color-text-disable);
 }
+.input-icon {
+  position: relative;
+}
+.input-icon input {
+  padding-left: 40px !important;
+  position: relative;
+}
+.input-icon .prefix {
+  position: absolute;
+  left: 7px;
+  top: 25px;
+  padding: 9px 8px;
+  color: #aaa;
+}
 
+.input-icon .suffix {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  right: 7px;
+  top: 25px;
+  padding: 9px 8px;
+  color: #aaa;
+}
+
+.suffix i {
+  font-size: 1.2em;
+}
 .form-control {
   box-sizing: border-box;
 
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
   padding: var(--figma-size-field-padding-top-bottom)
     var(--figma-size-field-padding-right-left);
   gap: var(--figma-size-field-gap);
@@ -58,17 +89,25 @@ textarea.form-control {
   display: block;
   flex-direction: row;
   align-items: flex-start;
-  padding: var(--figma-size-field-padding-top-bottom)
-    var(--figma-size-field-padding-right-left);
 
   height: 44px;
   width: 100%;
-
-  background: var(--figma-color-background-base-light);
 
   border: 1px solid transparent;
   border-radius: var(--figma-size-field-radius);
 }
 .form-control-plaintext:focus {
   outline: none;
+}
+
+input[type='file'] {
+  /*display: none;*/
+}
+.form-control::-webkit-file-upload-button {
+}
+.form-control::file-selector-button {
+  visibility: hidden;
+  width: 0%;
+  margin-left: -20px;
+  margin-top: 3px;
 }

@@ -1,0 +1,41 @@
+.pagination {
+  display: flex;
+  padding-left: 0;
+  list-style: none !important;
+}
+
+.page-link {
+  position: relative;
+  display: block;
+  padding: 2px 9px;
+  font-size: 12px;
+
+  text-decoration: none !important;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.page-link.active {
+  color: #53b1fd !important;
+  border: 1px solid #53b1fd !important;
+}
+.page-link.disabled {
+  color: #d0d5dd !important;
+  pointer-events: none;
+}
+
+.page-link:hover {
+  background-color: var(--figma-color-background-button-secondary-hover);
+}
+
+.page-item:first-child .page-link {
+}
+
+.pagination-lg .page-link {
+  border: 1px solid #d0d5dd !important;
+  padding: 4px 10px;
+}
+
+.pagination-lg .page-link.active {
+  border: 1px solid #53b1fd !important;
+}

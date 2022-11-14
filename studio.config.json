@@ -1,39 +1,51 @@
 {
- "packages": {
-  "dir": "",
-  "menu": [
-   [
-    "TOKENS",
-    [
-     "tokens",
-     "colors",
-     "size"
+  "packages": {
+    "dir": "",
+    "menu": [
+      [
+        "TOKENS",
+        [
+          "tokens",
+          "colors",
+          "size"
+        ]
+      ],
+      [
+        "COMPONENTS",
+        [
+          "button-comp",
+          "button",
+          "breadcrumb",
+          "cards",
+          "carousel",
+          "field",
+          "navs-tabs",
+          "navbar",
+          "pagination",
+          "tags"
+        ]
+      ],
+      [
+        "Forms",
+        [
+          "select",
+          "checks-radios",
+          "input-group"
+        ]
+      ],
+      [
+        "Utilities",
+        [
+          "shadows"
+        ]
+      ],
+      [
+        "INFRASTRUCTURE",
+        [
+          "sd-input",
+          "doc-layout"
+        ]
+      ]
     ]
-   ],
-   [
-    "COMPONENTS",
-    [
-     "button-comp",
-     "button",
-     "fields",
-     "typography",
-     "field"
-    ]
-   ],
-   [
-    "Forms",
-    [
-     "select",
-     "checks-radios"
-    ]
-   ],
-   [
-    "INFRASTRUCTURE",
-    [
-     "sd-input",
-     "doc-layout"
-    ]
-   ]
-  ]
- }
+  }
 }
