@@ -173,20 +173,16 @@ export const exHeading = () => html`
 
 ### Alignment
 
-```js preview-story
-export const exAlignmentCenter = () => html`
+```html preview-story
   <figure class="text-center">
     <span class="h2">Pack my box with five dozen liquor jugs.</span></br>
     <span>It's center text alignment</span>
   </figure>
-`;
 ```
 
-```js preview-story
-export const exAlignmentEnd = () => html`
+```html preview-story
   <figure class="text-end">
     <span class="h2">Pack my box with five dozen liquor jugs.</span></br>
     <span>It's end text alignment</span>
   </figure>
-`;
 ```
