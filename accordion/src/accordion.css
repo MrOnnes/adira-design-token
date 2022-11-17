@@ -1,0 +1,177 @@
+.accordion {
+  --ad-accordion-color: var(--figma-color-text-normal);
+  --ad-accordion-bg: #fff;
+  --ad-accordion-transition: color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
+  --ad-accordion-border-radius: var(--figma-size-radius-small);
+  --ad-accordion-inner-border-radius: calc(
+    var(--figma-size-radius-small) - 1px
+  );
+  --ad-accordion-btn-padding-x: 16px;
+  --ad-accordion-btn-padding-y: 12px;
+  --ad-accordion-btn-color: var(--figma-color-text-normal);
+  --ad-accordion-btn-bg: var(--figma-palette-primary-200);
+  --ad-accordion-btn-icon: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Pro%206.2.1%20by%20%40fontawesome%20-%20https%3A%2F%2Ffontawesome.com%20License%20-%20https%3A%2F%2Ffontawesome.com%2Flicense%20%28Commercial%20License%29%20Copyright%202022%20Fonticons%2C%20Inc.%20--%3E%3Cpath%20d%3D%22M233.4%20406.6c12.5%2012.5%2032.8%2012.5%2045.3%200l192-192c12.5-12.5%2012.5-32.8%200-45.3s-32.8-12.5-45.3%200L256%20338.7%2086.6%20169.4c-12.5-12.5-32.8-12.5-45.3%200s-12.5%2032.8%200%2045.3l192%20192z%22%2F%3E%3C%2Fsvg%3E');
+  --ad-accordion-btn-icon-width: 1.25rem;
+  --ad-accordion-btn-icon-transform: rotate(-180deg);
+  --ad-accordion-btn-icon-transition: transform 0.2s ease-in-out;
+  --ad-accordion-btn-active-icon: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Pro%206.2.1%20by%20%40fontawesome%20-%20https%3A%2F%2Ffontawesome.com%20License%20-%20https%3A%2F%2Ffontawesome.com%2Flicense%20%28Commercial%20License%29%20Copyright%202022%20Fonticons%2C%20Inc.%20--%3E%3Cpath%20d%3D%22M233.4%20406.6c12.5%2012.5%2032.8%2012.5%2045.3%200l192-192c12.5-12.5%2012.5-32.8%200-45.3s-32.8-12.5-45.3%200L256%20338.7%2086.6%20169.4c-12.5-12.5-32.8-12.5-45.3%200s-12.5%2032.8%200%2045.3l192%20192z%22%2F%3E%3C%2Fsvg%3E');
+  --ad-accordion-btn-focus-border-color: ;
+  --ad-accordion-btn-focus-box-shadow: ;
+  --ad-accordion-body-padding-x: 1.25rem;
+  --ad-accordion-body-padding-y: 1rem;
+  --ad-accordion-active-color: var(--ad-accordion-btn-color);
+  --ad-accordion-active-bg: var(--ad-accordion-btn-bg);
+  border-radius: var(--figma-size-radius-small);
+}
+
+.accordion-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: var(--ad-accordion-btn-padding-y) var(--ad-accordion-btn-padding-x);
+  font-size: 1rem;
+  color: var(--ad-accordion-btn-color);
+  text-align: left;
+  background-color: var(--ad-accordion-btn-bg);
+  border: 0;
+  border-radius: 0;
+  overflow-anchor: none;
+  transition: var(--ad-accordion-transition);
+}
+@media (prefers-reduced-motion: reduce) {
+  .accordion-button {
+    transition: none;
+  }
+}
+.accordion-button:not(.collapsed) {
+  color: var(--ad-accordion-active-color);
+  background-color: var(--ad-accordion-active-bg);
+  box-shadow: inset 0 calc(-1 * var(--ad-accordion-border-width)) 0
+    var(--ad-accordion-border-color);
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: var(--ad-accordion-btn-active-icon);
+  transform: var(--ad-accordion-btn-icon-transform);
+}
+.accordion-button::after {
+  flex-shrink: 0;
+  width: var(--ad-accordion-btn-icon-width);
+  height: var(--ad-accordion-btn-icon-width);
+  margin-left: auto;
+  content: '';
+  background-image: var(--ad-accordion-btn-icon);
+  background-repeat: no-repeat;
+  background-size: var(--ad-accordion-btn-icon-width);
+  transition: var(--ad-accordion-btn-icon-transition);
+}
+@media (prefers-reduced-motion: reduce) {
+  .accordion-button::after {
+    transition: none;
+  }
+}
+.accordion-button:hover {
+  z-index: 2;
+}
+.accordion-button:focus {
+  z-index: 3;
+  border-color: var(--ad-accordion-btn-focus-border-color);
+  outline: 0;
+  box-shadow: var(--ad-accordion-btn-focus-box-shadow);
+}
+
+.accordion-header {
+  margin-bottom: 0;
+}
+
+.accordion-item {
+  color: var(--ad-accordion-color);
+  background-color: var(--ad-accordion-bg);
+  border: var(--ad-accordion-border-width) solid
+    var(--ad-accordion-border-color);
+}
+.accordion-item:first-of-type {
+  border-top-left-radius: var(--ad-accordion-border-radius);
+  border-top-right-radius: var(--ad-accordion-border-radius);
+}
+.accordion-item:first-of-type .accordion-button {
+  border-top-left-radius: var(--ad-accordion-inner-border-radius);
+  border-top-right-radius: var(--ad-accordion-inner-border-radius);
+}
+.accordion-item:not(:first-of-type) {
+  border-top: 0;
+}
+.accordion-item {
+  border-bottom-right-radius: var(--ad-accordion-border-radius);
+  border-bottom-left-radius: var(--ad-accordion-border-radius);
+}
+.accordion-item .accordion-button.collapsed {
+  border-bottom-right-radius: var(--ad-accordion-inner-border-radius);
+  border-bottom-left-radius: var(--ad-accordion-inner-border-radius);
+}
+.accordion-item .accordion-collapse {
+  border-bottom-right-radius: var(--ad-accordion-border-radius);
+  border-bottom-left-radius: var(--ad-accordion-border-radius);
+}
+
+.accordion-body {
+  padding: 8px 16px 16px 16px;
+}
+
+.accordion-flush .accordion-collapse {
+  border-width: 0;
+}
+.accordion-flush .accordion-item {
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+}
+.accordion-flush .accordion-item:first-child {
+  border-top: 0;
+}
+.accordion-flush .accordion-item:last-child {
+  border-bottom: 0;
+}
+.accordion-flush .accordion-item .accordion-button,
+.accordion-flush .accordion-item .accordion-button.collapsed {
+  border-radius: 0;
+}
+
+.fade {
+  transition: opacity 0.15s linear;
+}
+@media (prefers-reduced-motion: reduce) {
+  .fade {
+    transition: none;
+  }
+}
+.fade:not(.show) {
+  opacity: 0;
+}
+
+.collapse:not(.show) {
+  display: none;
+}
+
+.collapsing {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .collapsing {
+    transition: none;
+  }
+}
+.collapsing.collapse-horizontal {
+  width: 0;
+  height: auto;
+  transition: width 0.35s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .collapsing.collapse-horizontal {
+    transition: none;
+  }
+}

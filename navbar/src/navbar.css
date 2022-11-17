@@ -22,7 +22,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0 16px;
+  padding: 12px 16px;
   background-color: var(--figma-color-background-primary);
 }
 
@@ -67,7 +67,6 @@
 }
 
 .navbar-brand {
-  padding: 10px;
   font-size: var(--adnav-navbar-brand-font-size);
   color: var(--adnav-navbar-brand-color) !important;
   text-decoration: none !important;
@@ -174,7 +173,7 @@
   align-items: center;
   gap: 8px;
 }
-.navbar-toolbar .avatar img {
+.avatar img {
   margin: 0 !important;
   object-fit: cover;
   width: 24px;
@@ -185,4 +184,30 @@
 .navbar-toolbar .btn {
   background-color: transparent;
   padding-left: 0px;
+}
+
+.topbar {
+  background-color: var(--figma-palette-gray-200);
+  padding: 12px 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  min-width: 580px;
+}
+.topinfo {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  white-space: nowrap;
+}
+.topmenu {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  white-space: nowrap;
+}
+.topmenu button {
+  background: none;
+  border: none;
+  color: var(--figma-color-text-normal);
 }

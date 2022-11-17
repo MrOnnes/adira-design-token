@@ -5,57 +5,76 @@ A slideshow component for cycling through elements—images or slides of text—
 ```js script
 import { html } from 'lit';
 import '../../tokens/src/styles.css';
-import 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js';
+import '../../tokens/src/script.js';
 ```
 
 ### Example
 
-```js preview-story
-export const exCarousel = () => html`
-
-  <div id="carouselExample" class="carousel slide" data-ride="carousel">
-    <div class="carousel-indicators">
-      <button
-        data-target="#carouselExample"
-        data-slide-to="0"
-        class="active"
-      ></button>
-      <button data-target="#carouselExample" data-slide-to="1"></button>
-      <button data-target="#carouselExample" data-slide-to="2"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img
-          src="https://images.unsplash.com/photo-1579353977828-2a4eab540b9a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
-          alt="Img1"
-          class="d-block"
-          style="width:100%"
-        />
-      </div>
-      <div class="carousel-item">
-        <img
-          src="https://images.unsplash.com/photo-1661956602153-23384936a1d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-          alt="Img2"
-          class="d-block"
-          style="width:100%"
-        />
-      </div>
-      <div class="carousel-item">
-        <img
-          src="https://images.unsplash.com/photo-1668018064529-76c9849d6e0e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
-          alt="Img3"
-          class="d-block"
-          style="width:100%"
-        />
-      </div>
-    </div>
-
-    <button class="carousel-control-prev" data-target="#carouselExample" data-slide="prev">
-    <span class="caraousel-control-prev-icon"><span>
-    </button>
-    <button class="carousel-control-next" data-target="#carouselExample" data-slide="next">
-    <span class="caraousel-control-next-icon"><span>
-    </button>
+```html preview-story
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+  <div class="carousel-indicators shadow-lg">
+    <button
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide-to="0"
+      class="active"
+      aria-current="true"
+      aria-label="Slide 1"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide-to="1"
+      aria-label="Slide 2"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide-to="2"
+      aria-label="Slide 3"
+    ></button>
   </div>
-`;
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img
+        src="https://loremflickr.com/640/360"
+        class="d-block w-100"
+        alt="..."
+        style="height: 830px;margin: 0;"
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        src="https://loremflickr.com/640/360"
+        class="d-block w-100"
+        alt="..."
+        style="height: 830px;margin: 0;"
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        src="https://loremflickr.com/640/360"
+        class="d-block w-100"
+        alt="..."
+        style="height: 830px;margin: 0;"
+      />
+    </div>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleIndicators"
+    data-bs-slide="prev"
+  >
+    <span><i class="fa-solid fa-chevron-left"></i></span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleIndicators"
+    data-bs-slide="next"
+  >
+    <span><i class="fa-solid fa-chevron-right"></i></span>
+  </button>
+</div>
 ```

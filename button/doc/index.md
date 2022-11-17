@@ -5,140 +5,121 @@ import { html } from 'lit';
 import '../../tokens/src/styles.css';
 ```
 
-## Usage
-
-At this moment, our button component is just a combination of some CSS Custom Properties representing the Design Tokens behind the button.
-The other CSS file implements those design tokens onto any element with `.btn` class.
-
-```html
-<link rel="stylesheet" href="...." /> <button class="btn btn-primary"></button>
-```
-
 ### Example
 
-```js preview-story
-export const exampleButton = () => html`
-  <div class="bd-example gap-med">
-    <button type="button" class="btn btn-primary">Primary</button>
-    <button type="button" class="btn btn-secondary">Secondary</button>
-    <button type="button" class="btn btn-success">Success</button>
-    <button type="button" class="btn btn-danger">Danger</button>
-    <button type="button" class="btn btn-warning">Warning</button>
-    <button type="button" class="btn btn-info">Info</button>
-    <button type="button" class="btn btn-light">Light</button>
-    <button type="button" class="btn btn-dark">Dark</button>
-    <button type="button" class="btn btn-link">Link</button>
-  </div>
-`;
+```html preview-story
+<div style="display:flex; flex-wrap: wrap; gap:8px">
+  <button type="button" class="btn btn-primary">Primary</button>
+  <button type="button" class="btn btn-secondary">Secondary</button>
+  <button type="button" class="btn btn-success">Success</button>
+  <button type="button" class="btn btn-danger">Danger</button>
+  <button type="button" class="btn btn-warning">Warning</button>
+  <button type="button" class="btn btn-info">Info</button>
+  <button type="button" class="btn btn-light">Light</button>
+  <button type="button" class="btn btn-dark">Dark</button>
+  <button type="button" class="btn btn-link">Link</button>
+</div>
 ```
 
 #### With Icon
 
-```js preview-story
-export const exampleButtonIcon = () => html`
-  <div class="bd-example gap-med">
-    <button type="button" class="btn btn-primary">
-      <i class="fa-solid fa-download"></i>Primary
-    </button>
-    <button type="button" class="btn btn-secondary">
-      <i class="fa-solid fa-download"></i>Secondary
-    </button>
-    <button type="button" class="btn btn-success">
-      <i class="fa-solid fa-download"></i>Success
-    </button>
-    <button type="button" class="btn btn-danger">
-      <i class="fa-solid fa-download"></i>Danger
-    </button>
-    <button type="button" class="btn btn-warning">
-      <i class="fa-solid fa-download"></i>Warning
-    </button>
-    <button type="button" class="btn btn-info">
-      <i class="fa-solid fa-download"></i>Info
-    </button>
-    <button type="button" class="btn btn-light">
-      <i class="fa-solid fa-download"></i>Light
-    </button>
-    <button type="button" class="btn btn-dark">
-      <i class="fa-solid fa-download"></i>Dark
-    </button>
-    <button type="button" class="btn btn-link">
-      <i class="fa-solid fa-download"></i>Link
-    </button>
-  </div>
-`;
+use
+
+```
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css);
+```
+
+if icon not showing
+
+```html preview-story
+<div style="display:flex; flex-wrap: wrap; gap:8px">
+  <button type="button" class="btn btn-primary">
+    <i class="fa-solid fa-download"></i>Primary
+  </button>
+  <button type="button" class="btn btn-secondary">
+    <i class="fa-solid fa-download"></i>Secondary
+  </button>
+  <button type="button" class="btn btn-success">
+    <i class="fa-solid fa-download"></i>Success
+  </button>
+  <button type="button" class="btn btn-danger">
+    <i class="fa-solid fa-download"></i>Danger
+  </button>
+  <button type="button" class="btn btn-warning">
+    <i class="fa-solid fa-download"></i>Warning
+  </button>
+  <button type="button" class="btn btn-info">
+    <i class="fa-solid fa-download"></i>Info
+  </button>
+  <button type="button" class="btn btn-light">
+    <i class="fa-solid fa-download"></i>Light
+  </button>
+  <button type="button" class="btn btn-dark">
+    <i class="fa-solid fa-download"></i>Dark
+  </button>
+  <button type="button" class="btn btn-link">
+    <i class="fa-solid fa-download"></i>Link
+  </button>
+</div>
 ```
 
 ### Size
 
-Fancy larger or smaller buttons? Add <span class="code">.btn-lg</span> or <span class="code">.btn-sm</span> for additional sizes.
+Fancy larger or smaller buttons? Add <span style="color:red">.btn-lg</span> or <span style="color:red">.btn-sm</span> for additional sizes.
 
-```js preview-story
-export const sizeButtonLg = () => html`
-  <div class="bd-example gap-med">
-    <button type="button" class="btn btn-primary btn-lg">Primary</button>
-    <button type="button" class="btn btn-secondary btn-lg">Secondary</button>
-  </div>
-`;
+```html preview-story
+<div style="display:flex; flex-wrap: wrap; gap:8px">
+  <button type="button" class="btn btn-primary btn-lg">Primary</button>
+  <button type="button" class="btn btn-secondary btn-lg">Secondary</button>
+</div>
 ```
 
-```js preview-story
-export const sizeButtonSm = () => html`
-  <div class="bd-example  gap-med">
-    <button type="button" class="btn btn-primary btn-sm">Primary</button>
-    <button type="button" class="btn btn-secondary btn-sm">Secondary</button>
-  </div>
-`;
+```html preview-story
+<div style="display:flex; flex-wrap: wrap; gap:8px">
+  <button type="button" class="btn btn-primary btn-sm">Primary</button>
+  <button type="button" class="btn btn-secondary btn-sm">Secondary</button>
+</div>
 ```
 
 ### Disabled
 
 Make buttons look inactive by adding the <span class="code">disabled</span> boolean attribute
 
-```js preview-story
-export const disabledButton = () => html`
-  <div class="bd-example gap-med">
-    <button type="button" class="btn btn-primary" disabled>Primary</button>
-    <button type="button" class="btn btn-secondary" disabled>Secondary</button>
-  </div>
-`;
+```html preview-story
+<div style="display:flex; flex-wrap: wrap; gap:8px">
+  <button type="button" class="btn btn-primary" disabled>Primary</button>
+  <button type="button" class="btn btn-secondary" disabled>Secondary</button>
+</div>
 ```
 
 ### Button Group
 
 Responsive "Block Button". Resize your browser to see them change.
 
-```js preview-story
-export const blockButton = () => html`
-  <div class="bd-example d-grid  gap-med">
-    <button type="button" class="btn btn-primary">Primary</button>
-    <button type="button" class="btn btn-secondary">Secondary</button>
-  </div>
-`;
+```html preview-story
+<div class="d-grid  gap-med">
+  <button type="button" class="btn btn-primary">Primary</button>
+  <button type="button" class="btn btn-secondary">Secondary</button>
+</div>
 ```
 
-```js preview-story
-export const blockLeftButton = () => html`
-  <div class="bd-example d-grid  gap-med d-md-flex">
-    <button type="button" class="btn btn-primary">Primary</button>
-    <button type="button" class="btn btn-secondary">Secondary</button>
-  </div>
-`;
+```html preview-story
+<div class="d-grid  gap-med d-md-flex">
+  <button type="button" class="btn btn-primary">Primary</button>
+  <button type="button" class="btn btn-secondary">Secondary</button>
+</div>
 ```
 
-```js preview-story
-export const blockMidButton = () => html`
-  <div class="bd-example d-grid  gap-med mx-auto col-6">
-    <button type="button" class="btn btn-primary">Primary</button>
-    <button type="button" class="btn btn-secondary">Secondary</button>
-  </div>
-`;
+```html preview-story
+<div class="d-grid gap-med mx-auto col-6">
+  <button type="button" class="btn btn-primary">Primary</button>
+  <button type="button" class="btn btn-secondary">Secondary</button>
+</div>
 ```
 
-```js preview-story
-export const blockRightButton = () => html`
-  <div class="bd-example d-grid  gap-med d-md-flex justify-content-md-end">
-    <button type="button" class="btn btn-primary">Primary</button>
-    <button type="button" class="btn btn-secondary">Secondary</button>
-  </div>
-`;
+```html preview-story
+<div class="d-grid gap-med d-md-flex justify-content-md-end">
+  <button type="button" class="btn btn-primary">Primary</button>
+  <button type="button" class="btn btn-secondary">Secondary</button>
+</div>
 ```
