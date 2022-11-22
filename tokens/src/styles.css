@@ -81,7 +81,7 @@ body {
 .text-black {
   color: var(--figma-color-text-normal);
 }
-.text-muted {
+.text-disabled {
   color: var(--figma-color-text-disable);
 }
 .d-inline {
