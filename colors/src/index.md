@@ -58,6 +58,30 @@ import '../../tokens/src/styles.css';
 </div>
 ```
 
+#### Secondary
+
+```html story
+<div class="preview-box">
+  <dockit-css-showcases
+    css-props-prefix="--figma-color-background-button-secondary"
+    component-class="box"
+    style-key="background-color"
+  ></dockit-css-showcases>
+</div>
+```
+
+#### Success
+
+```html story
+<div class="preview-box">
+  <dockit-css-showcases
+    css-props-prefix="--figma-color-background-button-success"
+    component-class="box"
+    style-key="background-color"
+  ></dockit-css-showcases>
+</div>
+```
+
 #### Error
 
 ```html story
@@ -70,12 +94,12 @@ import '../../tokens/src/styles.css';
 </div>
 ```
 
-#### Secondary
+#### Warning
 
 ```html story
 <div class="preview-box">
   <dockit-css-showcases
-    css-props-prefix="--figma-color-background-button-secondary"
+    css-props-prefix="--figma-color-background-button-warning"
     component-class="box"
     style-key="background-color"
   ></dockit-css-showcases>

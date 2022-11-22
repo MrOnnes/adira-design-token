@@ -84,14 +84,6 @@ body {
 .text-muted {
   color: var(--figma-color-text-disable);
 }
-.text-black-50 {
-  color: var(--figma-color-text-normal);
-  opacity: 0.5;
-}
-.text-white-50 {
-  color: var(--figma-color-text-white);
-  opacity: 0.5;
-}
 .d-inline {
   display: inline !important;
 }

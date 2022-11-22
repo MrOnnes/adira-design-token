@@ -37,7 +37,7 @@ table {
 .table th {
   padding: 6px 12px;
 
-  background: #fcfcfd;
+  background: var(--figma-color-background-base-light);
   box-shadow: inset 0px -1px 0px #c9cfda;
 
   text-align: -webkit-match-parent;

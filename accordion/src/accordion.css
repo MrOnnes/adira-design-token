@@ -11,7 +11,7 @@
   --ad-accordion-btn-padding-x: 16px;
   --ad-accordion-btn-padding-y: 12px;
   --ad-accordion-btn-color: var(--figma-color-text-normal);
-  --ad-accordion-btn-bg: var(--figma-palette-primary-200);
+  --ad-accordion-btn-bg: var(--figma-color-background-primary-container);
   --ad-accordion-btn-icon: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Pro%206.2.1%20by%20%40fontawesome%20-%20https%3A%2F%2Ffontawesome.com%20License%20-%20https%3A%2F%2Ffontawesome.com%2Flicense%20%28Commercial%20License%29%20Copyright%202022%20Fonticons%2C%20Inc.%20--%3E%3Cpath%20d%3D%22M233.4%20406.6c12.5%2012.5%2032.8%2012.5%2045.3%200l192-192c12.5-12.5%2012.5-32.8%200-45.3s-32.8-12.5-45.3%200L256%20338.7%2086.6%20169.4c-12.5-12.5-32.8-12.5-45.3%200s-12.5%2032.8%200%2045.3l192%20192z%22%2F%3E%3C%2Fsvg%3E');
   --ad-accordion-btn-icon-width: 1.25rem;
   --ad-accordion-btn-icon-transform: rotate(-180deg);
