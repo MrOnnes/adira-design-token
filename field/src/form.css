@@ -29,7 +29,7 @@
   gap: 8px;
   position: absolute;
   right: 7px;
-  top: 25px;
+  top: 1.7rem;
   padding: 9px 8px;
   color: #aaa;
 }
@@ -141,9 +141,11 @@ input[type='date'] {
 .input-date input[type='text'] {
 }
 [type='date']::-webkit-inner-spin-button {
-  display: none;
+  /* display: none; */
 }
 [type='date']::-webkit-calendar-picker-indicator {
   /* opacity: 1;
   width: 10%; */
+  padding: 10px 10px;
+  background-color: var(--figma-color-background-primary);
 }

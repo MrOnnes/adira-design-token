@@ -10,7 +10,7 @@ import '../../tokens/src/styles.css';
 ### Example
 
 ```html preview-story
-<div class="bd-example d-flex gap-med">
+<div class=" d-flex gap-med flex-wrap">
   <label class="tags">Label</label>
   <label class="tags tag-primary">Label</label>
   <label class="tags tag-success">Label</label>
@@ -23,7 +23,7 @@ import '../../tokens/src/styles.css';
 ### Example
 
 ```html preview-story
-<div class="bd-example d-flex gap-med">
+<div class=" d-flex gap-med flex-wrap">
   <label class="tags"> <i class="fa-solid fa-check"></i>Label</label>
   <label class="tags tag-primary"><i class="fa-solid fa-check"></i>Label</label>
   <label class="tags tag-success"><i class="fa-solid fa-check"></i>Label</label>

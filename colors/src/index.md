@@ -191,3 +191,15 @@ import '../../tokens/src/styles.css';
   ></dockit-css-showcases>
 </div>
 ```
+
+## Color Class
+
+```html story-preview
+<p class="text-primary">.text-primary</p>
+<p class="text-success">.text-success</p>
+<p class="text-danger">.text-danger</p>
+<p class="text-info bg-dark">.text-info</p>
+<p class="text-white bg-dark">.text-white</p>
+<p class="text-black">.text-dark</p>
+<p class="text-muted">.text-muted</p>
+```
