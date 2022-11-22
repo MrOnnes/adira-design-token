@@ -879,6 +879,10 @@
       }
     },
     "background": {
+      "primary": {
+        "value": "#FFDD00",
+        "type": "color"
+      },
       "primary-container": {
         "value": "#FFEB74",
         "type": "color"
@@ -907,6 +911,10 @@
       },
       "success": {
         "value": "#D1FADF",
+        "type": "color"
+      },
+      "warning": {
+        "value": "#FEF0C7",
         "type": "color"
       },
       "disable": {

@@ -828,6 +828,10 @@
         }
       },
       "background": {
+        "primary": {
+          "value": "{palette.primary.300}",
+          "type": "color"
+        },
         "primary-container": {
           "value": "{palette.primary.200}",
           "type": "color"
@@ -856,6 +860,10 @@
         },
         "success": {
           "value": "{palette.success.100}",
+          "type": "color"
+        },
+        "warning": {
+          "value": "{palette.warning.100}",
           "type": "color"
         },
         "disable": {
