@@ -218,12 +218,12 @@ import '../../tokens/src/styles.css';
 
 ## Color Class
 
-```html story-preview
+```html preview-story
 <p class="text-primary">.text-primary</p>
 <p class="text-success">.text-success</p>
 <p class="text-danger">.text-danger</p>
 <p class="text-info bg-dark">.text-info</p>
 <p class="text-white bg-dark">.text-white</p>
 <p class="text-black">.text-dark</p>
-<p class="text-muted">.text-muted</p>
+<p class="text-disabled">.text-disabled</p>
 ```

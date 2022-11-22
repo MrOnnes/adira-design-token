@@ -12,7 +12,7 @@ import '../../tokens/src/script.js';
 
 ```html preview-story
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-  <div class="carousel-indicators shadow-lg">
+  <div class="carousel-indicators">
     <button
       type="button"
       data-bs-target="#carouselExampleIndicators"
@@ -38,21 +38,21 @@ import '../../tokens/src/script.js';
     <div class="carousel-item active">
       <img
         src="https://loremflickr.com/640/360"
-        class="d-block w-100"
+        class="d-block w-full"
         alt="..."
       />
     </div>
     <div class="carousel-item">
       <img
         src="https://loremflickr.com/640/360"
-        class="d-block w-100"
+        class="d-block w-full"
         alt="..."
       />
     </div>
     <div class="carousel-item">
       <img
         src="https://loremflickr.com/640/360"
-        class="d-block w-100"
+        class="d-block w-full"
         alt="..."
       />
     </div>
