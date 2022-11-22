@@ -16,11 +16,11 @@
 }
 
 .page-link.active {
-  color: #53b1fd !important;
-  border: 1px solid #53b1fd !important;
+  color: var(--figma-color-text-link) !important;
+  border: 1px solid var(--figma-color-border-link) !important;
 }
 .page-link.disabled {
-  color: #d0d5dd !important;
+  color: var(--figma-color-text-disable) !important;
   pointer-events: none;
 }
 
@@ -32,10 +32,10 @@
 }
 
 .pagination-lg .page-link {
-  border: 1px solid #d0d5dd !important;
+  border: 1px solid var(--figma-color-border-base) !important;
   padding: 4px 10px;
 }
 
 .pagination-lg .page-link.active {
-  border: 1px solid #53b1fd !important;
+  border: 1px solid var(--figma-color-border-link) !important;
 }

@@ -46,8 +46,8 @@ button:not(:disabled) {
 }
 
 .btn-success {
-  background: var(--figma-color-background-success);
-  color: var(--figma-color-text-success);
+  background: var(--figma-color-background-button-success-active);
+  color: var(--figma-color-text-button-primary);
 }
 
 .btn-danger {
@@ -56,22 +56,22 @@ button:not(:disabled) {
 }
 
 .btn-warning {
-  background: var(--figma-color-background-warning);
-  color: var(--figma-color-text-warning);
+  background: var(--figma-color-background-button-warning-active);
+  color: var(--figma-color-text-button-primary);
 }
 
 .btn-info {
-  background: var(--figma-color-background-link);
-  color: var(--figma-color-text-link);
+  background: var(--figma-color-background-button-info-active);
+  color: var(--figma-color-text-white);
 }
 
 .btn-light {
-  background: var(--figma-color-background-base-light);
+  background: var(--figma-color-background-button-light-active);
   color: var(--figma-color-text-button-primary);
 }
 
 .btn-dark {
-  background: var(--figma-color-background-base-dark);
+  background: var(--figma-color-background-button-dark-active);
   color: var(--figma-color-text-white);
 }
 
@@ -86,48 +86,40 @@ button:not(:disabled) {
 
 .btn-primary:hover {
   background: var(--figma-color-background-button-primary-hover);
-  color: var(--figma-color-text-button-primary);
 }
 
 .btn-secondary:hover {
   background: var(--figma-color-background-button-secondary-hover);
-  color: var(--figma-color-text-button-secondary);
   border: 1px solid var(--figma-color-border-button-link);
 }
 
 .btn-success:hover {
-  background: var(--figma-color-background-success);
-  color: var(--figma-color-text-success);
+  background: var(--figma-color-background-button-success-hover);
 }
 
 .btn-danger:hover {
   background: var(--figma-color-background-button-error-hover);
-  color: var(--figma-color-text-white);
 }
 
 .btn-warning:hover {
-  background: var(--figma-color-background-hover);
-  color: var(--figma-color-text-warning);
+  background: var(--figma-color-background-button-warning-hover);
 }
 
 .btn-info:hover {
-  background: var(--figma-color-background-link);
-  color: var(--figma-color-text-link);
+  background: var(--figma-color-background-button-info-hover);
 }
 
 .btn-light:hover {
-  background: var(--figma-color-background-base-light);
-  color: var(--figma-color-text-button-primary);
+  background: var(--figma-color-background-button-light-hover);
 }
 
 .btn-dark:hover {
-  background: var(--figma-color-background-base-dark);
-  color: var(--figma-color-text-white);
+  background: var(--figma-color-background-button-dark-hover);
 }
 
 .btn-link:hover {
   background: var(--figma-color-background-button-secondary-hover);
-  color: var(--figma-color-text-button-secondary);
+
   border: none;
   border-radius: var(--figma-size-button-radius);
 }
