@@ -13,6 +13,7 @@
 @import '../../input-group/src/input-group.css';
 @import '../../navs-tabs/src/nav.css';
 @import '../../navbar/src/navbar.css';
+@import '../../table/src/table.css';
 @import '../../tags/src/tags.css';
 @import '../../flex/src/flex.css';
 @import '../../overflow/src/overflow.css';
@@ -57,6 +58,39 @@ body {
 .code {
   color: red;
   word-wrap: break-word;
+}
+
+.bg-dark {
+  background-color: var(--figma-color-background-base-dark);
+}
+.text-primary {
+  color: var(--figma-color-text-normal);
+}
+.text-success {
+  color: var(--figma-color-text-success);
+}
+.text-danger {
+  color: var(--figma-color-text-error);
+}
+.text-info {
+  color: var(--figma-color-text-link);
+}
+.text-white {
+  color: var(--figma-color-text-white);
+}
+.text-black {
+  color: var(--figma-color-text-normal);
+}
+.text-muted {
+  color: var(--figma-color-text-disable);
+}
+.text-black-50 {
+  color: var(--figma-color-text-normal);
+  opacity: 0.5;
+}
+.text-white-50 {
+  color: var(--figma-color-text-white);
+  opacity: 0.5;
 }
 .d-inline {
   display: inline !important;

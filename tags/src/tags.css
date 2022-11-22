@@ -1,6 +1,4 @@
 .tags {
-  --ad-size-chip-radius: var(--figma-size-chip-radius);
-
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -9,9 +7,10 @@
   gap: 8px;
 
   height: 32px;
+  width: fit-content;
 
   background: var(--figma-color-background-base-light);
-  border-radius: var(--ad-size-chip-radius);
+  border-radius: var(--figma-size-chip-radius);
 }
 
 .tag-primary {
@@ -28,7 +27,7 @@
 }
 .tag-warning {
   color: var(--figma-color-text-normal);
-  background: var(--figma-color-background-primary);
+  background: var(--figma-color-background-warning);
 }
 .tag-confirmed {
   color: var(--figma-color-text-link);

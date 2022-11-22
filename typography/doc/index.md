@@ -173,12 +173,16 @@ export const exHeading = () => html`
 
 ### Alignment
 
+use <span style="color:red">.text-center</span> to make text alignment to center
+
 ```html preview-story
   <figure class="text-center">
     <span class="h2">Pack my box with five dozen liquor jugs.</span></br>
     <span>It's center text alignment</span>
   </figure>
 ```
+
+use <span style="color:red">.text-end</span> to make tex alignment to right
 
 ```html preview-story
   <figure class="text-end">

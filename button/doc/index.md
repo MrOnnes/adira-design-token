@@ -8,7 +8,7 @@ import '../../tokens/src/styles.css';
 ### Example
 
 ```html preview-story
-<div style="display:flex; flex-wrap: wrap; gap:8px">
+<div class="d-flex flex-wrap gap-med">
   <button type="button" class="btn btn-primary">Primary</button>
   <button type="button" class="btn btn-secondary">Secondary</button>
   <button type="button" class="btn btn-success">Success</button>
@@ -32,7 +32,7 @@ use
 if icon not showing
 
 ```html preview-story
-<div style="display:flex; flex-wrap: wrap; gap:8px">
+<div class="d-flex flex-wrap gap-med">
   <button type="button" class="btn btn-primary">
     <i class="fa-solid fa-download"></i>Primary
   </button>

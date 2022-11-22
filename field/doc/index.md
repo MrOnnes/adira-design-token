@@ -45,25 +45,24 @@ import 'https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css';
 
 ### With Icon
 
-Add `input-icon` class on `<div>`
+Add <span style="color:red">.input-icon</span>class on`<div>`
+And add <span style="color:red">.prefix</span> on `<i>` for left icon, or <span style="color:red">.suffix</span> for right icon.
 
-```js preview-story
-export const inputFieldWIcon = () => html`
-  <form>
-    <div class="w-full input-icon">
-      <label for="Label">NIP</label>
-      <input
-        class="form-control"
-        type="text"
-        id="id"
-        name="name"
-        placeholder="NIP"
-      />
-      <i class="fa-solid fa-user prefix"></i>
-      <div class="caption helper">Masukan NIP</div>
-    </div>
-  </form>
-`;
+```html preview-story
+<form>
+  <div class="w-full input-icon">
+    <label for="Label">NIP</label>
+    <input
+      class="form-control"
+      type="text"
+      id="id"
+      name="name"
+      placeholder="NIP"
+    />
+    <i class="fa-solid fa-user prefix"></i>
+    <div class="caption helper">Masukan NIP</div>
+  </div>
+</form>
 ```
 
 ### Password toggle button
@@ -91,6 +90,25 @@ export const inputFieldPassEye = () => html`
     </div>
   </form>
 `;
+```
+
+JS script :
+
+```
+export function showPassword() {
+  var x = document.getElementById('password');
+  var y = document.getElementById('hide1');
+  var z = document.getElementById('hide2');
+  if (x.type === 'password') {
+    x.type = 'text';
+    y.style.display = 'block';
+    z.style.display = 'none';
+  } else {
+    x.type = 'password';
+    y.style.display = 'none';
+    z.style.display = 'block';
+  }
+}
 ```
 
 ### Form Text
@@ -393,4 +411,41 @@ export const exDate = () => html`
     </div>
   </form>
 `;
+```
+
+```js preview-story
+export const exDate2 = () => html`
+  <form>
+    <div class="w-full">
+      <label for="date">Tanggal Lahir</label>
+      <div class="d-flex gap-med">
+        <input
+          class="form-control"
+          type="date"
+          id="date"
+          name="name"
+          placeholder="Select Date"
+        />
+        </span>
+      </div>
+    </div>
+  </form>
+`;
+```
+
+```html preview-story
+<form>
+  <div class="w-full">
+    <label for="date2">Tanggal Lahir</label>
+    <div class="d-flex gap-med">
+      <input
+        class="form-control"
+        type="date"
+        id="date2"
+        name="name"
+        placeholder="Placeholder"
+      />
+    </div>
+  </div>
+</form>
 ```

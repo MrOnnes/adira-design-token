@@ -40,7 +40,6 @@ import '../../tokens/src/script.js';
         src="https://loremflickr.com/640/360"
         class="d-block w-100"
         alt="..."
-        style="height: 830px;margin: 0;"
       />
     </div>
     <div class="carousel-item">
@@ -48,7 +47,6 @@ import '../../tokens/src/script.js';
         src="https://loremflickr.com/640/360"
         class="d-block w-100"
         alt="..."
-        style="height: 830px;margin: 0;"
       />
     </div>
     <div class="carousel-item">
@@ -56,7 +54,6 @@ import '../../tokens/src/script.js';
         src="https://loremflickr.com/640/360"
         class="d-block w-100"
         alt="..."
-        style="height: 830px;margin: 0;"
       />
     </div>
   </div>

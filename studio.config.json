@@ -8,7 +8,8 @@
      "tokens",
      "typography",
      "colors",
-     "size"
+     "size",
+     "INSTALLATION"
     ]
    ],
    [
@@ -27,7 +28,8 @@
      "pagination",
      "tags",
      "accordion",
-     "topbar"
+     "topbar",
+     "table"
     ]
    ],
    [
