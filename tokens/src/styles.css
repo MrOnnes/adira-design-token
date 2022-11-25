@@ -61,28 +61,28 @@ body {
 }
 
 .bg-dark {
-  background-color: var(--figma-color-background-base-dark);
+  background: var(--figma-color-background-base-dark) !important;
 }
 .text-primary {
-  color: var(--figma-color-text-normal);
+  color: var(--figma-color-text-normal) !important;
 }
 .text-success {
-  color: var(--figma-color-text-success);
+  color: var(--figma-color-text-success) !important;
 }
 .text-danger {
-  color: var(--figma-color-text-error);
+  color: var(--figma-color-text-error) !important;
 }
 .text-info {
-  color: var(--figma-color-text-link);
+  color: var(--figma-color-text-link) !important;
 }
 .text-white {
-  color: var(--figma-color-text-white);
+  color: var(--figma-color-text-white) !important;
 }
 .text-black {
-  color: var(--figma-color-text-normal);
+  color: var(--figma-color-text-normal) !important;
 }
 .text-disabled {
-  color: var(--figma-color-text-disable);
+  color: var(--figma-color-text-disable) !important;
 }
 .d-inline {
   display: inline !important;

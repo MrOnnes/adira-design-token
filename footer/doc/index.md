@@ -1,6 +1,6 @@
 # Footer
 
-Documentation
+Footer
 
 ```js script
 import { html } from 'lit';

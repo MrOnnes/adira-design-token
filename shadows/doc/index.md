@@ -12,6 +12,7 @@ Komponen shadow berfungsi agar sebuah elemen terlihat lebih atraktif dan pengala
 ```html preview-story
 <div class="d-grid gap-xl">
   <div class="shadow-none bg-light">No shadow</div>
+
   <div class="shadow-xs bg-light">Shadow xs</div>
 
   <div class="shadow-sm bg-light">Shadow sm</div>

@@ -146,7 +146,7 @@ you can use class alignment class <span style="color:red">.text-center</span> or
 
 ### Sorting Function
 
-Add function and class <span style="color:red">.sorting</span> on table header
+Add function, table ID, and class <span style="color:red">.sorting</span> on table header. [(src)](https://www.w3schools.com/howto/howto_js_sort_table.asp)
 
 ```html preview-story
 <table class="table" id="TABLEIDHERE">
@@ -183,7 +183,7 @@ Add function and class <span style="color:red">.sorting</span> on table header
 </table>
 ```
 
-```
+```js preview
 function sortTable(n) {
   var table,
     rows,
@@ -197,60 +197,38 @@ function sortTable(n) {
     switchcount = 0;
   table = document.getElementById('TABLEIDHERE');
   switching = true;
-  //Set the sorting direction to ascending:
   dir = 'asc';
-  /*Make a loop that will continue until
-  no switching has been done:*/
   while (switching) {
-    //start by saying: no switching is done:
     switching = false;
     rows = table.rows;
-    /*Loop through all table rows (except the
-    first, which contains table headers):*/
     for (i = 1; i < rows.length - 1; i++) {
-      //start by saying there should be no switching:
       shouldSwitch = false;
-      /*Get the two elements you want to compare,
-      one from current row and one from the next:*/
       x = rows[i].getElementsByTagName('TD')[n];
       y = rows[i + 1].getElementsByTagName('TD')[n];
       z = rows[0].getElementsByClassName('sorting')[n];
-      // document.querySelector('.sorting')
-      // document.getElementsByClassName('sorting')
-      /*check if the two rows should switch place,
-      based on the direction, asc or desc:*/
       if (dir == 'asc') {
-        //console.log(i);
-        //console.log(x);
-        z.classList.remove('sorting_desc')
-        z.classList.add('sorting_asc')
+        z.classList.remove('sorting_desc');
+        z.classList.add('sorting_asc');
         console.log(z.className);
         if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-          //if so, mark as a switch and break the loop:
           shouldSwitch = true;
           break;
         }
       } else if (dir == 'desc') {
-        z.classList.remove('sorting_asc')
-        z.classList.add('sorting_desc')
+        z.classList.remove('sorting_asc');
+        z.classList.add('sorting_desc');
         console.log(z.className);
         if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-          //if so, mark as a switch and break the loop:
           shouldSwitch = true;
           break;
         }
       }
     }
     if (shouldSwitch) {
-      /*If a switch has been marked, make the switch
-      and mark that a switch has been done:*/
       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
       switching = true;
-      //Each time a switch is done, increase this count by 1:
       switchcount++;
     } else {
-      /*If no switching has been done AND the direction is "asc",
-      set the direction to "desc" and run the while loop again.*/
       if (switchcount == 0 && dir == 'asc') {
         dir = 'desc';
         switching = true;
@@ -258,5 +236,59 @@ function sortTable(n) {
     }
   }
 }
+```
 
+### Example
+
+```html preview-story
+<table class="table" id="TABLEIDHERE">
+  <thead class="">
+    <tr>
+      <th class="bg-dark text-white sorting" onclick="sortTable(0)">No</th>
+      <th class="bg-dark text-white sorting" onclick="sortTable(1)">
+        No Kontrak
+      </th>
+      <th class="bg-dark text-white sorting" onclick="sortTable(2)">
+        Nama Nasabah
+      </th>
+      <th class="bg-dark text-white sorting" onclick="sortTable(3)">
+        Perusahaan Asuransi
+      </th>
+      <th class="bg-dark text-white sorting" onclick="sortTable(4)">
+        Jenis Pelaporan
+      </th>
+      <th class="bg-dark text-white sorting" onclick="sortTable(5)">Overdue</th>
+      <th class="bg-dark text-white">Aksi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>0123456789</td>
+      <td>Esther Howard</td>
+      <td>Zurich</td>
+      <td>ASURANSI KENDARAAN</td>
+      <td>34</td>
+      <td><button class="btn btn-link">lihat detail</button></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>0123456789</td>
+      <td>Esther Howard</td>
+      <td>Zurich</td>
+      <td>ASURANSI KENDARAAN</td>
+      <td>34</td>
+      <td><button class="btn btn-link">lihat detail</button></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>0123456789</td>
+      <td>Esther Howard</td>
+      <td>Zurich</td>
+      <td>ASURANSI KENDARAAN</td>
+      <td>34</td>
+      <td><button class="btn btn-link">lihat detail</button></td>
+    </tr>
+  </tbody>
+</table>
 ```

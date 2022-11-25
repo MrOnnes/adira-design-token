@@ -20,3 +20,7 @@ export function showDate() {
   console.log('function showDate');
   $('#date').datepicker();
 }
+export function showDate2() {
+  console.log('function showDate');
+  $('#date3').datepicker();
+}

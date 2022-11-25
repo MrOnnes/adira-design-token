@@ -9,7 +9,7 @@
   height: 32px;
   width: fit-content;
 
-  background: var(--figma-color-background-base-light);
+  background: var(--figma-color-background-base-grey);
   border-radius: var(--figma-size-chip-radius);
 }
 

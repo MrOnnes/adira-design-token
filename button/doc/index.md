@@ -9,6 +9,7 @@ import '../../tokens/src/styles.css';
 
 ```html preview-story
 <div class="d-flex flex-wrap gap-med">
+  <button type="button" class="btn ">Default</button>
   <button type="button" class="btn btn-primary">Primary</button>
   <button type="button" class="btn btn-secondary">Secondary</button>
   <button type="button" class="btn btn-success">Success</button>
@@ -33,6 +34,9 @@ if icon not showing
 
 ```html preview-story
 <div class="d-flex flex-wrap gap-med">
+  <button type="button" class="btn ">
+    <i class="fa-solid fa-download"></i>Default
+  </button>
   <button type="button" class="btn btn-primary">
     <i class="fa-solid fa-download"></i>Primary
   </button>
