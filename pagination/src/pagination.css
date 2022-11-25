@@ -39,3 +39,14 @@
 .pagination-lg .page-link.active {
   border: 1px solid var(--figma-color-border-link) !important;
 }
+
+.datatable-pagination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.datatable-pagination select {
+  height: 26px;
+  padding: 0px 24px 0px 12px;
+  width: fit-content;
+}

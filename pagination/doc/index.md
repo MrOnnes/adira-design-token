@@ -9,9 +9,9 @@ import '../../tokens/src/styles.css';
 
 ### Example
 
-add on .page-item class:<br>
-**.disabled** for disabled menu<br>
-**.active** for active page
+add on <span style="color:red">.page-item</span> class:<br>
+<span style="color:red">.disabled</span> for disabled page<br>
+<span style="color:red">.active</span> for active page
 
 ```html preview-story
 <nav>
@@ -59,4 +59,17 @@ add on .page-item class:<br>
     </li>
   </ul>
 </nav>
+```
+
+```html preview-story
+<div class="datatable-pagination">
+  <p class="caption">Showing</p>
+  <select class="form-select">
+    <option selected>1</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+  </select>
+  <p class="caption">dari 10 data</p>
+</div>
 ```

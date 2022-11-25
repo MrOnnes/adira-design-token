@@ -1,21 +1,6 @@
 # Installation
 
-Current Version :
-
-```
-0.1.0
-```
-
----
-
 ### Required
-
-Stable Version :
-
-```
-<!-- CSS only -->
-https://cdn.jsdelivr.net/gh/MrOnnes/adira-design-token@0.1.0/tokens/src/styles.min.css
-```
 
 Latest Version :
 
@@ -23,6 +8,8 @@ Latest Version :
 <!-- CSS only -->
 https://cdn.jsdelivr.net/gh/MrOnnes/adira-design-token@latest/tokens/src/styles.min.css
 ```
+
+---
 
 #### Add Bootstrap JS
 

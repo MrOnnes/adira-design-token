@@ -45,7 +45,7 @@ import 'https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css';
 
 ### With Icon
 
-Add <span style="color:red">.input-icon</span>class on`<div>`
+Add <span style="color:red">.input-icon</span> class on`<div>`
 And add <span style="color:red">.prefix</span> on `<i>` for left icon, or <span style="color:red">.suffix</span> for right icon.
 
 ```html preview-story
@@ -113,7 +113,7 @@ export function showPassword() {
 
 ### Form Text
 
-Form text below inputs can be styled with .helper. If a block-level element will be used, a top margin is added for easy spacing from the inputs above.
+Form text below inputs can be styled with <span style="color:red">.helper</span>. If a block-level element will be used, a top margin is added for easy spacing from the inputs above.
 
 ```html preview-story
 <form>
@@ -133,7 +133,7 @@ Form text below inputs can be styled with .helper. If a block-level element will
 
 ### Disabled
 
-Add the `disabled` boolean attribute on an input to prevent user interactions and make it appear lighter.
+Add the <span style="color:red">disabled</span> boolean attribute on an input to prevent user interactions and make it appear lighter.
 
 ```html preview-story
 <form>
@@ -195,7 +195,7 @@ Give textual form controls like `<input>`s and `<textarea>`s an upgrade with cus
 
 ### Sizing
 
-Form text below inputs can be styled with .helper. If a block-level element will be used, a top margin is added for easy spacing from the inputs above.
+Form text below inputs can be styled with <span style="color:red">.helper</span>. If a block-level element will be used, a top margin is added for easy spacing from the inputs above.
 
 ```html preview-story
 <form>
@@ -254,7 +254,7 @@ Give textual form controls like `<input>` and `<textarea>`
 
 ### Readonly Input
 
-replace .form-control with .form-control-plaintext to remove the default form field styling and preserve the correct margin and padding.
+replace <span style="color:red">.form-control</span> with <span style="color:red">.form-control-plaintext</span> to remove the default form field styling and preserve the correct margin and padding.
 
 ```html preview-story
 <form>
@@ -289,7 +289,10 @@ replace .form-control with .form-control-plaintext to remove the default form fi
       <label class="btn btn-primary" for="fileKTP">
         <i class="fa-solid fa-upload"></i>
       </label>
-      <label class="btn btn-danger" for="fileKTP">
+      <label
+        class="btn btn-danger"
+        onclick="document.getElementById('fileKTP').value = ''"
+      >
         <i class="fa-solid fa-trash-can"></i>
       </label>
     </div>
@@ -312,7 +315,10 @@ replace .form-control with .form-control-plaintext to remove the default form fi
     </div>
     <div class="caption helper">All ext, max 2MB</div>
   </div>
+</form>
+```
 
+```html preview-story
   <div class="w-full input-icon">
     <label for="Label">Upload KTP-icon</label>
     <div class="d-flex gap-med">
@@ -323,10 +329,17 @@ replace .form-control with .form-control-plaintext to remove the default form fi
         name="name"
         placeholder="Placeholder-icon"
       />
-      <label for="fileKTP-icon" class="suffix">
-        <i class="fa-solid fa-upload "></i>
-        <i class="fa-solid fa-trash-can "></i>
-      </label>
+      <span class="suffix">
+        <label for="fileKTP-icon">
+          <i class="fa-solid fa-upload "></i>
+        </label>
+        <label>
+          <i
+            class="fa-solid fa-trash-can"
+            onclick="document.getElementById('fileKTP-icon').value = ''"
+          ></i>
+        </label>
+      </span>
     </div>
     <div class="caption helper">All ext, max 2MB</div>
   </div>
@@ -346,6 +359,28 @@ replace .form-control with .form-control-plaintext to remove the default form fi
       </label>
     </div>
     <div class="caption helper">All ext, max 2MB</div>
+  </div>
+</form>
+```
+
+## Example
+
+```html preview-story
+<div class="w-full input-icon">
+    <label for="Label">FORM LAPORAN KERUGIAN KLAIM</label>
+    <div class="d-flex gap-med">
+      <input
+        class="form-control"
+        type="file"
+        id="fileDownload-icon"
+        name="name"
+        placeholder="File JPG, PNG, PDF, Docx"
+      />
+      <label for="fileDownload-icon" class="suffix">
+        <i class="fa-solid fa-cloud-arrow-up"></i>
+      </label>
+    </div>
+    <div class="caption helper">File JPG, PNG, PDF, Docx</div>
   </div>
 </form>
 ```
@@ -384,12 +419,12 @@ The input field ID (datepicker) needs to be specified as datepicker selector.
 
 ```
 $(function(){
-    $("#datepicker").datepicker();
+    $("DATEPICKERID").datepicker();
 });
 ```
 
 ```js preview-story
-import { showDate } from './field.js';
+import { showDate, showDate2 } from './field.js';
 export const exDate = () => html`
   <form>
     <div class="w-full">
@@ -410,42 +445,38 @@ export const exDate = () => html`
       </div>
     </div>
   </form>
-`;
-```
 
-```js preview-story
-export const exDate2 = () => html`
   <form>
     <div class="w-full">
-      <label for="date">Tanggal Lahir</label>
-      <div class="d-flex gap-med">
+      <label for="date3">Tanggal Lahir</label>
+      <div
+        class="d-flex gap-med"
+        style="
+    position: relative;
+"
+      >
         <input
           class="form-control"
-          type="date"
-          id="date"
+          type="text"
+          id="date3"
           name="name"
           placeholder="Select Date"
+          readonly
         />
-        </span>
+        <label
+          class="suffix"
+          @click="${showDate2}"
+          for="date3"
+          style="
+    position: absolute;
+    right: 19px;
+    top: 12px;
+"
+        >
+          <i class="fa-solid fa-calendar"></i>
+        </label>
       </div>
     </div>
   </form>
 `;
-```
-
-```html preview-story
-<form>
-  <div class="w-full">
-    <label for="date2">Tanggal Lahir</label>
-    <div class="d-flex gap-med">
-      <input
-        class="form-control"
-        type="date"
-        id="date2"
-        name="name"
-        placeholder="Placeholder"
-      />
-    </div>
-  </div>
-</form>
 ```

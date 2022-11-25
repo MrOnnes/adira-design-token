@@ -16,24 +16,59 @@
   padding-left: 40px !important;
   position: relative;
 }
+.input-icon label ~ .prefix {
+  top: 1.8rem;
+}
+.input-icon label ~ .suffix,
+.input-icon label.suffix {
+  top: 1.8rem;
+  cursor: pointer;
+}
+.input-icon label.suffix {
+  display: flex;
+  column-gap: 8px;
+}
 .input-icon .prefix {
   position: absolute;
   left: 7px;
-  top: 25px;
+  /* top: 25px; */
+  top: 0.3rem;
   padding: 9px 8px;
   color: #aaa;
 }
+/* .input-icon button {
+  background: none;
+  border: none;
+  top: 1.5rem !important;
+} */
 
 .input-icon .suffix {
-  display: flex;
-  gap: 8px;
   position: absolute;
   right: 7px;
-  top: 1.7rem;
+  top: 0.3rem;
   padding: 9px 8px;
   color: #aaa;
 }
+.input-icon span.suffix {
+  top: 1.8rem;
+}
 
+.suffix label:not(.btn) {
+  padding: 0.37em;
+  cursor: pointer;
+}
+.suffix label:hover,
+.suffix i:hover {
+  color: var(--figma-color-text-button-primary);
+}
+.suffix > i {
+  font-size: 1.2em;
+  color: #aaa;
+  cursor: pointer;
+}
+.suffix > i:hover {
+  color: var(--figma-color-text-button-primary);
+}
 .suffix i {
   font-size: 1.2em;
 }
@@ -105,6 +140,7 @@ textarea.form-control {
 
 input[type='file'] {
   /*display: none;*/
+  padding-left: 24px !important;
 }
 .form-control::-webkit-file-upload-button {
 }
@@ -147,5 +183,7 @@ input[type='date'] {
   /* opacity: 1;
   width: 10%; */
   padding: 10px 10px;
-  background-color: var(--figma-color-background-primary);
+  color: #aaa;
+  display: no;
+  /* background-color: var(--figma-color-background-primary); */
 }

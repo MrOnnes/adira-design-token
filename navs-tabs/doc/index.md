@@ -9,9 +9,8 @@ import '../../tokens/src/styles.css';
 
 ### Example
 
-add on .page-item class:<br>
-**.disabled** for disabled menu<br>
-**.active** for active page
+<span style="color:red">.disabled</span> for disabled menu<br>
+<span style="color:red">.active</span> for active menu
 
 ```html preview-story
 <ul class="nav">
@@ -32,7 +31,7 @@ add on .page-item class:<br>
 
 ### With Icon
 
-replace .nav-link to .nav-link-icon
+replace <span style="color:red">.nav-link</span> to <span style="color:red">.nav-link-icon</span>
 
 ```html preview-story
 <ul class="nav nav-icon">
@@ -57,7 +56,7 @@ replace .nav-link to .nav-link-icon
 
 ### Underline style
 
-add class .nav-border
+add class <span style="color:red">.nav-border</span>
 
 ```html preview-story
 <ul class="nav nav-border">
@@ -97,7 +96,7 @@ add class .nav-border
 
 ### Pills style
 
-add class .nav-pills
+add class <span style="color:red">.nav-pills</span>
 
 ```html preview-story
 <ul class="nav nav-pills">

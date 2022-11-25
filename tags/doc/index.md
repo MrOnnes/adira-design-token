@@ -1,13 +1,12 @@
 # Tags
 
-Documentation
+Chips help people enter information, make selections, filter content, or trigger actions.
+Use <span style="color:red">.tags</span> and <span style="color:red">.tag-x</span>
 
 ```js script
 import { html } from 'lit';
 import '../../tokens/src/styles.css';
 ```
-
-### Example
 
 ```html preview-story
 <div class=" d-flex gap-med flex-wrap">
@@ -20,8 +19,6 @@ import '../../tokens/src/styles.css';
 </div>
 ```
 
-### Example
-
 ```html preview-story
 <div class=" d-flex gap-med flex-wrap">
   <label class="tags"> <i class="fa-solid fa-check"></i>Label</label>
@@ -32,5 +29,22 @@ import '../../tokens/src/styles.css';
   <label class="tags tag-confirmed"
     ><i class="fa-solid fa-check"></i>Label</label
   >
+</div>
+```
+
+### Example
+
+```html preview-story
+<div class=" d-flex gap-med flex-wrap">
+  <label class="tags tag-success"
+    ><i class="fa-solid fa-check"></i>Approved</label
+  >
+  <label class="tags tag-error"
+    >Error<i class="fa-solid fa-circle-xmark"></i
+  ></label>
+  <label class="tags"
+    >username@email.com<i class="fa-solid fa-circle-xmark"></i
+  ></label>
+  <label class="tags"><i class="fa-solid fa-calendar"></i>Date</label>
 </div>
 ```
