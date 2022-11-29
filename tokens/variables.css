@@ -194,7 +194,9 @@
   --figma-size-line-height-label: 18px;
   --figma-size-line-height-caption: 18px;
   --figma-color-text-normal: #344054;
+  --figma-color-text-sidebar: #344054;
   --figma-color-text-gray: #667085;
+  --figma-color-text-disable: #98a2b3;
   --figma-color-text-white: #fcfcfd;
   --figma-color-text-success: #12b76a;
   --figma-color-text-warning: #f79009;
@@ -202,8 +204,6 @@
   --figma-color-text-link: #2e90fa;
   --figma-color-text-button-primary: #344054;
   --figma-color-text-button-secondary: #175cd3;
-  --figma-color-text-sidebar: #344054;
-  --figma-color-text-disable: #98a2b3;
   --figma-color-background-primary: #ffdd00;
   --figma-color-background-primary-container: #ffeb74;
   --figma-color-background-base-light: #fcfcfd;

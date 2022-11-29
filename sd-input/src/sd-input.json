@@ -835,8 +835,16 @@
         "value": "#344054",
         "type": "color"
       },
+      "sidebar": {
+        "value": "#344054",
+        "type": "color"
+      },
       "gray": {
         "value": "#667085",
+        "type": "color"
+      },
+      "disable": {
+        "value": "#98A2B3",
         "type": "color"
       },
       "white": {
@@ -868,14 +876,6 @@
           "value": "#175CD3",
           "type": "color"
         }
-      },
-      "sidebar": {
-        "value": "#344054",
-        "type": "color"
-      },
-      "disable": {
-        "value": "#98A2B3",
-        "type": "color"
       }
     },
     "background": {
