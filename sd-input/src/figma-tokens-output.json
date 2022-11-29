@@ -784,8 +784,16 @@
           "value": "{palette.gray.700}",
           "type": "color"
         },
+        "sidebar": {
+          "value": "{palette.gray.700}",
+          "type": "color"
+        },
         "gray": {
           "value": "{palette.gray.500}",
+          "type": "color"
+        },
+        "disable": {
+          "value": "{palette.gray.400}",
           "type": "color"
         },
         "white": {
@@ -817,14 +825,6 @@
             "value": "{palette.link.700}",
             "type": "color"
           }
-        },
-        "sidebar": {
-          "value": "{palette.gray.700}",
-          "type": "color"
-        },
-        "disable": {
-          "value": "{palette.gray.400}",
-          "type": "color"
         }
       },
       "background": {
