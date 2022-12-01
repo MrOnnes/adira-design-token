@@ -1778,5 +1778,10 @@
       "type": "spacing",
       "description": "8"
     }
+  },
+  "logo": {
+    "value": "https://www.adira.co.id/frontend/assets/img/logo.png",
+    "type": "asset",
+    "description": "logo adira"
   }
 }
