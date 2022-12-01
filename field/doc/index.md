@@ -65,6 +65,36 @@ And add <span style="color:red">.prefix</span> on `<i>` for left icon, or <span 
 </form>
 ```
 
+```html preview-story
+<form>
+  <div class="w-full input-icon">
+    <label for="Label">Weight</label>
+    <input
+      class="form-control"
+      type="number"
+      id="id"
+      name="name"
+      placeholder="0"
+    />
+    <p class="suffix">Kg</p>
+  </div>
+</form>
+
+<form>
+  <div class="w-full input-icon">
+    <label for="Label">Phone</label>
+    <input
+      class="form-control"
+      type="number"
+      id="id"
+      name="name"
+      placeholder="0"
+    />
+    <p class="prefix">+62</p>
+  </div>
+</form>
+```
+
 ### Password toggle button
 
 ```js preview-story

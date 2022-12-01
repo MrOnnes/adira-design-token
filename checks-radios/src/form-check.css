@@ -37,7 +37,7 @@ input[type='checkbox'][disabled] label.checkbox {
 
 .checkbox.checkbox[disabled],
 .checkbox .checkmark::after {
-  background-color: #fff;
+  /* background-color: #fff; */
   color: var(--figma-color-text-disable);
 }
 .checkbox {
