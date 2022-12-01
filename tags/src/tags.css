@@ -33,3 +33,11 @@
   color: var(--figma-color-text-link);
   background: var(--figma-color-background-link);
 }
+
+button.tags {
+  border: none;
+}
+button.tags:hover {
+  filter: brightness(85%);
+  cursor: pointer;
+}

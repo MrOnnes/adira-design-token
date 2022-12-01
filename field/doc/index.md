@@ -71,7 +71,7 @@ And add <span style="color:red">.prefix</span> on `<i>` for left icon, or <span 
     <label for="Label">Weight</label>
     <input
       class="form-control"
-      type="number"
+      type="text"
       id="id"
       name="name"
       placeholder="0"
@@ -85,7 +85,7 @@ And add <span style="color:red">.prefix</span> on `<i>` for left icon, or <span 
     <label for="Label">Phone</label>
     <input
       class="form-control"
-      type="number"
+      type="text"
       id="id"
       name="name"
       placeholder="0"
