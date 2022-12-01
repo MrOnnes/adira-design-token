@@ -775,6 +775,11 @@
         "value": "{size.32}+{size.224}",
         "type": "sizing"
       }
+    },
+    "logo": {
+      "value": "https://www.adira.co.id/frontend/assets/img/logo.png",
+      "type": "asset",
+      "description": "logo adira"
     }
   },
   "colors": {
