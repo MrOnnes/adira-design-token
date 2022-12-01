@@ -1,5 +1,7 @@
 # Colors
 
+Our design system leverages a purposeful set of color styles as the perfect starting point for any brand or project. When it comes to color, contrast is critical for ensuring text is legible. We've added WCAG 2.1 contrast ratios to our color system so you can make sure you're designing with accessibility in mind.
+
 ```js script
 import { html } from 'lit';
 import '@divriots/dockit-core/css-showcases/dockit-css-showcases.define.js';

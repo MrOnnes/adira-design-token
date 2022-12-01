@@ -13,7 +13,7 @@
   position: relative;
 }
 .input-icon input {
-  padding-left: 40px !important;
+  padding-left: 48px !important;
   position: relative;
 }
 .input-icon label ~ .prefix {
@@ -35,6 +35,12 @@
   top: 0.3rem;
   padding: 9px 8px;
   color: #aaa;
+}
+.input-icon:has(> .suffix) input {
+  padding-left: 20px !important;
+}
+.input-icon:has(> .prefix) input {
+  padding-left: 48px !important;
 }
 /* .input-icon button {
   background: none;
@@ -72,6 +78,18 @@
 .suffix i {
   font-size: 1.2em;
 }
+
+.input-icon p.suffix,
+.input-icon p.prefix {
+  top: 0.2rem;
+  margin: 0;
+}
+.input-icon label ~ p.suffix,
+.input-icon label ~ p.prefix {
+  top: 1.6rem;
+  margin: 0;
+}
+
 .form-control {
   box-sizing: border-box;
 
