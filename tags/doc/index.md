@@ -32,6 +32,27 @@ import '../../tokens/src/styles.css';
 </div>
 ```
 
+## Clickable tags
+
+```html preview-story
+<div class=" d-flex gap-med flex-wrap">
+  <button class="tags"><i class="fa-solid fa-check"></i>Label</button>
+  <button class="tags tag-primary">
+    <i class="fa-solid fa-check"></i>Label
+  </button>
+  <button class="tags tag-success">
+    <i class="fa-solid fa-check"></i>Label
+  </button>
+  <button class="tags tag-warning">
+    <i class="fa-solid fa-check"></i>Label
+  </button>
+  <button class="tags tag-error"><i class="fa-solid fa-check"></i>Label</button>
+  <button class="tags tag-confirmed">
+    <i class="fa-solid fa-check"></i>Label
+  </button>
+</div>
+```
+
 ### Example
 
 ```html preview-story
@@ -42,9 +63,11 @@ import '../../tokens/src/styles.css';
   <label class="tags tag-error"
     >Error<i class="fa-solid fa-circle-xmark"></i
   ></label>
-  <label class="tags"
-    >username@email.com<i class="fa-solid fa-circle-xmark"></i
-  ></label>
-  <label class="tags"><i class="fa-solid fa-calendar"></i>Date</label>
+  <button class="tags">
+    username@email.com<i class="fa-solid fa-circle-xmark"></i>
+  </button>
+  <button class="tags">
+    <i class="fa-solid fa-calendar"></i>Date</i>
+  </button>
 </div>
 ```
