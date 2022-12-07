@@ -71,7 +71,7 @@ StyleDictionary.registerTransform({
   name: "type/FontWeight",
   type: "value",
   transitive: true,
-  matcher: (token) => token.type === "fontWeight",
+  matcher: (token) => token.type === "fontWeights",
   transformer: (token) => `FontWeight.w${token.value}`,
 });
 
