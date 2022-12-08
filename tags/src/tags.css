@@ -1,3 +1,7 @@
+a.tags {
+  text-decoration: none;
+}
+
 .tags {
   display: flex;
   flex-direction: row;
@@ -9,6 +13,7 @@
   height: 32px;
   width: fit-content;
 
+  color: var(--figma-color-text-normal);
   background: var(--figma-color-background-base-grey);
   border-radius: var(--figma-size-chip-radius);
 }
@@ -34,10 +39,7 @@
   background: var(--figma-color-background-link);
 }
 
-button.tags {
-  border: none;
-}
-button.tags:hover {
+a.tags:hover {
   filter: brightness(85%);
   cursor: pointer;
 }

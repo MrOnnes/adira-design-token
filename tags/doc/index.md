@@ -10,25 +10,23 @@ import '../../tokens/src/styles.css';
 
 ```html preview-story
 <div class=" d-flex gap-med flex-wrap">
-  <label class="tags">Label</label>
-  <label class="tags tag-primary">Label</label>
-  <label class="tags tag-success">Label</label>
-  <label class="tags tag-warning">Label</label>
-  <label class="tags tag-error">Label</label>
-  <label class="tags tag-confirmed">Label</label>
+  <a class="tags">Tags</a>
+  <a class="tags tag-primary">Tags</a>
+  <a class="tags tag-success">Tags</a>
+  <a class="tags tag-warning">Tags</a>
+  <a class="tags tag-error">Tags</a>
+  <a class="tags tag-confirmed">Tags</a>
 </div>
 ```
 
 ```html preview-story
 <div class=" d-flex gap-med flex-wrap">
-  <label class="tags"> <i class="fa-solid fa-check"></i>Label</label>
-  <label class="tags tag-primary"><i class="fa-solid fa-check"></i>Label</label>
-  <label class="tags tag-success"><i class="fa-solid fa-check"></i>Label</label>
-  <label class="tags tag-warning"><i class="fa-solid fa-check"></i>Label</label>
-  <label class="tags tag-error"> <i class="fa-solid fa-check"></i>Label</label>
-  <label class="tags tag-confirmed"
-    ><i class="fa-solid fa-check"></i>Label</label
-  >
+  <a class="tags"> <i class="fa-solid fa-check"></i>Tags</a>
+  <a class="tags tag-primary"><i class="fa-solid fa-check"></i>Tags</a>
+  <a class="tags tag-success"><i class="fa-solid fa-check"></i>Tags</a>
+  <a class="tags tag-warning"><i class="fa-solid fa-check"></i>Tags</a>
+  <a class="tags tag-error"> <i class="fa-solid fa-check"></i>Tags</a>
+  <a class="tags tag-confirmed"><i class="fa-solid fa-check"></i>Tags</a>
 </div>
 ```
 
@@ -36,20 +34,20 @@ import '../../tokens/src/styles.css';
 
 ```html preview-story
 <div class=" d-flex gap-med flex-wrap">
-  <button class="tags"><i class="fa-solid fa-check"></i>Label</button>
-  <button class="tags tag-primary">
-    <i class="fa-solid fa-check"></i>Label
-  </button>
-  <button class="tags tag-success">
-    <i class="fa-solid fa-check"></i>Label
-  </button>
-  <button class="tags tag-warning">
-    <i class="fa-solid fa-check"></i>Label
-  </button>
-  <button class="tags tag-error"><i class="fa-solid fa-check"></i>Label</button>
-  <button class="tags tag-confirmed">
-    <i class="fa-solid fa-check"></i>Label
-  </button>
+  <a href="#" class="tags"><i class="fa-solid fa-check"></i>Tags</a>
+  <a href="#" class="tags tag-primary">
+    <i class="fa-solid fa-check"></i>Tags
+  </a>
+  <a href="#" class="tags tag-success">
+    <i class="fa-solid fa-check"></i>Tags
+  </a>
+  <a href="#" class="tags tag-warning">
+    <i class="fa-solid fa-check"></i>Tags
+  </a>
+  <a href="#" class="tags tag-error"><i class="fa-solid fa-check"></i>Tags</a>
+  <a href="#" class="tags tag-confirmed">
+    <i class="fa-solid fa-check"></i>Tags
+  </a>
 </div>
 ```
 
@@ -57,17 +55,17 @@ import '../../tokens/src/styles.css';
 
 ```html preview-story
 <div class=" d-flex gap-med flex-wrap">
-  <label class="tags tag-success"
-    ><i class="fa-solid fa-check"></i>Approved</label
+  <a class="tags tag-success"
+    ><i class="fa-solid fa-check"></i>Approved</a
   >
-  <label class="tags tag-error"
+  <a class="tags tag-error"
     >Error<i class="fa-solid fa-circle-xmark"></i
-  ></label>
-  <button class="tags">
+  ></a>
+  <a class="tags">
     username@email.com<i class="fa-solid fa-circle-xmark"></i>
-  </button>
-  <button class="tags">
+  </a>
+  <a class="tags">
     <i class="fa-solid fa-calendar"></i>Date</i>
-  </button>
+  </a>
 </div>
 ```
