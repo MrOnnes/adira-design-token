@@ -44,6 +44,6 @@ export const docLayoutTemplate = (content, context) => html`
     <div slot="logo">
       ${unsafeHTML(logoSvg)}<span>Figma Tokens Starter</span>
     </div>
-    <div class="prose">${unsafeHTML(content)}</div>
+    <div class="">${unsafeHTML(content)}</div>
   </dockit-layout>
 `;
