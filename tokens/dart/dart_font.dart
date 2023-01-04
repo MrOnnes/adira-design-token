@@ -4,7 +4,7 @@
 //
 
 // Do not edit directly
-// Generated on Wed, 07 Dec 2022 07:42:55 GMT
+// Generated on Wed, 04 Jan 2023 02:56:52 GMT
 
 
 
@@ -53,7 +53,7 @@ class adrFont {
     static const captionParagraphSpacing = 12;
     static const captionTextCase = "none";
     static const captionTextDecoration = "none";
-    static const familySans = -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    static const familySans = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'";
     static const h1FontFamily = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'";
     static const h1FontSize = 30.0;
     static const h1FontWeight = 600;
