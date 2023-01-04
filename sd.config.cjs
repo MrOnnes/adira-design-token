@@ -15,6 +15,9 @@ function wrapValueWithDoubleQuote(token) {
 function isFontFamily(token){
   return token.type === "fontFamily";
 }
+function isFontFamilies(token){
+  return token.type === "fontFamilies";
+}
 function isFontLetterSpacing(token){
   return token.type === "letterSpacing";
 }
@@ -46,6 +49,12 @@ StyleDictionary.registerTransform({
   name: "type/FontFamily",
   type: "value",
   matcher: isFontFamily,
+  transformer: wrapValueWithDoubleQuote
+});
+StyleDictionary.registerTransform({
+  name: "type/FontFamilies",
+  type: "value",
+  matcher: isFontFamilies,
   transformer: wrapValueWithDoubleQuote
 });
 StyleDictionary.registerTransform({
@@ -137,7 +146,7 @@ module.exports = {
       ]
     },
     "flutter-font": {
-      "transforms": ["attribute/cti","name/ti/camel","type/FontSize","type/FontFamily","type/FontWeight","type/LetterSpacing","type/TextCase","type/TextDecoration"],
+      "transforms": ["attribute/cti","name/ti/camel","type/FontSize","type/FontFamily","type/FontFamilies","type/FontWeight","type/LetterSpacing","type/TextCase","type/TextDecoration"],
             "buildPath": "tokens/dart/",
       "files": [
           {

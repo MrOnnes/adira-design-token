@@ -4,7 +4,7 @@
 //
 
 // Do not edit directly
-// Generated on Wed, 07 Dec 2022 07:42:55 GMT
+// Generated on Wed, 04 Jan 2023 02:56:52 GMT
 
 
 
@@ -13,23 +13,6 @@ import 'dart:ui';
 class adrSize {
   adrSize._();
 
-    static const 12 = 12.00;
-    static const 128 = 128.00;
-    static const 16 = 16.00;
-    static const 160 = 160.00;
-    static const 192 = 192.00;
-    static const 20 = 20.00;
-    static const 224 = 224.00;
-    static const 24 = 24.00;
-    static const 256 = 256.00;
-    static const 32 = 32.00;
-    static const 4 = 4.00;
-    static const 40 = 40.00;
-    static const 48 = 48.00;
-    static const 64 = 64.00;
-    static const 8 = 8.00;
-    static const 80 = 80.00;
-    static const 96 = 96.00;
     static const borderDialog = 1.00;
     static const buttonGap = 8.00;
     static const buttonHeight = 40.00;
