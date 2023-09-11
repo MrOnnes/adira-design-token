@@ -1,4 +1,4 @@
-name: Process Figma Tokens PR
+name: Process Figma Tokens Pull Request (convert to style-dictionary)
 
 on: pull_request
 
@@ -23,11 +23,11 @@ jobs:
 
       - name: Run style-dictionary
         run: npx style-dictionary build --config sd.config.cjs
-        
+
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
         with:
-          author_name: Senno Adi
+          author_name: Senno Adi (Robot style dictionary converter)
           author_email: example@gmail.com
           message: 'chore: style-dictionary output'
           add: '.'

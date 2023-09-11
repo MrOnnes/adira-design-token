@@ -1,4 +1,4 @@
-name: Create Figma Tokens PR
+name: Create Figma Tokens Pull Request (automatic create pull request)
 
 # match the branch you put in your Figma Tokens Sync Credentials in the next step
 on:
