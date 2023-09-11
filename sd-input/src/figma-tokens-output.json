@@ -832,6 +832,7 @@
           }
         },
         "test": {
+figma-tokens
           "value": "#522f8f",
           "type": "color",
           "description": "test token"

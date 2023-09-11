@@ -1,0 +1,166 @@
+table {
+  caption-side: bottom;
+  border-collapse: collapse;
+  border-radius: 1em;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: var(--figma-color-text-normal);
+  vertical-align: top;
+  border-color: var(--figma-color-border-base);
+}
+.table tr:first-child th:first-child {
+  border-top-left-radius: 8px;
+}
+.table tr:first-child th:last-child {
+  border-top-right-radius: 8px;
+}
+.table tr:last-child td:first-child {
+  border-bottom-left-radius: 8px;
+}
+.table tr:last-child td:last-child {
+  border-bottom-right-radius: 8px;
+}
+
+.table > :not(caption) > * > * {
+  padding: 0.5rem 0.5rem;
+  background-color: transparent;
+  border-bottom-width: 1px;
+  /* box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg); */
+}
+.table > tbody {
+  vertical-align: inherit;
+}
+.table > thead {
+}
+
+.table-group-divider {
+  border-top: 2px solid currentcolor;
+}
+
+.caption-top {
+  caption-side: top;
+}
+
+.table td {
+  padding: 6px 12px;
+}
+.table th {
+  padding: 6px 12px;
+
+  background: var(--figma-color-background-base-light);
+  box-shadow: inset 0px -1px 0px #c9cfda;
+
+  text-align: -webkit-match-parent;
+}
+.table button {
+  background: none;
+  border: none;
+}
+
+thead th {
+  height: 60px;
+  font-family: var(--figma-font-subtitle2-font-family);
+  font-style: normal;
+  font-weight: var(--figma-font-subtitle2-font-weight);
+  font-size: var(--figma-size-font-subtitle-2);
+  line-height: var(--figma-size-line-height-subtitle2);
+  /* identical to box height, or 143% */
+
+  align-items: center;
+  vertical-align: middle !important;
+  text-transform: capitalize;
+}
+
+tbody td {
+  font-family: var(--figma-font-body2-font-family);
+  font-style: normal;
+  font-weight: var(--figma-font-body2-font-weight);
+  font-size: var(--figma-size-font-body-2);
+  line-height: var(--figma-size-line-height-body2);
+}
+
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+  vertical-align: middle !important;
+}
+
+table.table thead .sorting,
+table.table thead .sorting_asc,
+table.table thead .sorting_asc_disabled,
+table.table thead .sorting_desc,
+table.table thead .sorting_desc_disabled {
+  cursor: pointer;
+  position: relative;
+}
+
+table.table thead > tr > td.sorting,
+table.table thead > tr > td.sorting_asc,
+table.table thead > tr > td.sorting_desc,
+table.table thead > tr > th.sorting,
+table.table thead > tr > th.sorting_asc,
+table.table thead > tr > th.sorting_desc {
+  padding-right: 30px;
+}
+
+table.table thead .sorting:before,
+table.table thead .sorting_asc:before,
+table.table thead .sorting_asc_disabled:before,
+table.table thead .sorting_desc:before,
+table.table thead .sorting_desc_disabled:before {
+  right: 0.5em;
+  content: '\f0de';
+  font-family: 'Font Awesome\ 6 Free';
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+table.table thead .sorting:after,
+table.table thead .sorting_asc:after,
+table.table thead .sorting_asc_disabled:after,
+table.table thead .sorting_desc:after,
+table.table thead .sorting_desc_disabled:after {
+  right: 0.5em;
+  content: '\f0dd';
+  font-family: 'Font Awesome\ 6 Free';
+  font-weight: 900;
+
+  font-size: 1rem;
+}
+
+table.table thead .sorting:after,
+table.table thead .sorting:before,
+table.table thead .sorting_asc:after,
+table.table thead .sorting_asc:before,
+table.table thead .sorting_asc_disabled:after,
+table.table thead .sorting_asc_disabled:before,
+table.table thead .sorting_desc:after,
+table.table thead .sorting_desc:before,
+table.table thead .sorting_desc_disabled:after,
+table.table thead .sorting_desc_disabled:before {
+  position: absolute;
+  bottom: 1.2em;
+  display: block;
+  opacity: 0.3;
+}
+
+table.table thead .sorting_asc:before,
+table.table thead .sorting_desc:after {
+  opacity: 1;
+}
+
+table.table label.checkbox {
+  /* top: 9px; */
+}
+table.table label.checkbox:has(content) {
+  top: 0;
+}

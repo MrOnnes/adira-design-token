@@ -1,0 +1,52 @@
+.pagination {
+  display: flex;
+  padding-left: 0;
+  list-style: none !important;
+}
+
+.page-link {
+  position: relative;
+  display: block;
+  padding: 2px 9px;
+  font-size: 12px;
+
+  text-decoration: none !important;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.page-link.active {
+  color: var(--figma-color-text-link) !important;
+  border: 1px solid var(--figma-color-border-link) !important;
+}
+.page-link.disabled {
+  color: var(--figma-color-text-disable) !important;
+  pointer-events: none;
+}
+
+.page-link:hover {
+  background-color: var(--figma-color-background-button-secondary-hover);
+}
+
+.page-item:first-child .page-link {
+}
+
+.pagination-lg .page-link {
+  border: 1px solid var(--figma-color-border-base) !important;
+  padding: 4px 10px;
+}
+
+.pagination-lg .page-link.active {
+  border: 1px solid var(--figma-color-border-link) !important;
+}
+
+.datatable-pagination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.datatable-pagination select {
+  height: 26px;
+  padding: 0px 24px 0px 12px;
+  width: fit-content;
+}
