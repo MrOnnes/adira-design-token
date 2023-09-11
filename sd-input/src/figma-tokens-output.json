@@ -830,6 +830,11 @@
             "value": "{palette.link.700}",
             "type": "color"
           }
+        },
+        "test": {
+          "value": "#a16bff",
+          "type": "color",
+          "description": "test token"
         }
       },
       "background": {
