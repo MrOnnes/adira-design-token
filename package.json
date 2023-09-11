@@ -1,6 +1,9 @@
 {
   "name": "@backlight-dev/ragged-fiction-fhfxu.blank-l9wkeayq",
-  "version": "0.0.1",
+  "version": "0.2.0",
+  "author": {
+    "name": "Senno Adi"
+  },
   "description": "",
   "license": "MIT",
   "type": "module",
@@ -10,7 +13,11 @@
   },
   "devDependencies": {
     "token-transformer": "^0.0.27",
-    "style-dictionary": "^3.7.1"
+    "style-dictionary": "^3.7.1",
+    "@divriots/dockit-core": "^0.9.4",
+    "lit": "^2.2.2",
+    "@rocket/create": "*",
+    "@mdjs/core": "*"
   },
   "dependencies": {}
 }

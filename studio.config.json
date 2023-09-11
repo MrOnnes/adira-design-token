@@ -5,14 +5,49 @@
    [
     "TOKENS",
     [
-     "tokens"
+     "INSTALLATION",
+     "colors",
+     "tokens",
+     "typography",
+     "size",
+     "definition"
     ]
    ],
    [
     "COMPONENTS",
     [
+     "accordion",
      "button-comp",
-     "button"
+     "button",
+     "breadcrumb",
+     "cards",
+     "carousel",
+     "dropdown",
+     "field",
+     "footer",
+     "navs-tabs",
+     "navbar",
+     "pagination",
+     "table",
+     "tags",
+     "topbar"
+    ]
+   ],
+   [
+    "Forms",
+    [
+     "select",
+     "checks-radios",
+     "input-group"
+    ]
+   ],
+   [
+    "Utilities",
+    [
+     "display",
+     "flex",
+     "overflow",
+     "shadows"
     ]
    ],
    [
@@ -23,5 +58,11 @@
     ]
    ]
   ]
+ },
+ "dependencies": {
+  "autoInstall": false
+ },
+ "doc": {
+  "markdownEngine": "mdjs"
  }
 }

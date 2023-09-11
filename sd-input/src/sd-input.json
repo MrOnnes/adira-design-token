@@ -2,7 +2,7 @@
   "font": {
     "H1": {
       "fontFamily": {
-        "value": "'Inter'",
+        "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
         "type": "fontFamily"
       },
       "fontWeight": {
@@ -36,7 +36,7 @@
     },
     "H2": {
       "fontFamily": {
-        "value": "'Inter'",
+        "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
         "type": "fontFamily"
       },
       "fontWeight": {
@@ -70,7 +70,7 @@
     },
     "H3": {
       "fontFamily": {
-        "value": "'Inter'",
+        "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
         "type": "fontFamily"
       },
       "fontWeight": {
@@ -104,7 +104,7 @@
     },
     "H4": {
       "fontFamily": {
-        "value": "'Inter'",
+        "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
         "type": "fontFamily"
       },
       "fontWeight": {
@@ -138,7 +138,7 @@
     },
     "H5": {
       "fontFamily": {
-        "value": "'Inter'",
+        "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
         "type": "fontFamily"
       },
       "fontWeight": {
@@ -172,7 +172,7 @@
     },
     "Subtitle1": {
       "fontFamily": {
-        "value": "'Inter'",
+        "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
         "type": "fontFamily"
       },
       "fontWeight": {
@@ -206,7 +206,7 @@
     },
     "Subtitle2": {
       "fontFamily": {
-        "value": "'Inter'",
+        "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
         "type": "fontFamily"
       },
       "fontWeight": {
@@ -240,7 +240,7 @@
     },
     "Body1": {
       "fontFamily": {
-        "value": "'Inter'",
+        "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
         "type": "fontFamily"
       },
       "fontWeight": {
@@ -274,7 +274,7 @@
     },
     "Body2": {
       "fontFamily": {
-        "value": "'Inter'",
+        "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
         "type": "fontFamily"
       },
       "fontWeight": {
@@ -308,7 +308,7 @@
     },
     "Button1": {
       "fontFamily": {
-        "value": "'Inter'",
+        "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
         "type": "fontFamily"
       },
       "fontWeight": {
@@ -342,7 +342,7 @@
     },
     "Button2": {
       "fontFamily": {
-        "value": "'Inter'",
+        "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
         "type": "fontFamily"
       },
       "fontWeight": {
@@ -376,7 +376,7 @@
     },
     "Label": {
       "fontFamily": {
-        "value": "'Inter'",
+        "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
         "type": "fontFamily"
       },
       "fontWeight": {
@@ -410,7 +410,7 @@
     },
     "Caption": {
       "fontFamily": {
-        "value": "'Inter'",
+        "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
         "type": "fontFamily"
       },
       "fontWeight": {
@@ -444,7 +444,7 @@
     },
     "family": {
       "sans": {
-        "value": "'Inter'",
+        "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
         "type": "fontFamilies"
       }
     },
@@ -767,20 +767,36 @@
         "value": "#344054",
         "type": "color"
       },
+      "sidebar": {
+        "value": "#344054",
+        "type": "color"
+      },
+      "gray": {
+        "value": "#667085",
+        "type": "color"
+      },
+      "disable": {
+        "value": "#98A2B3",
+        "type": "color"
+      },
       "white": {
         "value": "#FCFCFD",
         "type": "color"
       },
-      "link": {
-        "value": "#2E90FA",
+      "success": {
+        "value": "#12B76A",
         "type": "color"
       },
-      "success": {
-        "value": "#027A48",
+      "warning": {
+        "value": "#F79009",
         "type": "color"
       },
       "error": {
-        "value": "#B42318",
+        "value": "#F04438",
+        "type": "color"
+      },
+      "link": {
+        "value": "#2E90FA",
         "type": "color"
       },
       "button": {
@@ -793,18 +809,19 @@
           "type": "color"
         }
       },
-      "sidebar": {
-        "value": "#344054",
-        "type": "color"
-      },
-      "disable": {
-        "value": "#98A2B3",
-        "type": "color"
+      "test": {
+        "value": "#522faa",
+        "type": "color",
+        "description": "test token"
       }
     },
     "background": {
       "primary": {
         "value": "#FFDD00",
+        "type": "color"
+      },
+      "primary-container": {
+        "value": "#FFEB74",
         "type": "color"
       },
       "base": {
@@ -833,6 +850,10 @@
         "value": "#D1FADF",
         "type": "color"
       },
+      "warning": {
+        "value": "#FEF0C7",
+        "type": "color"
+      },
       "disable": {
         "value": "#F2F4F7",
         "type": "color"
@@ -849,6 +870,76 @@
           },
           "selected": {
             "value": "#F2B705",
+            "type": "color"
+          }
+        },
+        "success": {
+          "active": {
+            "value": "#6CE9A6",
+            "type": "color"
+          },
+          "hover": {
+            "value": "#A6F4C5",
+            "type": "color"
+          },
+          "selected": {
+            "value": "#12B76A",
+            "type": "color"
+          }
+        },
+        "warning": {
+          "active": {
+            "value": "#FEC84B",
+            "type": "color"
+          },
+          "hover": {
+            "value": "#FEDF89",
+            "type": "color"
+          },
+          "selected": {
+            "value": "#F79009",
+            "type": "color"
+          }
+        },
+        "info": {
+          "active": {
+            "value": "#84CAFF",
+            "type": "color"
+          },
+          "hover": {
+            "value": "#B2DDFF",
+            "type": "color"
+          },
+          "selected": {
+            "value": "#2E90FA",
+            "type": "color"
+          }
+        },
+        "light": {
+          "active": {
+            "value": "#FCFCFD",
+            "type": "color"
+          },
+          "hover": {
+            "value": "#F2F4F7",
+            "type": "color"
+          },
+          "selected": {
+            "value": "#D0D5DD",
+            "type": "color"
+          }
+        },
+        "dark": {
+          "active": {
+            "value": "#101828",
+            "type": "color"
+          },
+          "hover": {
+            "value": "#344054",
+            "type": "color"
+          },
+          "selected": {
+            "value": "#1D2939",
             "type": "color"
           }
         },
