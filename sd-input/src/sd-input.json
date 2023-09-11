@@ -808,6 +808,11 @@
           "value": "#175CD3",
           "type": "color"
         }
+      },
+      "test": {
+        "value": "#522faa",
+        "type": "color",
+        "description": "test token"
       }
     },
     "background": {
