@@ -31,3 +31,17 @@ jobs:
           author_email: example@gmail.com
           message: 'chore: style-dictionary output'
           add: '.'
+
+      - name: Get Current Version
+        id: get_version
+        run: |
+          current_version=$(jq -r .version package.json)
+          echo "::set-output name=current_version::$current_version"
+
+      - name: Create Version Tag
+        if: ${{ steps.get_version.outputs.current_version != '' }}
+        run: |
+          current_version="${{ steps.get_version.outputs.current_version }}"
+          new_version="${{ github.run_number }}"
+          git tag -a "v$new_version" -m "Version $new_version"
+          git push origin "v$new_version"
