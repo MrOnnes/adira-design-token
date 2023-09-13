@@ -33,12 +33,18 @@ jobs:
           add: '.'
 
       - name: Get Current Version
+        id: version
         run: |
           current_version=$(jq -r .version package.json)
-          new_revision=$((version_parts[2] + 1))
-          new_version="${version_parts[0]}.${version_parts[1]}.$new_revision"
-          echo "::set-output name=new_version::$new_version"
-        id: version
+          echo "Current Version: $current_version"
+
+      # - name: Get Current Version
+      #   run: |
+      #     current_version=$(jq -r .version package.json)
+      #     new_revision=$((version_parts[2] + 1))
+      #     new_version="${version_parts[0]}.${version_parts[1]}.$new_revision"
+      #     echo "::set-output name=new_version::$new_version"
+      #   id: version
 
       # - name: Create Version Tag
       #   run: |
