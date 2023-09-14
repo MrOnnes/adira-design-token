@@ -41,18 +41,17 @@ jobs:
           new_revision=$((version_parts[2] + 1))
           new_version="${version_parts[0]}.${version_parts[1]}.$new_revision"
           echo "New Version: $new_version"
-          jq ".version = \"$new_version\"" package.json > package.json.tmp
-          mv package.json.tmp package.json
+          echo "::set-output name=new_version::$new_version"
           echo "NEW_VERSION=$new_version" >> $GITHUB_ENV
 
-      - name: Commit and Push Changes
+      - name: Update Version in package.json
         run: |
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
+          new_version="${{ steps.version.outputs.new_version }}"
+          echo "Updating package.json to version $new_version"
+          npm --no-git-tag-version version $new_version
           git add package.json
-          git commit -m "Bump version to $new_version"
-          git push origin main
-        working-directory: ${{ github.workspace }}
+          git commit -m "chore: update package.json to version $new_version"
+          git push origin HEAD
 
       - name: Create Version Tag
         run: |
