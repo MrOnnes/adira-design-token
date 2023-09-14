@@ -32,11 +32,16 @@ jobs:
           message: 'chore: style-dictionary output'
           add: '.'
 
-      - name: Get Current Version
+      - name: Get Current Version and Calculate New Version
         id: version
         run: |
           current_version=$(jq -r .version package.json)
           echo "Current Version: $current_version"
+          IFS='.' read -ra version_parts <<< "$current_version"
+          new_revision=$((version_parts[2] + 1))
+          new_version="${version_parts[0]}.${version_parts[1]}.$new_revision"
+          echo "New Version: $new_version"
+          echo "NEW_VERSION=$new_version" >> $GITHUB_ENV
 
       - name: Create Version Tag
         run: |
