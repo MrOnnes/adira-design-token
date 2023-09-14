@@ -41,6 +41,8 @@ jobs:
           new_revision=$((version_parts[2] + 1))
           new_version="${version_parts[0]}.${version_parts[1]}.$new_revision"
           echo "New Version: $new_version"
+          jq ".version = \"$new_version\"" package.json > package.json.tmp
+          mv package.json.tmp package.json
           echo "NEW_VERSION=$new_version" >> $GITHUB_ENV
 
       - name: Commit and Push Changes
