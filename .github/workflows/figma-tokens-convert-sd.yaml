@@ -49,6 +49,8 @@ jobs:
           git config user.email "actions@github.com"
           new_version="${{ steps.version.outputs.new_version }}"
           echo "New Version : $new_version"
+          git tag -a "v$new_version" -m "Versi $new_version"
+          git push origin "v$new_version"
 
       # - name: Create Version Tag
       #   run: |
