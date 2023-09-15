@@ -14,14 +14,15 @@ jobs:
       #   run: |
       #     echo "skipped"
 
+      - name: Check Branch Name
+        run: |
+          if [[ $GITHUB_REF != "refs/heads/figma-tokens" ]]; then
+            echo "Not pushing to figma-tokens branch, skipping the workflow."
+            exit 0
+          fi
+
       - name: Checkout code
         uses: actions/checkout@v2
-
-      # - name: Install Dependencies
-      #   run: npm install
-
-      # - name: Run token-transformer
-      #   run: npx token-transformer sd-input/src/figma-tokens-output.json sd-input/src/sd-input.json global,colors,size,font global --resolveReferences true --expandTypography=true
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
