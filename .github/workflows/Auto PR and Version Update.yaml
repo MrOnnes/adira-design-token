@@ -1,11 +1,16 @@
 name: Auto Convert and Version Update
 
 on:
-  workflow_run:
-    workflows:
-      ['Create Figma Tokens Pull Request (automatic create pull request)']
-    types:
-      - completed
+  push:
+    branches:
+      - dart-tokens
+
+# on:
+#   workflow_run:
+#     workflows:
+#       ['Create Figma Tokens Pull Request (automatic create pull request)']
+#     types:
+#       - completed
 
 jobs:
   convert-sd:
@@ -21,9 +26,9 @@ jobs:
       #   - name: Chekout code
       #     uses: actions/checkout@v2
 
-      - name: Chekout code
-        run: |
-          echo "repo + ref : ${{ github.event.pull_request.head.repo.full_name }} + ${{ github.event.pull_request.head.ref }}"
+      #   - name: Chekout code
+      #     run: |
+      #       echo "repo + ref : ${{ github.event.pull_request.head.repo.full_name }} + ${{ github.event.pull_request.head.ref }}"
 
       #   - uses: actions/checkout@master
       #     with:

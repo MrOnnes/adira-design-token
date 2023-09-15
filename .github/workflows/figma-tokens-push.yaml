@@ -7,7 +7,32 @@ on:
       - figma-tokens
 
 jobs:
+  convert-sd:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run token-transformer
+        run: npx token-transformer sd-input/src/figma-tokens-output.json sd-input/src/sd-input.json global,colors,size,font global --resolveReferences true --expandTypography=true
+
+      - name: Run style-dictionary
+        run: npx style-dictionary build --config sd.config.cjs
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "senno.adi2509@gmail.com"
+          git config --local user.name "senno adi"
+          git add .
+          git commit -m "chore: style-dictionary output"
+          git push origin main
+
   pull-request:
+    needs: convert-sd
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
