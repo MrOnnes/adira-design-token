@@ -84,8 +84,6 @@ jobs:
 
           # git push --tags
 
-          fi
-
         #####
 
       - name: get new_version
