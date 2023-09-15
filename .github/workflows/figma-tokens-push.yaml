@@ -55,7 +55,9 @@ jobs:
 
           # Membuat versi yang baru dengan menggabungkan kembali array
           new_version="${version_parts[0]}.${version_parts[1]}.$new_revision"
-          echo "new version : $new_version"
+
+          # echo "new version : $new_version"
+          echo "new_version=$new_version" >> $GITHUB_ENV  # Menyimpan nilai new_version sebagai env variable
 
           # Mengecek apakah tag sudah ada atau tidak
           if git rev-parse --verify "v$new_version" >/dev/null 2>&1; then
