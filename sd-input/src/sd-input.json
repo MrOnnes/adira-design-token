@@ -810,7 +810,7 @@
         }
       },
       "test": {
-        "value": "#522fbb",
+        "value": "#522faa",
         "type": "color",
         "description": "test token"
       }
