@@ -56,6 +56,11 @@ jobs:
           new_version="${version_parts[0]}.${version_parts[1]}.$new_revision"
           echo "new version : $new_version"
 
+          # Mengecek apakah tag sudah ada atau tidak
+          if git rev-parse --verify "v$new_version" >/dev/null 2>&1; then
+            echo "Tag 'v$new_version' sudah ada."
+          else
+
           # Memperbarui versi dalam package.json
           jq ".version = \"$new_version\"" package.json > package.json.tmp
           mv package.json.tmp package.json
@@ -67,6 +72,8 @@ jobs:
           git tag -a "v$new_version" -m "Versi $new_version"
 
           git push --tags
+
+          fi
 
         #####
 
