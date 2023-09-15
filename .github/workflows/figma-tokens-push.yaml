@@ -35,6 +35,7 @@ jobs:
         run: sudo apt-get install jq
 
       - name: Auto-increment Version Tag on Merge
+        id: tagging
         run: |
           #Mendapatkan versi saat ini dari package.json
           current_version=$(jq -r .version package.json)
@@ -90,6 +91,7 @@ jobs:
           author_email: senno.adi2509@gmail.com
           message: 'chore: style-dictionary output'
           add: '.'
+          # tag: 'v${{ steps.tagging.outputs.new_version}}'
           tag_push: ''
 
       - name: Create Pull Request
