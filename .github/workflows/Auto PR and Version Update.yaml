@@ -38,9 +38,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Pull latest changes from main
-        run: git pull origin main
-
       - name: Checkout Repository
         uses: actions/checkout@v2
 
@@ -51,6 +48,9 @@ jobs:
 
       - name: Install jq
         run: sudo apt-get install jq
+
+      - name: Pull latest changes from main
+        run: git pull origin main
 
       - name: Auto-increment Version Tag on Merge
         run: |
