@@ -39,6 +39,11 @@ jobs:
           title: 'Figma Tokens Update'
           body: '🍥 Design Tokens were updated in Figma! This PR was created to update the code.'
 
+      - name: Trigger AutoTag Workflow
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: 'Auto Convert and Version Update'
+
       - name: Check ouputs
         run: |
           echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
