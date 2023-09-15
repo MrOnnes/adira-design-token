@@ -1528,6 +1528,11 @@
   },
   "$themes": [],
   "$metadata": {
-    "tokenSetOrder": ["global", "colors", "size", "font"]
+    "tokenSetOrder": [
+      "global",
+      "colors",
+      "size",
+      "font"
+    ]
   }
 }
