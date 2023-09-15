@@ -58,6 +58,8 @@ jobs:
 
           git tag -a "v$new_version" -m "Versi $new_version"
 
+          git push --tags
+
         #####
 
       - name: Commit changes
