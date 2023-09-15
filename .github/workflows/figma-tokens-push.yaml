@@ -67,8 +67,11 @@ jobs:
           jq --arg new_version "$new_version" '.version = $new_version' package.json > package.json.tmp
           mv package.json.tmp package.json
 
-          #
 
+          # Simpan nilai new_version ke dalam berkas teks
+          echo "$new_version" > new_version.txt
+
+          fi
 
           # Commit perubahan dan push ke branch main
           git config user.name "GitHub Actions"
@@ -86,9 +89,11 @@ jobs:
         #####
 
       - name: get new_version
+        id: get_version
         run: |
-          # Anda dapat mengakses nilai new_version yang disimpan sebelumnya
-          echo "new_version: ${{ steps.tagging.outputs.new_version }}"
+          # Baca nilai new_version dari berkas teks
+          new_version=$(cat new_version.txt)
+          echo "new_version: $new_version"
 
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
