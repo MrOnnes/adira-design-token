@@ -20,17 +20,41 @@ on:
       - completed
 
 jobs:
-  main-branch-job:
+  convert-sd:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
-      - name: Check if the workflow was successful
-        run: |
-          if [[ ${{ github.event.workflow_run.conclusion }} == 'success' ]]; then
-          echo "The Figma Tokens Pull Request was successfully merged."
-          # Add your actions here that you want to perform after the PR is merged.
-          else
-          echo "The Figma Tokens Pull Request was not successful."
-          fi
+      - uses: actions/checkout@master
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.pull_request.head.ref }}
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run token-transformer
+        run: npx token-transformer sd-input/src/figma-tokens-output.json sd-input/src/sd-input.json global,colors,size,font global --resolveReferences true --expandTypography=true
+
+      - name: Run style-dictionary
+        run: npx style-dictionary build --config sd.config.cjs
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: senno adi
+          author_email: senno.adi2509@@gmail.com
+          message: 'chore: style-dictionary output'
+          add: '.'
+#   main-branch-job:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Check if the workflow was successful
+#         run: |
+#           if [[ ${{ github.event.workflow_run.conclusion }} == 'success' ]]; then
+#           echo "The Figma Tokens Pull Request was successfully merged."
+#           # Add your actions here that you want to perform after the PR is merged.
+#           else
+#           echo "The Figma Tokens Pull Request was not successful."
+#           fi
 
 #   pull-request:
 #     runs-on: ubuntu-latest
