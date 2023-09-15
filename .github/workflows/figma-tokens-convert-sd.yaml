@@ -3,45 +3,69 @@ name: Process Figma Tokens Pull Request (convert to style-dictionary)
 on: pull_request
 
 jobs:
-  run_if: # only if base branch is "figma-tokens"
-    if: ${{ github.head_ref == 'figma-tokens' }}
-    name: Process Figma Tokens
+  skip:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
     steps:
-      # checkout to the head of this PR
-      - uses: actions/checkout@master
-        with:
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
-          ref: ${{ github.event.pull_request.head.ref }}
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Run token-transformer
-        run: npx token-transformer sd-input/src/figma-tokens-output.json sd-input/src/sd-input.json global,colors,size,font global --resolveReferences true --expandTypography=true
-
-      - name: Run style-dictionary
-        run: npx style-dictionary build --config sd.config.cjs
-
-      - name: Commit changes
-        uses: EndBug/add-and-commit@v9
-        with:
-          author_name: Senno Adi (Robot style dictionary converter)
-          author_email: example@gmail.com
-          message: 'chore: style-dictionary output'
-          add: '.'
-
-      - name: Get Current Version
-        id: get_version
+      - name: skip process
         run: |
-          current_version=$(jq -r .version package.json)
-          echo "::set-output name=current_version::$current_version"
+          echo: "skipped"
 
-      - name: Create Version Tag
-        if: ${{ steps.get_version.outputs.current_version != '' }}
-        run: |
-          current_version="${{ steps.get_version.outputs.current_version }}"
-          new_version="${{ github.run_number }}"
-          git tag -a "v$new_version" -m "Version $new_version"
-          git push origin "v$new_version"
+# jobs:
+#   run_if: # only if base branch is "figma-tokens"
+#     if: ${{ github.head_ref == 'figma-tokens' }}
+#     name: Process Figma Tokens
+#     runs-on: ubuntu-latest
+#     timeout-minutes: 5
+#     steps:
+#       # checkout to the head of this PR
+#       - uses: actions/checkout@master
+#         with:
+#           repository: ${{ github.event.pull_request.head.repo.full_name }}
+#           ref: ${{ github.event.pull_request.head.ref }}
+
+#       - name: Install Dependencies
+#         run: npm install
+
+#       - name: Run token-transformer
+#         run: npx token-transformer sd-input/src/figma-tokens-output.json sd-input/src/sd-input.json global,colors,size,font global --resolveReferences true --expandTypography=true
+
+#       - name: Run style-dictionary
+#         run: npx style-dictionary build --config sd.config.cjs
+
+#       - name: Commit changes
+#         uses: EndBug/add-and-commit@v9
+#         with:
+#           author_name: Senno Adi (Robot style dictionary converter)
+#           author_email: example@gmail.com
+#           message: 'chore: style-dictionary output'
+#           add: '.'
+
+#       - name: Get Current Version and Calculate New Version
+#         id: version
+#         run: |
+#           current_version=$(jq -r .version package.json)
+#           echo "Current Version: $current_version"
+#           IFS='.' read -ra version_parts <<< "$current_version"
+#           new_revision=$((version_parts[2] + 1))
+#           new_version="${version_parts[0]}.${version_parts[1]}.$new_revision"
+#           echo "New Version: $new_version"
+#           echo "::set-output name=new_version::$new_version"
+#           echo "NEW_VERSION=$new_version" >> $GITHUB_ENV
+
+#       - name: Update Version in package.json
+#         run: |
+#           new_version="${{ steps.version.outputs.new_version }}"
+#           echo "Updating package.json to version $new_version"
+#           npm --no-git-tag-version version $new_version
+#           git add package.json
+#           git commit -m "chore: update package.json to version $new_version"
+#           git push origin HEAD
+
+#       - name: Create Version Tag
+#         run: |
+#           git config user.name "GitHub Actions"
+#           git config user.email "actions@github.com"
+#           new_version="${{ env.NEW_VERSION }}"
+#           echo "New Version: $new_version"
+#           git tag -a "v$new_version" -m "Versi $new_version"
+#           git push origin "v$new_version"
