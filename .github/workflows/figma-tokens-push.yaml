@@ -24,12 +24,12 @@ jobs:
         run: npx style-dictionary build --config sd.config.cjs
 
       - name: Commit changes
-        run: |
-          git config --local user.email "senno.adi2509@gmail.com"
-          git config --local user.name "senno adi"
-          git add .
-          git commit -m "chore: style-dictionary output"
-          git push origin main
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: senno adi
+          author_email: senno.adi2509@@gmail.com
+          message: 'chore: style-dictionary output'
+          add: '.'
 
   pull-request:
     needs: convert-sd
