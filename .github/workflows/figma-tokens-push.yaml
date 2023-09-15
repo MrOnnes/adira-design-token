@@ -69,7 +69,8 @@ jobs:
 
 
           # Simpan nilai new_version ke dalam berkas teks
-          echo "$new_version" > new_version.txt
+          # echo "$new_version" > new_version.txt
+          echo "::set-env name=NEW_VERSION::$new_version"
 
           fi
 
@@ -90,7 +91,7 @@ jobs:
         id: get_version
         run: |
           # Baca nilai new_version dari berkas teks
-          new_version=$(cat new_version.txt)
+          new_version="${{ env.NEW_VERSION }}"
           echo "new_version: $new_version"
 
       - name: Commit changes
@@ -100,7 +101,7 @@ jobs:
           author_email: senno.adi2509@gmail.com
           message: 'chore: style-dictionary output'
           add: '.'
-          tag: 'v${cat new_version.txt}'
+          tag: 'v${NEW_VERSION}'
           tag_push: ''
 
       - name: Create Pull Request
