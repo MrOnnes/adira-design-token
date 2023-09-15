@@ -1,9 +1,11 @@
 name: Auto PR and Version Update
 
-on:
-  push:
-    branches:
-      - figma-tokens
+# on:
+#   push:
+#     branches:
+#       - figma-tokens
+
+on: pull_request
 
 jobs:
   pull-request:
