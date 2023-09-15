@@ -70,7 +70,8 @@ jobs:
 
           # Simpan nilai new_version ke dalam berkas teks
           # echo "$new_version" > new_version.txt
-          echo "::set-env name=NEW_VERSION::$new_version"
+          # Export nilai new_version sebagai variabel lingkungan
+            echo "NEW_VERSION=$new_version" >> $GITHUB_ENV
 
           fi
 
@@ -101,7 +102,7 @@ jobs:
           author_email: senno.adi2509@gmail.com
           message: 'chore: style-dictionary output'
           add: '.'
-          tag: 'v${NEW_VERSION}'
+          tag: 'v${{ env.NEW_VERSION }}'
           tag_push: ''
 
       - name: Create Pull Request
