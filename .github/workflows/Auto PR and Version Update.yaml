@@ -1,17 +1,18 @@
 name: Auto Convert and Version Update
 
-on: pull_request
+# on: pull_request
+on:
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  run_if: # only if base branch is "figma-tokens"
-    if: ${{ github.head_ref == 'figma-tokens' }}
-    name: Process Figma Tokens
+  do-something:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
     steps:
-      - name: running flow
+      - name: do something
         run: |
-          echo "flow running"
+          echo "do something"
 
 # on:
 #   workflow_run:
