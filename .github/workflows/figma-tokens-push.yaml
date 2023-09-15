@@ -91,7 +91,7 @@ jobs:
           author_email: senno.adi2509@gmail.com
           message: 'chore: style-dictionary output'
           add: '.'
-          # tag: 'v${{ steps.tagging.outputs.new_version}}'
+          tag: 'v${{ steps.tagging.outputs.new_version}}'
           tag_push: ''
 
       - name: Create Pull Request
