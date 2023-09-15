@@ -19,7 +19,11 @@ jobs:
         run: npm install
 
       - name: Run token-transformer
-        run: echo "token transformer running"
+        run: npx token-transformer sd-input/src/figma-tokens-output.json sd-input/src/sd-input.json global,colors,size,font global --resolveReferences true --expandTypography=true
+
+      - name: Run style-dictionary
+        run: echo "style-dictionary running"
+
   pull-request:
     runs-on: ubuntu-latest
     needs: convert-sd
