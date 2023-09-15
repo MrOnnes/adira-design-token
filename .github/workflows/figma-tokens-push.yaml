@@ -84,6 +84,11 @@ jobs:
 
         #####
 
+      - name: get new_version
+        run: |
+          # Anda dapat mengakses nilai new_version yang disimpan sebelumnya
+          echo "new_version: ${{ steps.tagging.outputs.new_version }}"
+
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
         with:
