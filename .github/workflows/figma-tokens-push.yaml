@@ -17,6 +17,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run token-transformer
+        run: npx token-transformer sd-input/src/figma-tokens-output.json sd-input/src/sd-input.json global,colors,size,font global --resolveReferences true --expandTypography=true
+
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
