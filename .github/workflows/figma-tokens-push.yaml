@@ -16,6 +16,20 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      - name: Run token-transformer
+        run: npx token-transformer sd-input/src/figma-tokens-output.json sd-input/src/sd-input.json global,colors,size,font global --resolveReferences true --expandTypography=true
+
+      - name: Run style-dictionary
+        run: npx style-dictionary build --config sd.config.cjs
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: senno adi
+          author_email: senno.adi2509@gmail.com
+          message: 'chore: style-dictionary output'
+          add: '.'
+
       #####
       - name: install jq
         run: sudo apt-get install jq
@@ -51,9 +65,15 @@ jobs:
           jq ".version = \"$new_version\"" package.json > package.json.tmp
           mv package.json.tmp package.json
 
+          #
+
+
           # Commit perubahan dan push ke branch main
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
+
+          git add -A
+          git commit -m "chore: update package.json to version $new_version"
 
           git tag -a "v$new_version" -m "Versi $new_version"
 
@@ -62,20 +82,6 @@ jobs:
           fi
 
         #####
-
-      - name: Run token-transformer
-        run: npx token-transformer sd-input/src/figma-tokens-output.json sd-input/src/sd-input.json global,colors,size,font global --resolveReferences true --expandTypography=true
-
-      - name: Run style-dictionary
-        run: npx style-dictionary build --config sd.config.cjs
-
-      - name: Commit changes
-        uses: EndBug/add-and-commit@v9
-        with:
-          author_name: senno adi
-          author_email: senno.adi2509@gmail.com
-          message: 'chore: style-dictionary output'
-          add: '.'
 
       - name: Create Pull Request
         id: cpr
