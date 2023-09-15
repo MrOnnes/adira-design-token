@@ -31,15 +31,15 @@ jobs:
           git config --local user.name "senno adi"
           git add .
           git commit -m "chore: style-dictionary output"
-          git push origin pr-branch
+          git push origin main
 
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
-          title: 'chore: style-dictionary output'
-          body: 'Automated PR to update style-dictionary output'
+    #   - name: Create Pull Request
+    #     uses: peter-evans/create-pull-request@v3
+    #     with:
+    #       token: ${{ secrets.GITHUB_TOKEN }}
+    #       branch: main
+    #       title: 'chore: style-dictionary output'
+    #       body: 'Automated PR to update style-dictionary output'
 
     #   - name: Commit changes
     #     uses: EndBug/add-and-commit@v9
@@ -48,6 +48,7 @@ jobs:
     #       author_email: senno.adi2509@@gmail.com
     #       message: 'chore: style-dictionary output'
     #       add: '.'
+
 #   create-tag:
 #     needs: convert-sd
 #     runs-on: ubuntu-latest
