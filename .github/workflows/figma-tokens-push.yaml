@@ -25,18 +25,19 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Create Pull Request
-        # uses: peter-evans/create-pull-request@v3
-        # with:
-        #   token: ${{ secrets.GITHUB_TOKEN }}
-        #   branch: main # Branch tujuan pull request
-        #   title: 'Figma Tokens Update'
-        #   body: '🍥 Design Tokens were updated in Figma! This PR was created to update the code.'
-        uses: repo-sync/pull-request@v2
+        uses: peter-evans/create-pull-request@v3
         with:
-          destination_branch: 'main' # match your default branch
-          pr_title: 'Figma Tokens Update'
-          pr_body: '🍥 Design Tokens were updated in Figma! This PR was created to update the code.'
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main # Branch tujuan pull request
+          title: 'Figma Tokens Update'
+          body: '🍥 Design Tokens were updated in Figma! This PR was created to update the code.'
+
+        # uses: repo-sync/pull-request@v2
+        # with:
+        #   destination_branch: 'main' # match your default branch
+        #   pr_title: 'Figma Tokens Update'
+        #   pr_body: '🍥 Design Tokens were updated in Figma! This PR was created to update the code.'
+        #   github_token: ${{ secrets.GITHUB_TOKEN }}
 
       # - uses: actions/checkout@v2
 
