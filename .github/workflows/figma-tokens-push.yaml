@@ -72,12 +72,12 @@ jobs:
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
 
-          git add -A
-          git commit -m "chore: update package.json to version $new_version"
+          # git add -A
+          # git commit -m "chore: update package.json to version $new_version"
 
-          git tag -a "v$new_version" -m "Versi $new_version"
+          # git tag -a "v$new_version" -m "Versi $new_version"
 
-          git push --tags
+          # git push --tags
 
           fi
 
@@ -90,6 +90,7 @@ jobs:
           author_email: senno.adi2509@gmail.com
           message: 'chore: style-dictionary output'
           add: '.'
+          tag_push: ''
 
       - name: Create Pull Request
         id: cpr
