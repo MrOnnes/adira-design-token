@@ -63,7 +63,8 @@ jobs:
           else
 
           # Memperbarui versi dalam package.json
-          jq ".version = \"$new_version\"" package.json > package.json.tmp
+          # jq ".version = \"$new_version\"" package.json > package.json.tmp
+          jq --arg new_version "$new_version" '.version = $new_version' package.json > package.json.tmp
           mv package.json.tmp package.json
 
           #
