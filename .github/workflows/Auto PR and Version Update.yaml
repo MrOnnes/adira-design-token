@@ -17,8 +17,13 @@ jobs:
       #     with:
       #       ref: ${{ github.event.workflow_run.head_branch }} # Menggunakan branch yang sesuai
       #       repository: ${{ github.event.workflow_run.head_repository.full_name }}
+
+      #   - name: Chekout code
+      #     uses: actions/checkout@v2
+
       - name: Chekout code
-        uses: actions/checkout@v2
+        run: |
+          echo "repo + ref : ${{ github.event.pull_request.head.repo.full_name }} + ${{ github.event.pull_request.head.ref }}"
 
       #   - uses: actions/checkout@master
       #     with:
