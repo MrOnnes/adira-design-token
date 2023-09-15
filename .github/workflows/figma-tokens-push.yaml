@@ -27,9 +27,13 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           author_name: senno adi
-          author_email: senno.adi2509@@gmail.com
+          author_email: senno.adi2509@gmail.com
           message: 'chore: style-dictionary output'
           add: '.'
+
+      - name: head_ref
+        run: |
+          echo "head ref : ${{github.head_ref}}"
 
   pull-request:
     needs: convert-sd
@@ -38,10 +42,21 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      # - name: Create Pull Request
+      #   uses: peter-evans/create-pull-request@v3
+      #   with:
+      #     token: ${{ secrets.GITHUB_TOKEN }}
+      #     branch: main # Branch tujuan pull request
+      #     title: 'Figma Tokens Update'
+      #     body: '🍥 Design Tokens were updated in Figma! This PR was created to update the code.'
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
+        uses: repo-sync/pull-request@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main # Branch tujuan pull request
-          title: 'Figma Tokens Update'
-          body: '🍥 Design Tokens were updated in Figma! This PR was created to update the code.'
+          destination_branch: 'main' # match your default branch
+          pr_title: 'Figma Tokens Update'
+          pr_body: '🍥 Design Tokens were updated in Figma! This PR was created to update the code.'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: head_ref
+        run: |
+          echo "head ref : ${{github.head_ref}}"
