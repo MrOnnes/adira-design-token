@@ -32,185 +32,61 @@ jobs:
           author_email: senno.adi2509@@gmail.com
           message: 'chore: style-dictionary output'
           add: '.'
-
-  create-tag:
-    needs: convert-sd
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Set Up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14' # Ganti dengan versi Node.js yang sesuai
-
-      - name: Install jq
-        run: sudo apt-get install jq
-
-      #   - name: Pull latest changes from main
-      #     run: git pull origin main
-      - name: Auto-increment Version Tag on Merge
-        run: |
-          # Mendapatkan versi saat ini dari package.json
-          current_version=$(jq -r .version package.json)
-          echo "current version : $current_version"
-
-          # Cek apakah versi ada atau tidak
-          if [[ "$current_version" == "null" || -z "$current_version" ]]; then
-            echo "Tidak dapat menemukan versi dalam package.json."
-            exit 1
-          fi
-
-          # Memisahkan versi menjadi array berdasarkan tanda titik (.)
-          IFS='.' read -ra version_parts <<< "$current_version"
-
-          # Menambahkan 1 ke bagian terakhir (angka revisi) dari versi
-          new_revision=$((version_parts[2] + 1))
-
-          # Membuat versi yang baru dengan menggabungkan kembali array
-          new_version="${version_parts[0]}.${version_parts[1]}.$new_revision"
-          echo "new version : $new_version"
-
-          # Memperbarui versi dalam package.json
-          jq ".version = \"$new_version\"" package.json > package.json.tmp
-          mv package.json.tmp package.json
-
-          # Melakukan git pull terlebih dahulu untuk mengambil perubahan terbaru dari remote 'main'
-          git pull origin main
-
-          # Menghapus tag yang sudah ada di remote jika ada
-          # git push --delete origin "v$new_version" || true
-
-          # Commit perubahan dan push ke branch main
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          git add package.json
-          git commit -m "Auto-increment version to $new_version"
-          git push origin main
-
-          # Membuat tag baru dengan versi yang baru
-          git tag -a "v$new_version" -m "Versi $new_version"
-          git push origin "v$new_version"
-
-#   main-branch-job:
+#   create-tag:
+#     needs: convert-sd
 #     runs-on: ubuntu-latest
+
 #     steps:
-#       - name: Check if the workflow was successful
+#       - name: Checkout Repository
+#         uses: actions/checkout@v2
+
+#       - name: Set Up Node.js
+#         uses: actions/setup-node@v2
+#         with:
+#           node-version: '14' # Ganti dengan versi Node.js yang sesuai
+
+#       - name: Install jq
+#         run: sudo apt-get install jq
+
+#       - name: Auto-increment Version Tag on Merge
 #         run: |
-#           if [[ ${{ github.event.workflow_run.conclusion }} == 'success' ]]; then
-#           echo "The Figma Tokens Pull Request was successfully merged."
-#           # Add your actions here that you want to perform after the PR is merged.
-#           else
-#           echo "The Figma Tokens Pull Request was not successful."
+#           # Mendapatkan versi saat ini dari package.json
+#           current_version=$(jq -r .version package.json)
+#           echo "current version : $current_version"
+
+#           # Cek apakah versi ada atau tidak
+#           if [[ "$current_version" == "null" || -z "$current_version" ]]; then
+#             echo "Tidak dapat menemukan versi dalam package.json."
+#             exit 1
 #           fi
 
-#   pull-request:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: skip process
-#         run: |
-#           echo "skipped"
+#           # Memisahkan versi menjadi array berdasarkan tanda titik (.)
+#           IFS='.' read -ra version_parts <<< "$current_version"
 
-# steps:
-#   - uses: actions/checkout@v2
+#           # Menambahkan 1 ke bagian terakhir (angka revisi) dari versi
+#           new_revision=$((version_parts[2] + 1))
 
-#   - name: Create Pull Request
-#     uses: repo-sync/pull-request@v2
-#     with:
-#       destination_branch: 'main' # match your default branch
-#       pr_title: 'Figma Tokens Update'
-#       pr_body: '🍥 Design Tokens were updated in Figma! This PR was created to update the code.'
-#       github_token: ${{ secrets.GH_PAT }}
+#           # Membuat versi yang baru dengan menggabungkan kembali array
+#           new_version="${version_parts[0]}.${version_parts[1]}.$new_revision"
+#           echo "new version : $new_version"
 
-#   process-sd:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v2
+#           # Memperbarui versi dalam package.json
+#           jq ".version = \"$new_version\"" package.json > package.json.tmp
+#           mv package.json.tmp package.json
 
-#       - name: Install Dependencies
-#         run: npm install
+#           # Melakukan git pull terlebih dahulu untuk mengambil perubahan terbaru dari remote 'main'
+#           git pull origin main
 
-#       - name: Run token-transformer
-#         run: npx token-transformer sd-input/src/figma-tokens-output.json sd-input/src/sd-input.json global,colors,size,font global --resolveReferences true --expandTypography=true
+#           # Menghapus tag yang sudah ada di remote jika ada
+#           # git push --delete origin "v$new_version" || true
 
-#       - name: Run style-dictionary
-#         run: npx style-dictionary build --config sd.config.cjs
-
-#       - name: Commit changes
-#         uses: EndBug/add-and-commit@v9
-#         with:
-#           author_name: Senno Adi (Robot style dictionary converter)
-#           author_email: example@gmail.com
-#           message: 'chore: style-dictionary output'
-#           add: '.'
-
-#   - name: Checkout code
-#     uses: actions/checkout@v2
-
-#   - name: Create Pull Request
-#     uses: peter-evans/create-pull-request@v3
-#     with:
-#       token: ${{ secrets.GITHUB_TOKEN }}
-#       branch: main # Branch tujuan pull request
-#       title: 'Figma Tokens Update'
-#       body: '🍥 Design Tokens were updated in Figma! This PR was created to update the code.'
-
-#   create-pr:
-#     runs-on: ubuntu-latest
-#     needs: process-sd
-#     steps:
-#       - name: Checkout code
-#         uses: actions/checkout@v2
-
-#       - name: Create Pull Request
-#         uses: peter-evans/create-pull-request@v3
-#         with:
-#           token: ${{ secrets.GITHUB_TOKEN }}
-#           branch: main # Branch tujuan pull request
-#           title: 'Figma Tokens Update'
-#           body: '🍥 Design Tokens were updated in Figma! This PR was created to update the code.'
-
-#   - name: Get Current Version and Calculate New Version
-#     id: version
-#     run: |
-#       current_version=$(jq -r .version package.json)
-#       echo "Current Version: $current_version"
-#       IFS='.' read -ra version_parts <<< "$current_version"
-#       new_revision=$((version_parts[2] + 1))
-#       new_version="${version_parts[0]}.${version_parts[1]}.$new_revision"
-#       echo "New Version: $new_version"
-#       echo "::set-output name=new_version::$new_version"
-#       echo "NEW_VERSION=$new_version" >> $GITHUB_ENV
-
-#   - name: Update Version in package.json
-#     run: |
-#       new_version="${{ steps.version.outputs.new_version }}"
-#       echo "Updating package.json to version $new_version"
-#       npm --no-git-tag-version version $new_version
-#       git add package.json
-#       git commit -m "chore: update package.json to version $new_version"
-
-#   create-pr:
-#     runs-on: ubuntu-latest
-#     needs: process-sd
-#     steps:
-#       - name: Checkout code
-#         uses: actions/checkout@v2
-
-#       - name: Create Pull Request
-#         uses: peter-evans/create-pull-request@v3
-#         with:
-#           token: ${{ secrets.GITHUB_TOKEN }}
-#           branch: main # Branch tujuan pull request
-#           title: 'Figma Tokens Update'
-#           body: '🍥 Design Tokens were updated in Figma! This PR was created to update the code.'
-
-#       - name: Merge PR (Optional)
-#         if: success() # Hanya merge jika PR berhasil dibuat
-#         run: |
-#           # Mengganti branch 'main' dengan branch 'figma-tokens'
-#           git checkout main
-#           git merge --no-ff ${{ github.event.head_ref }} -m "Merge branch 'figma-tokens' into main"
+#           # Commit perubahan dan push ke branch main
+#           git config user.name "GitHub Actions"
+#           git config user.email "actions@github.com"
+#           git add package.json
+#           git commit -m "Auto-increment version to $new_version"
 #           git push origin main
+
+#           # Membuat tag baru dengan versi yang baru
+#           git tag -a "v$new_version" -m "Versi $new_version"
+#           git push origin "v$new_version"
