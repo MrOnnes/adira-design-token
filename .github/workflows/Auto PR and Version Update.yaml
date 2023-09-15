@@ -37,13 +37,66 @@ jobs:
       - name: Run style-dictionary
         run: npx style-dictionary build --config sd.config.cjs
 
-      - name: Commit changes
-        uses: EndBug/add-and-commit@v9
+    #   - name: Commit changes
+    #     uses: EndBug/add-and-commit@v9
+    #     with:
+    #       author_name: senno adi
+    #       author_email: senno.adi2509@@gmail.com
+    #       message: 'chore: style-dictionary output'
+    #       add: '.'
+
+  create-tag:
+    needs: convert-sd
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set Up Node.js
+        uses: actions/setup-node@v2
         with:
-          author_name: senno adi
-          author_email: senno.adi2509@@gmail.com
-          message: 'chore: style-dictionary output'
-          add: '.'
+          node-version: '14' # Ganti dengan versi Node.js yang sesuai
+
+      - name: Install jq
+        run: sudo apt-get install jq
+
+      - name: Auto-increment Version Tag on Merge
+        if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'main'
+        run: |
+          # Mendapatkan versi saat ini dari package.json
+          current_version=$(jq -r .version package.json)
+
+          # Cek apakah versi ada atau tidak
+          if [[ "$current_version" == "null" || -z "$current_version" ]]; then
+            echo "Tidak dapat menemukan versi dalam package.json."
+            exit 1
+          fi
+
+          # Memisahkan versi menjadi array berdasarkan tanda titik (.)
+          IFS='.' read -ra version_parts <<< "$current_version"
+
+          # Menambahkan 1 ke bagian terakhir (angka revisi) dari versi
+          new_revision=$((version_parts[2] + 1))
+
+          # Membuat versi yang baru dengan menggabungkan kembali array
+          new_version="${version_parts[0]}.${version_parts[1]}.$new_revision"
+
+          # Memperbarui versi dalam package.json
+          jq ".version = \"$new_version\"" package.json > package.json.tmp
+          mv package.json.tmp package.json
+
+          # Commit perubahan dan push ke branch main
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add package.json
+          git commit -m "Auto-increment version to $new_version"
+          git push origin main
+
+          # Membuat tag baru dengan versi yang baru
+          git tag -a "v$new_version" -m "Versi $new_version"
+          git push origin "v$new_version"
+
 #   main-branch-job:
 #     runs-on: ubuntu-latest
 #     steps:
