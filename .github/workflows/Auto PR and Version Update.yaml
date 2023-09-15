@@ -12,10 +12,17 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@master
+      - name: Checkout pull request branch
+        uses: actions/checkout@v2
         with:
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
-          ref: ${{ github.event.pull_request.head.ref }}
+          ref: ${{ github.event.workflow_run.head_branch }} # Menggunakan branch yang sesuai
+          repository: ${{ github.event.workflow_run.head_repository.full_name }}
+
+      #   - uses: actions/checkout@master
+      #     with:
+      #       repository: ${{ github.event.pull_request.head.repo.full_name }}
+      #       ref: ${{ github.event.pull_request.head.ref }}
+
       - name: Install Dependencies
         run: npm install
 
