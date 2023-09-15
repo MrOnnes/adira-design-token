@@ -12,11 +12,13 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Checkout pull request branch
+      #   - name: Checkout pull request branch
+      #     uses: actions/checkout@v2
+      #     with:
+      #       ref: ${{ github.event.workflow_run.head_branch }} # Menggunakan branch yang sesuai
+      #       repository: ${{ github.event.workflow_run.head_repository.full_name }}
+      - name: Chekout code
         uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.workflow_run.head_branch }} # Menggunakan branch yang sesuai
-          repository: ${{ github.event.workflow_run.head_repository.full_name }}
 
       #   - uses: actions/checkout@master
       #     with:
