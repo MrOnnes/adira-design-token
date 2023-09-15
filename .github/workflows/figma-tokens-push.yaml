@@ -52,6 +52,10 @@ jobs:
           jq ".version = \"$new_version\"" package.json > package.json.tmp
           mv package.json.tmp package.json
 
+          # Commit perubahan dan push ke branch main
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+
           git tag -a "v$new_version" -m "Versi $new_version"
 
         #####
