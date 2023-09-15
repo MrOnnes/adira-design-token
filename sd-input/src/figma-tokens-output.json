@@ -832,7 +832,7 @@
           }
         },
         "test": {
-          "value": "#522fcc",
+          "value": "#522fdd",
           "type": "color",
           "description": "test token"
         }
@@ -1528,11 +1528,6 @@
   },
   "$themes": [],
   "$metadata": {
-    "tokenSetOrder": [
-      "global",
-      "colors",
-      "size",
-      "font"
-    ]
+    "tokenSetOrder": ["global", "colors", "size", "font"]
   }
 }
