@@ -7,28 +7,48 @@ name: Auto PR and Version Update
 
 # on: pull_request
 
+# on:
+#   pull_request:
+#     branches:
+#       - main
+
 on:
-  pull_request:
-    branches:
-      - main
+  workflow_run:
+    workflows:
+      ['Create Figma Tokens Pull Request (automatic create pull request)']
+    types:
+      - completed
 
 jobs:
-  pull-request:
+  main-branch-job:
     runs-on: ubuntu-latest
     steps:
-      - name: skip process
+      - name: Check if the workflow was successful
         run: |
-          echo "skipped"
-    # steps:
-    #   - uses: actions/checkout@v2
+          if [[ ${{ github.event.workflow_run.conclusion }} == 'success' ]]; then
+          echo "The Figma Tokens Pull Request was successfully merged."
+          # Add your actions here that you want to perform after the PR is merged.
+          else
+          echo "The Figma Tokens Pull Request was not successful."
+          fi
 
-    #   - name: Create Pull Request
-    #     uses: repo-sync/pull-request@v2
-    #     with:
-    #       destination_branch: 'main' # match your default branch
-    #       pr_title: 'Figma Tokens Update'
-    #       pr_body: '🍥 Design Tokens were updated in Figma! This PR was created to update the code.'
-    #       github_token: ${{ secrets.GH_PAT }}
+#   pull-request:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: skip process
+#         run: |
+#           echo "skipped"
+
+# steps:
+#   - uses: actions/checkout@v2
+
+#   - name: Create Pull Request
+#     uses: repo-sync/pull-request@v2
+#     with:
+#       destination_branch: 'main' # match your default branch
+#       pr_title: 'Figma Tokens Update'
+#       pr_body: '🍥 Design Tokens were updated in Figma! This PR was created to update the code.'
+#       github_token: ${{ secrets.GH_PAT }}
 
 #   process-sd:
 #     runs-on: ubuntu-latest
