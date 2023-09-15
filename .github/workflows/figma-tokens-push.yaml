@@ -22,13 +22,13 @@ jobs:
       - name: Run style-dictionary
         run: npx style-dictionary build --config sd.config.cjs
 
-      - name: Commit changes
-        uses: EndBug/add-and-commit@v9
-        with:
-          author_name: senno adi
-          author_email: senno.adi2509@gmail.com
-          message: 'chore: style-dictionary output'
-          add: '.'
+      # - name: Commit changes
+      #   uses: EndBug/add-and-commit@v9
+      #   with:
+      #     author_name: senno adi
+      #     author_email: senno.adi2509@gmail.com
+      #     message: 'chore: style-dictionary output'
+      #     add: '.'
 
       #####
       - name: install jq
@@ -82,6 +82,14 @@ jobs:
           fi
 
         #####
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: senno adi
+          author_email: senno.adi2509@gmail.com
+          message: 'chore: style-dictionary output'
+          add: '.'
 
       - name: Create Pull Request
         id: cpr
