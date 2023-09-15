@@ -32,13 +32,13 @@ jobs:
           message: 'chore: style-dictionary output'
           add: '.'
 
-  # pull-request:
-  #   runs-on: ubuntu-latest
-  #   needs: convert-sd
-  #   steps:
-  #     # - name: skip process
-  #     #   run: |
-  #     #     echo "skipped"
+  pull-request:
+    runs-on: ubuntu-latest
+    needs: convert-sd
+    steps:
+      - name: skip process
+        run: |
+          echo "skipped"
 
   #     - name: Check Branch Name
   #       run: |
