@@ -12,12 +12,11 @@
     "serve": "npx backlight@latest serve hSAEtELKuZc4zA63KHpB --open"
   },
   "devDependencies": {
-    "token-transformer": "^0.0.27",
-    "style-dictionary": "^3.7.1",
     "@divriots/dockit-core": "^0.9.4",
-    "lit": "^2.2.2",
+    "@mdjs/core": "*",
     "@rocket/create": "*",
-    "@mdjs/core": "*"
-  },
-  "dependencies": {}
+    "lit": "^2.2.2",
+    "style-dictionary": "^3.8.0",
+    "token-transformer": "^0.0.27"
+  }
 }
