@@ -7,50 +7,106 @@ on:
       - figma-tokens
 
 jobs:
-  # convert-sd:
-  #   runs-on: ubuntu-latest
-  #   timeout-minutes: 5
-  #   steps:
-  #     - uses: actions/checkout@master
-  #       with:
-  #         repository: ${{ github.event.pull_request.head.repo.full_name }}
-  #         ref: ${{ github.event.pull_request.head.ref }}
-  #     - name: Install Dependencies
-  #       run: npm install
-
-  #     - name: Run token-transformer
-  #       run: npx token-transformer sd-input/src/figma-tokens-output.json sd-input/src/sd-input.json global,colors,size,font global --resolveReferences true --expandTypography=true
-
-  #     - name: Run style-dictionary
-  #       run: npx style-dictionary build --config sd.config.cjs
-
-  #     - name: Commit changes
-  #       uses: EndBug/add-and-commit@v9
-  #       with:
-  #         author_name: senno adi
-  #         author_email: senno.adi2509@@gmail.com
-  #         message: 'chore: style-dictionary output'
-  #         add: '.'
-
   pull-request:
     runs-on: ubuntu-latest
-    # needs: convert-sd
     steps:
-      # - name: skip process
-      #   run: |
-      #     echo "skipped"
-
-      #     - name: Check Branch Name
-      #       run: |
-      #         if [[ $GITHUB_REF != "refs/heads/figma-tokens" ]]; then
-      #           echo "Not pushing to figma-tokens branch, skipping the workflow."
-      #           exit 0
-      #         fi
-
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run token-transformer
+        run: npx token-transformer sd-input/src/figma-tokens-output.json sd-input/src/sd-input.json global,colors,size,font global --resolveReferences true --expandTypography=true
+
+      - name: Run style-dictionary
+        run: npx style-dictionary build --config sd.config.cjs
+
+      # - name: Commit changes
+      #   uses: EndBug/add-and-commit@v9
+      #   with:
+      #     author_name: senno adi
+      #     author_email: senno.adi2509@gmail.com
+      #     message: 'chore: style-dictionary output'
+      #     add: '.'
+
+      #####
+      - name: install jq
+        run: sudo apt-get install jq
+
+      - name: Auto-increment Version Tag on Merge
+        id: tagging
+        run: |
+          #Mendapatkan versi saat ini dari package.json
+          current_version=$(jq -r .version package.json)
+          echo "current version : $current_version"
+
+          # Cek apakah versi ada atau tidak
+          if [[ "$current_version" == "null" || -z "$current_version" ]]; then
+            echo "Tidak dapat menemukan versi dalam package.json."
+            exit 1
+          fi
+
+          # Memisahkan versi menjadi array berdasarkan tanda titik (.)
+          IFS='.' read -ra version_parts <<< "$current_version"
+
+          # Menambahkan 1 ke bagian terakhir (angka revisi) dari versi
+          new_revision=$((version_parts[2] + 1))
+
+          # Membuat versi yang baru dengan menggabungkan kembali array
+          new_version="${version_parts[0]}.${version_parts[1]}.$new_revision"
+          echo "new version : $new_version"
+
+          # Mengecek apakah tag sudah ada atau tidak
+          if git rev-parse --verify "v$new_version" >/dev/null 2>&1; then
+            echo "Tag 'v$new_version' sudah ada."
+          else
+
+          # Memperbarui versi dalam package.json
+          # jq ".version = \"$new_version\"" package.json > package.json.tmp
+          jq --arg new_version "$new_version" '.version = $new_version' package.json > package.json.tmp
+          mv package.json.tmp package.json
+
+
+          # Simpan nilai new_version ke dalam berkas teks
+          # echo "$new_version" > new_version.txt
+          # Export nilai new_version sebagai variabel lingkungan
+            echo "NEW_VERSION=$new_version" >> $GITHUB_ENV
+
+          fi
+
+          # Commit perubahan dan push ke branch main
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+
+          # git add -A
+          # git commit -m "chore: update package.json to version $new_version"
+
+          # git tag -a "v$new_version" -m "Versi $new_version"
+
+          # git push --tags
+
+        #####
+
+      - name: get new_version
+        id: get_version
+        run: |
+          # Baca nilai new_version dari berkas teks
+          new_version="${{ env.NEW_VERSION }}"
+          echo "new_version: $new_version"
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: senno adi
+          author_email: senno.adi2509@gmail.com
+          message: 'chore: style-dictionary output'
+          add: '.'
+          tag: 'v${{ env.NEW_VERSION }}'
+          tag_push: ''
+
       - name: Create Pull Request
+        id: cpr
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -58,19 +114,7 @@ jobs:
           title: 'Figma Tokens Update'
           body: '🍥 Design Tokens were updated in Figma! This PR was created to update the code.'
 
-  # uses: repo-sync/pull-request@v2
-  # with:
-  #   destination_branch: 'main' # match your default branch
-  #   pr_title: 'Figma Tokens Update'
-  #   pr_body: '🍥 Design Tokens were updated in Figma! This PR was created to update the code.'
-  #   github_token: ${{ secrets.GITHUB_TOKEN }}
-
-  # - uses: actions/checkout@v2
-
-  # - name: Create Pull Request
-  #   uses: repo-sync/pull-request@v2
-  #   with:
-  #     destination_branch: 'main' # match your default branch
-  #     pr_title: 'Figma Tokens Update'
-  #     pr_body: '🍥 Design Tokens were updated in Figma! This PR was created to update the code.'
-  #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Check ouputs
+        run: |
+          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
+          echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
