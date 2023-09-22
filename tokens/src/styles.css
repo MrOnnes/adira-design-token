@@ -5,7 +5,10 @@
 @import '../../button/src/button.css';
 @import '../../typography/src/typo.css';
 @import '../../field/src/form.css';
-@import '../../footer/src/footer.css';
+/* @import '../../../dist/documentation/footer/src/footer.css'; */
+/* dist/documentation/footer/src/footer.css */
+/* @import '@' */
+@import '../../dist/documentation/footer/src/footer.css';
 @import '../../carousel/src/carousel.css';
 @import '../../pagination/src/pagination.css';
 @import '../../dropdown/src/form-select.css';
@@ -14,7 +17,8 @@
 @import '../../navs-tabs/src/nav.css';
 @import '../../navbar/src/navbar.css';
 @import '../../table/src/table.css';
-@import '../../tags/src/tags.css';
+/* @import '../../tags/src/tags.css'; */
+@import '../../dist/documentation/tags/src/tags.css';
 @import '../../flex/src/flex.css';
 @import '../../overflow/src/overflow.css';
 @import '../../shadows/src/shadows.css';
