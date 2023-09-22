@@ -7,80 +7,80 @@ function isSize(token) {
   return token.attributes.category === 'size';
 }
 function wrapValueWith(character, token) {
-	return `${character}${token.value}${character}`;
+  return `${character}${token.value}${character}`;
 }
 function wrapValueWithDoubleQuote(token) {
-	return wrapValueWith('"', token);
+  return wrapValueWith('"', token);
 }
-function isFontFamily(token){
-  return token.type === "fontFamily";
+function isFontFamily(token) {
+  return token.type === 'fontFamily';
 }
-function isFontFamilies(token){
-  return token.type === "fontFamilies";
+function isFontFamilies(token) {
+  return token.type === 'fontFamilies';
 }
-function isFontLetterSpacing(token){
-  return token.type === "letterSpacing";
+function isFontLetterSpacing(token) {
+  return token.type === 'letterSpacing';
 }
-function isFontTextCase(token){
-  return token.type === "textCase";
+function isFontTextCase(token) {
+  return token.type === 'textCase';
 }
-function isFontTextDecoration(token){
-  return token.type === "textDecoration";
+function isFontTextDecoration(token) {
+  return token.type === 'textDecoration';
 }
 
 StyleDictionary.registerTransform({
-  name: "size/flutter/pxToDouble",
-  type: "value",
+  name: 'size/flutter/pxToDouble',
+  type: 'value',
   transitive: true,
   matcher: isSize,
   transformer: function (token) {
-    return (parseFloat(token.value, 10)).toFixed(2);
-  }
+    return parseFloat(token.value, 10).toFixed(2);
+  },
 });
 StyleDictionary.registerTransform({
-  name: "type/FontSize",
-  type: "value",
+  name: 'type/FontSize',
+  type: 'value',
   transitive: true,
-  matcher: (token) => token.type === "fontSize",
+  matcher: (token) => token.type === 'fontSize',
   transformer: (token) => `${token.value}.0`,
 });
 
 StyleDictionary.registerTransform({
-  name: "type/FontFamily",
-  type: "value",
+  name: 'type/FontFamily',
+  type: 'value',
   matcher: isFontFamily,
-  transformer: wrapValueWithDoubleQuote
+  transformer: wrapValueWithDoubleQuote,
 });
 StyleDictionary.registerTransform({
-  name: "type/FontFamilies",
-  type: "value",
+  name: 'type/FontFamilies',
+  type: 'value',
   matcher: isFontFamilies,
-  transformer: wrapValueWithDoubleQuote
+  transformer: wrapValueWithDoubleQuote,
 });
 StyleDictionary.registerTransform({
-  name: "type/LetterSpacing",
-  type: "value",
+  name: 'type/LetterSpacing',
+  type: 'value',
   matcher: isFontLetterSpacing,
-  transformer: wrapValueWithDoubleQuote
+  transformer: wrapValueWithDoubleQuote,
 });
 StyleDictionary.registerTransform({
-  name: "type/TextCase",
-  type: "value",
+  name: 'type/TextCase',
+  type: 'value',
   matcher: isFontTextCase,
-  transformer: wrapValueWithDoubleQuote
+  transformer: wrapValueWithDoubleQuote,
 });
 StyleDictionary.registerTransform({
-  name: "type/TextDecoration",
-  type: "value",
+  name: 'type/TextDecoration',
+  type: 'value',
   matcher: isFontTextDecoration,
-  transformer: wrapValueWithDoubleQuote
+  transformer: wrapValueWithDoubleQuote,
 });
 
 StyleDictionary.registerTransform({
-  name: "type/FontWeight",
-  type: "value",
+  name: 'type/FontWeight',
+  type: 'value',
   transitive: true,
-  matcher: (token) => token.type === "fontWeights",
+  matcher: (token) => token.type === 'fontWeights',
   transformer: (token) => `FontWeight.w${token.value}`,
 });
 
@@ -91,11 +91,10 @@ module.exports = {
       return [`Do not edit directly, this file was auto-generated`];
     },
   },
-  
+
   platforms: {
     css: {
-      transforms: ["attribute/cti", "name/cti/kebab", 
-      "color/css","size/px"],
+      transforms: ['attribute/cti', 'name/cti/kebab', 'color/css', 'size/px'],
 
       buildPath: 'tokens/',
       prefix: 'figma',
@@ -109,58 +108,85 @@ module.exports = {
         },
       ],
     },
-    "flutter-color": {
-      "transformGroup": "flutter-separate",
-            "buildPath": "tokens/dart/",
-      "files": [
-          {
-              "destination": "dart_color.dart",
-              "format": "flutter/class.dart",
-              "className": "adrColor",
-              "type": "color",
-              "filter":{
-                "attributes":{
-                  "category": "color"
-                }
-              }
-          }
-      ]
+    scss: {
+      transformGroup: 'scss',
+      // prefix: 'sd',
+      buildPath: 'tokens/scss/',
+      files: [
+        {
+          destination: '_variables.scss',
+          format: 'scss/variables',
+        },
+      ],
+      // actions: ['copy_assets'],
     },
-    "flutter-size": {
-      "transforms": ["attribute/cti", "name/ti/camel",
-      "content/flutter/literal", 
-      "asset/flutter/literal", "font/flutter/literal","size/flutter/pxToDouble"],
-            "buildPath": "tokens/dart/",
-      "files": [
-          {
-              "destination": "dart_size.dart",
-              "format": "flutter/class.dart",
-              "className": "adrSize",
-              "type": "size",
-              "filter":{
-                "attributes":{
-                  "category": "size"
-                }
-              }
-          }
-      ]
+    'flutter-color': {
+      transformGroup: 'flutter-separate',
+      buildPath: 'tokens/dart/',
+      files: [
+        {
+          destination: 'dart_color.dart',
+          format: 'flutter/class.dart',
+          className: 'adrColor',
+          type: 'color',
+          filter: {
+            attributes: {
+              category: 'color',
+            },
+          },
+        },
+      ],
     },
-    "flutter-font": {
-      "transforms": ["attribute/cti","name/ti/camel","type/FontSize","type/FontFamily","type/FontFamilies","type/FontWeight","type/LetterSpacing","type/TextCase","type/TextDecoration"],
-            "buildPath": "tokens/dart/",
-      "files": [
-          {
-              "destination": "dart_font.dart",
-              "format": "flutter/class.dart",
-              "className": "adrFont",
-              "type": "font",
-              "filter":{
-                "attributes":{
-                  "category": "font"
-                }
-              }
-          }
-      ]
+    'flutter-size': {
+      transforms: [
+        'attribute/cti',
+        'name/ti/camel',
+        'content/flutter/literal',
+        'asset/flutter/literal',
+        'font/flutter/literal',
+        'size/flutter/pxToDouble',
+      ],
+      buildPath: 'tokens/dart/',
+      files: [
+        {
+          destination: 'dart_size.dart',
+          format: 'flutter/class.dart',
+          className: 'adrSize',
+          type: 'size',
+          filter: {
+            attributes: {
+              category: 'size',
+            },
+          },
+        },
+      ],
+    },
+    'flutter-font': {
+      transforms: [
+        'attribute/cti',
+        'name/ti/camel',
+        'type/FontSize',
+        'type/FontFamily',
+        'type/FontFamilies',
+        'type/FontWeight',
+        'type/LetterSpacing',
+        'type/TextCase',
+        'type/TextDecoration',
+      ],
+      buildPath: 'tokens/dart/',
+      files: [
+        {
+          destination: 'dart_font.dart',
+          format: 'flutter/class.dart',
+          className: 'adrFont',
+          type: 'font',
+          filter: {
+            attributes: {
+              category: 'font',
+            },
+          },
+        },
+      ],
     },
   },
 };
