@@ -1,0 +1,48 @@
+a.tags {
+  text-decoration: none;
+}
+a.tags:not([href]) {
+  pointer-events: none;
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 16px;
+  gap: 8px;
+
+  height: 32px;
+  width: fit-content;
+
+  color: var(--figma-color-text-normal);
+  background: var(--figma-color-background-base-grey);
+  border-radius: var(--figma-size-chip-radius);
+}
+
+.tag-primary {
+  color: var(--figma-color-text-normal);
+  background: var(--figma-color-background-primary);
+}
+.tag-success {
+  color: var(--figma-color-text-success);
+  background: var(--figma-color-background-success);
+}
+.tag-error {
+  color: var(--figma-color-text-error);
+  background: var(--figma-color-background-error);
+}
+.tag-warning {
+  color: var(--figma-color-text-warning);
+  background: var(--figma-color-background-warning);
+}
+.tag-confirmed {
+  color: var(--figma-color-text-link);
+  background: var(--figma-color-background-link);
+}
+
+a.tags:hover {
+  filter: brightness(105%);
+  cursor: pointer;
+}
