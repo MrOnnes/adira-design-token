@@ -137,8 +137,9 @@ button:not(:disabled),
 }
 
 .btn-primary {
-  background: var(--figma-color-background-button-primary-active);
-  color: var(--figma-color-text-button-primary);
+  background: var(--figma-color-background-button-primary-active) !important;
+  color: var(--figma-color-text-button-primary) !important;
+  border: none !important;
 }
 
 .btn-secondary {
@@ -148,46 +149,53 @@ button:not(:disabled),
 }
 
 .btn-success {
-  background: var(--figma-color-background-button-success-active);
-  color: var(--figma-color-text-button-primary);
+  background: var(--figma-color-background-button-success-active) !important;
+  color: var(--figma-color-text-button-primary) !important;
+  border: none !important;
 }
 
 .btn-danger {
-  background: var(--figma-color-background-button-error-active);
-  color: var(--figma-color-text-white);
+  background: var(--figma-color-background-button-error-active) !important;
+  color: var(--figma-color-text-white) !important;
+  border: none !important;
 }
 
 .btn-warning {
-  background: var(--figma-color-background-button-warning-active);
-  color: var(--figma-color-text-button-primary);
+  background: var(--figma-color-background-button-warning-active) !important;
+  color: var(--figma-color-text-button-primary) !important;
+  border: none !important;
 }
 
 .btn-info {
-  background: var(--figma-color-background-button-info-active);
-  color: var(--figma-color-text-white);
+  background: var(--figma-color-background-button-info-active) !important;
+  color: var(--figma-color-text-white) !important;
+  border: none !important;
 }
 
 .btn-light {
-  background: var(--figma-color-background-button-light-active);
-  color: var(--figma-color-text-button-primary);
+  background: var(--figma-color-background-button-light-active) !important;
+  color: var(--figma-color-text-button-primary) !important;
+  border: none !important;
 }
 
 .btn-dark {
-  background: var(--figma-color-background-button-dark-active);
-  color: var(--figma-color-text-white);
+  background: var(--figma-color-background-button-dark-active) !important;
+  color: var(--figma-color-text-white) !important;
+  border: none !important;
 }
 
 .btn-link {
-  background: none;
-  color: var(--figma-color-text-button-secondary);
-  border: none;
-  border-radius: var(--figma-size-button-radius);
+  background: none !important;
+  color: var(--figma-color-text-button-secondary) !important;
+  border: none !important;
+  border-radius: var(--figma-size-button-radius) !important;
 }
 
 /* HOVER */
 
 .btn-primary:hover {
-  background: var(--figma-color-background-button-primary-hover);
+  background: var(--figma-color-background-button-primary-hover) !important;
+  border: none !important;
 }
 
 .btn-secondary:hover {
@@ -196,34 +204,39 @@ button:not(:disabled),
 }
 
 .btn-success:hover {
-  background: var(--figma-color-background-button-success-hover);
+  background: var(--figma-color-background-button-success-hover) !important;
+  border: none !important;
 }
 
 .btn-danger:hover {
-  background: var(--figma-color-background-button-error-hover);
+  background: var(--figma-color-background-button-error-hover) !important;
+  border: none !important;
 }
 
 .btn-warning:hover {
-  background: var(--figma-color-background-button-warning-hover);
+  background: var(--figma-color-background-button-warning-hover) !important;
+  border: none !important;
 }
 
 .btn-info:hover {
-  background: var(--figma-color-background-button-info-hover);
+  background: var(--figma-color-background-button-info-hover) !important;
+  border: none !important;
 }
 
 .btn-light:hover {
-  background: var(--figma-color-background-button-light-hover);
+  background: var(--figma-color-background-button-light-hover) !important;
+  border: none !important;
 }
 
 .btn-dark:hover {
-  background: var(--figma-color-background-button-dark-hover);
+  background: var(--figma-color-background-button-dark-hover) !important;
+  border: none !important;
 }
 
 .btn-link:hover {
-  background: var(--figma-color-background-button-secondary-hover);
-
-  border: none;
-  border-radius: var(--figma-size-button-radius);
+  background: var(--figma-color-background-button-secondary-hover) !important;
+  border: none !important;
+  border-radius: var(--figma-size-button-radius) !important;
 }
 
 /* SIZE */
