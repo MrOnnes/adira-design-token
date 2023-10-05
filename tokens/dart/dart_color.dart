@@ -4,7 +4,7 @@
 //
 
 // Do not edit directly
-// Generated on Tue, 19 Sep 2023 08:11:37 GMT
+// Generated on Thu, 05 Oct 2023 09:15:08 GMT
 
 
 
@@ -16,6 +16,7 @@ class adrColor {
     static const backgroundBaseDark = Color(0xFF101828);
     static const backgroundBaseGrey = Color(0xFFF2F4F7);
     static const backgroundBaseLight = Color(0xFFFCFCFD);
+    static const backgroundBaseSkyblue = Color(0xFFF5FAFF);
     static const backgroundButtonDarkActive = Color(0xFF101828);
     static const backgroundButtonDarkHover = Color(0xFF344054);
     static const backgroundButtonDarkSelected = Color(0xFF1D2939);
@@ -46,6 +47,7 @@ class adrColor {
     static const backgroundPrimary = Color(0xFFFFDD00);
     static const backgroundPrimaryContainer = Color(0xFFFFEB74);
     static const backgroundSuccess = Color(0xFFD1FADF);
+    static const backgroundVariantComplementary = Color(0xFF194185);
     static const backgroundWarning = Color(0xFFFEF0C7);
     static const borderBase = Color(0xFF98A2B3);
     static const borderButtonError = Color(0xFFF04438);
