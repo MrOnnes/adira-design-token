@@ -8,5 +8,5 @@ import '../../tokens/src/styles.css';
 ```
 
 ```html preview-story
-<footer>AdiraOne © 2022</footer>
+<footer class="footer">AdiraOne © 2022</footer>
 ```

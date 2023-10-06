@@ -3,6 +3,7 @@
 ```js script
 import { html } from 'lit';
 import '../../tokens/src/styles.css';
+import '../../tokens/src/script.js';
 ```
 
 ### Example
