@@ -19,6 +19,7 @@
 @import '../../overflow/src/overflow.css';
 @import '../../shadows/src/shadows.css';
 @import '../../tokens/variables.css';
+@import '../../modal/src/modal.css';
 
 *,
 ::after,
