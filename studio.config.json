@@ -27,7 +27,31 @@
         ]
       ],
       ["Forms", ["select", "checks-radios", "input-group"]],
-      ["Utilities", ["display", "flex", "overflow", "shadows"]],
+      [
+        "Utilities",
+        [
+          "Border",
+          "Clearfix",
+          "Close icon",
+          "Colors",
+          "Display",
+          "Embed",
+          "Flex",
+          "Float",
+          "Image replacement",
+          "Overflow",
+          "Position",
+          "Ratio",
+          "Screenreaders",
+          "Shadows",
+          "Stack",
+          "Strecthed-Link",
+          "Text-truncation",
+          "Vertical-align",
+          "Visually-hidden",
+          "VR"
+        ]
+      ],
       ["INFRASTRUCTURE", ["sd-input", "doc-layout"]]
     ]
   },
