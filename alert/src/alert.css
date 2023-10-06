@@ -1,20 +1,23 @@
-/* .alert {
-  --bs-alert-bg: transparent;
-  --bs-alert-padding-x: 1rem;
-  --bs-alert-padding-y: 1rem;
-  --bs-alert-margin-bottom: 1rem;
-  --bs-alert-color: inherit;
-  --bs-alert-border-color: transparent;
-  --bs-alert-border: var(--bs-border-width) solid var(--bs-alert-border-color);
-  --bs-alert-border-radius: var(--bs-border-radius);
-  --bs-alert-link-color: inherit;
+.alert {
+  --adr-alert-text-color: var(--figma-color-text-normal);
+  --adr-alert-bg: transparent;
+  --adr-alert-padding-x: 1rem;
+  --adr-alert-padding-y: 0.625rem;
+  --adr-alert-margin-bottom: 1rem;
+  --adr-alert-color: inherit;
+  --adr-alert-border-color: transparent;
+  --adr-border-width: 1px;
+  --adr-alert-border: var(--adr-border-width) solid
+    var(--adr-alert-border-color);
+  --adr-alert-border-radius: var(--figma-size-radius-small);
+  /* --adr-alert-link-color: var(--figma-color-background-link); */
   position: relative;
-  padding: var(--bs-alert-padding-y) var(--bs-alert-padding-x);
-  margin-bottom: var(--bs-alert-margin-bottom);
-  color: var(--bs-alert-color);
-  background-color: var(--bs-alert-bg);
-  border: var(--bs-alert-border);
-  border-radius: var(--bs-alert-border-radius);
+  padding: var(--adr-alert-padding-y) var(--adr-alert-padding-x);
+  margin-bottom: var(--adr-alert-margin-bottom);
+  color: var(--adr-alert-color);
+  background-color: var(--adr-alert-bg);
+  border: var(--adr-alert-border);
+  border-radius: var(--adr-alert-border-radius);
 }
 
 .alert-heading {
@@ -23,7 +26,7 @@
 
 .alert-link {
   font-weight: 700;
-  color: var(--bs-alert-link-color);
+  color: var(--adr-alert-link-color);
 }
 
 .alert-dismissible {
@@ -37,58 +40,67 @@
   padding: 1.25rem 1rem;
 }
 
+.alert-dismissible .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* padding: 0.75rem 1.25rem; */
+  padding: var(--adr-alert-padding-y) 1.25rem;
+  color: inherit;
+}
+
 .alert-primary {
-  --bs-alert-color: var(--bs-primary-text-emphasis);
-  --bs-alert-bg: var(--bs-primary-bg-subtle);
-  --bs-alert-border-color: var(--bs-primary-border-subtle);
-  --bs-alert-link-color: var(--bs-primary-text-emphasis);
+  /* --adr-alert-color: var(--adr-primary-text-emphasis); */
+  --adr-alert-bg: var(--figma-color-background-primary-container);
+  --adr-alert-border-color: var(--figma-color-border-base);
+  /* --adr-alert-link-color: var(--adr-primary-text-emphasis); */
 }
 
 .alert-secondary {
-  --bs-alert-color: var(--bs-secondary-text-emphasis);
-  --bs-alert-bg: var(--bs-secondary-bg-subtle);
-  --bs-alert-border-color: var(--bs-secondary-border-subtle);
-  --bs-alert-link-color: var(--bs-secondary-text-emphasis);
+  /* --adr-alert-color: var(--adr-secondary-text-emphasis); */
+  --adr-alert-bg: var(--figma-color-background-base-grey);
+  --adr-alert-border-color: var(--figma-color-border-base);
+  /* --adr-alert-link-color: var(--adr-secondary-text-emphasis); */
 }
 
 .alert-success {
-  --bs-alert-color: var(--bs-success-text-emphasis);
-  --bs-alert-bg: var(--bs-success-bg-subtle);
-  --bs-alert-border-color: var(--bs-success-border-subtle);
-  --bs-alert-link-color: var(--bs-success-text-emphasis);
+  /* --adr-alert-color: var(--adr-success-text-emphasis); */
+  --adr-alert-bg: var(--figma-color-background-success);
+  --adr-alert-border-color: var(--figma-color-border-success);
+  /* --adr-alert-link-color: var(--adr-success-text-emphasis); */
 }
 
 .alert-info {
-  --bs-alert-color: var(--bs-info-text-emphasis);
-  --bs-alert-bg: var(--bs-info-bg-subtle);
-  --bs-alert-border-color: var(--bs-info-border-subtle);
-  --bs-alert-link-color: var(--bs-info-text-emphasis);
+  /* --adr-alert-color: var(--adr-alert-text-color); */
+  --adr-alert-bg: var(--figma-color-background-link);
+  --adr-alert-border-color: var(--figma-color-border-link);
+  /* --adr-alert-link-color: var(--adr-info-text-emphasis); */
 }
 
 .alert-warning {
-  --bs-alert-color: var(--bs-warning-text-emphasis);
-  --bs-alert-bg: var(--bs-warning-bg-subtle);
-  --bs-alert-border-color: var(--bs-warning-border-subtle);
-  --bs-alert-link-color: var(--bs-warning-text-emphasis);
+  /* --adr-alert-color: var(--adr-warning-text-emphasis); */
+  --adr-alert-bg: var(--figma-color-background-warning);
+  --adr-alert-border-color: var(--figma-color-border-warning);
+  /* --adr-alert-link-color: var(--adr-warning-text-emphasis); */
 }
 
 .alert-danger {
-  --bs-alert-color: var(--bs-danger-text-emphasis);
-  --bs-alert-bg: var(--bs-danger-bg-subtle);
-  --bs-alert-border-color: var(--bs-danger-border-subtle);
-  --bs-alert-link-color: var(--bs-danger-text-emphasis);
+  /* --adr-alert-color: var(--adr-danger-text-emphasis); */
+  --adr-alert-bg: var(--figma-color-background-error);
+  --adr-alert-border-color: var(--figma-color-border-error);
+  /* --adr-alert-link-color: var(--adr-danger-text-emphasis); */
 }
 
 .alert-light {
-  --bs-alert-color: var(--bs-light-text-emphasis);
-  --bs-alert-bg: var(--bs-light-bg-subtle);
-  --bs-alert-border-color: var(--bs-light-border-subtle);
-  --bs-alert-link-color: var(--bs-light-text-emphasis);
+  /* --adr-alert-color: var(--adr-light-text-emphasis); */
+  --adr-alert-bg: var(--figma-color-background-base-light);
+  --adr-alert-border-color: var(--figma-color-border-base);
+  /* --adr-alert-link-color: var(--adr-light-text-emphasis); */
 }
 
 .alert-dark {
-  --bs-alert-color: var(--bs-dark-text-emphasis);
-  --bs-alert-bg: var(--bs-dark-bg-subtle);
-  --bs-alert-border-color: var(--bs-dark-border-subtle);
-  --bs-alert-link-color: var(--bs-dark-text-emphasis);
-} */
+  --adr-alert-color: var(--figma-color-text-white);
+  --adr-alert-bg: var(--figma-color-background-base-dark);
+  --adr-alert-border-color: var(--figma-color-border-base);
+  /* --adr-alert-link-color: var(--adr-dark-text-emphasis); */
+}

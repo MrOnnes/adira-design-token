@@ -9,6 +9,7 @@
       [
         "COMPONENTS",
         [
+          "Alert",
           "accordion",
           "button-comp",
           "button",
