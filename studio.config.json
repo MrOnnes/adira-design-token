@@ -4,13 +4,14 @@
     "menu": [
       [
         "TOKENS",
-        ["INSTALLATION", "colors", "tokens", "typography", "size", "definition"]
+        ["INSTALLATION", "tokens", "typography", "size", "definition"]
       ],
       [
         "COMPONENTS",
         [
+          "Accordion",
           "Alert",
-          "accordion",
+          "Badge",
           "button-comp",
           "button",
           "breadcrumb",
@@ -36,6 +37,7 @@
           "Close icon",
           "Colors",
           "Display",
+          "Color",
           "Embed",
           "Flex",
           "Float",
