@@ -1,15 +1,23 @@
-/* .modal {
+.modal-open {
+  overflow: hidden;
+}
+
+.modal {
   --bs-modal-zindex: 1055;
   --bs-modal-width: 500px;
   --bs-modal-padding: 1rem;
   --bs-modal-margin: 0.5rem;
   --bs-modal-color: ;
-  --bs-modal-bg: var(--bs-body-bg);
+  /* --bs-modal-bg: var(--bs-body-bg); */
+  --bs-modal-bg: var(--figma-color-background-base-light);
   --bs-modal-border-color: var(--bs-border-color-translucent);
   --bs-modal-border-width: var(--bs-border-width);
-  --bs-modal-border-radius: var(--bs-border-radius-lg);
+  /* --bs-modal-border-radius: var(--bs-border-radius-lg); */
+  --bs-modal-border-radius: var(--figma-size-radius-small);
   --bs-modal-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-  --bs-modal-inner-border-radius: calc(var(--bs-border-radius-lg) - (var(--bs-border-width)));
+  --bs-modal-inner-border-radius: calc(
+    var(--bs-border-radius-lg) - (var(--bs-border-width))
+  );
   --bs-modal-header-padding-x: 1rem;
   --bs-modal-header-padding-y: 1rem;
   --bs-modal-header-padding: 1rem 1rem;
@@ -76,6 +84,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  /* "--bs-modal-color ada untuk variasi jika ingin ubah warna teks" */
   color: var(--bs-modal-color);
   pointer-events: auto;
   background-color: var(--bs-modal-bg);
@@ -110,13 +119,18 @@
   align-items: center;
   justify-content: space-between;
   padding: var(--bs-modal-header-padding);
-  border-bottom: var(--bs-modal-header-border-width) solid var(--bs-modal-header-border-color);
+  border-bottom: var(--bs-modal-header-border-width) solid
+    var(--bs-modal-header-border-color);
   border-top-left-radius: var(--bs-modal-inner-border-radius);
   border-top-right-radius: var(--bs-modal-inner-border-radius);
 }
+
 .modal-header .btn-close {
-  padding: calc(var(--bs-modal-header-padding-y) * 0.5) calc(var(--bs-modal-header-padding-x) * 0.5);
-  margin: calc(-0.5 * var(--bs-modal-header-padding-y)) calc(-0.5 * var(--bs-modal-header-padding-x)) calc(-0.5 * var(--bs-modal-header-padding-y)) auto;
+  padding: calc(var(--bs-modal-header-padding-y) * 0.5)
+    calc(var(--bs-modal-header-padding-x) * 0.5);
+  margin: calc(-0.5 * var(--bs-modal-header-padding-y))
+    calc(-0.5 * var(--bs-modal-header-padding-x))
+    calc(-0.5 * var(--bs-modal-header-padding-y)) auto;
 }
 
 .modal-title {
@@ -138,7 +152,8 @@
   justify-content: flex-end;
   padding: calc(var(--bs-modal-padding) - var(--bs-modal-footer-gap) * 0.5);
   background-color: var(--bs-modal-footer-bg);
-  border-top: var(--bs-modal-footer-border-width) solid var(--bs-modal-footer-border-color);
+  border-top: var(--bs-modal-footer-border-width) solid
+    var(--bs-modal-footer-border-color);
   border-bottom-right-radius: var(--bs-modal-inner-border-radius);
   border-bottom-left-radius: var(--bs-modal-inner-border-radius);
 }
@@ -289,4 +304,4 @@
   .modal-fullscreen-xxl-down .modal-body {
     overflow-y: auto;
   }
-} */
+}

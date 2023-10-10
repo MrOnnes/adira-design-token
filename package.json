@@ -1,6 +1,6 @@
 {
   "name": "@backlight-dev/ragged-fiction-fhfxu.blank-l9wkeayq",
-  "version": "1.2.26",
+  "version": "1.2.31",
   "author": {
     "name": "Senno Adi"
   },
@@ -17,6 +17,7 @@
     "@rocket/create": "*",
     "lit": "^2.2.2",
     "style-dictionary": "^3.8.0",
-    "token-transformer": "^0.0.27"
+    "token-transformer": "^0.0.27",
+    "bootstrap": "5.3.2"
   }
 }

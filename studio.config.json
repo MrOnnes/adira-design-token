@@ -4,16 +4,18 @@
     "menu": [
       [
         "TOKENS",
-        ["INSTALLATION", "colors", "tokens", "typography", "size", "definition"]
+        ["INSTALLATION", "tokens", "typography", "size", "definition"]
       ],
       [
         "COMPONENTS",
         [
-          "accordion",
+          "Accordion",
+          "Alert",
+          "Badge",
+          "Breadcrumb",
           "button-comp",
-          "button",
-          "breadcrumb",
-          "cards",
+          "Button",
+          "Cards",
           "carousel",
           "dropdown",
           "field",
@@ -27,7 +29,32 @@
         ]
       ],
       ["Forms", ["select", "checks-radios", "input-group"]],
-      ["Utilities", ["display", "flex", "overflow", "shadows"]],
+      [
+        "Utilities",
+        [
+          "Border",
+          "Clearfix",
+          "Close icon",
+          "Colors",
+          "Display",
+          "Color",
+          "Embed",
+          "Flex",
+          "Float",
+          "Image replacement",
+          "Overflow",
+          "Position",
+          "Ratio",
+          "Screenreaders",
+          "Shadows",
+          "Stack",
+          "Strecthed-Link",
+          "Text-truncation",
+          "Vertical-align",
+          "Visually-hidden",
+          "VR"
+        ]
+      ],
       ["INFRASTRUCTURE", ["sd-input", "doc-layout"]]
     ]
   },
