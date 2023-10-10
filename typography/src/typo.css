@@ -289,13 +289,6 @@ label {
   text-decoration: var(--figma-font-caption-text-decoration);
 }
 
-.text-center {
-  text-align: center !important;
-}
-.text-end {
-  text-align: right !important;
-}
-
 h6,
 .h6,
 h5,
@@ -610,7 +603,8 @@ h1,
   text-align: left !important;
 }
 
-.text-end {
+.text-end,
+.text-right {
   text-align: right !important;
 }
 
@@ -710,14 +704,15 @@ h1,
 .text-body {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important;
-}
+}*/
 
 .text-muted {
-  --bs-text-opacity: 1;
-  color: var(--bs-secondary-color) !important;
+  /* --bs-text-opacity: 1; */
+  /* color: var(--bs-secondary-color) !important; */
+  color: var(--figma-color-text-gray) !important;
 }
 
-.text-black-50 {
+/*.text-black-50 {
   --bs-text-opacity: 1;
   color: rgba(0, 0, 0, 0.5) !important;
 }

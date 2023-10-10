@@ -113,7 +113,7 @@ button:not(:disabled),
   /* transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; */
   justify-content: center;
   align-items: center;
-  height: 40px;
+  /* height: 40px; */
   flex-direction: row;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -162,8 +162,8 @@ button:not(:disabled),
 
 .btn[disabled] {
   pointer-events: none;
-  background: var(--figma-color-background-disable);
-  color: var(--figma-color-text-disable);
+  background: var(--figma-color-background-disable) !important;
+  color: var(--figma-color-text-disable) !important;
   border-color: var(--figma-color-text-disable);
 }
 
@@ -272,13 +272,17 @@ button:not(:disabled),
 
 /* SIZE */
 .btn-lg {
-  padding: 1.5rem 2rem;
+  /* padding: 1.5rem 2rem; */
+  /* padding: 0.5rem 1rem; */
+  padding: 0.5rem 1.3rem;
   font-size: var(--figma-size-font-subtitle-1);
+  line-height: 1.5;
   border-radius: var(--figma-size-button-radius);
 }
 .btn-sm {
   padding: 4px 12px;
   font-size: var(--figma-size-font-caption);
+  line-height: 1.5;
   border-radius: var(--figma-size-radius-medium);
 }
 
@@ -295,6 +299,21 @@ button:not(:disabled),
   --bs-btn-font-size: 0.875rem;
   --bs-btn-border-radius: var(--bs-border-radius-sm);
 } */
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn-block + .btn-block {
+  margin-top: 0.5rem;
+}
+
+input[type='submit'].btn-block,
+input[type='reset'].btn-block,
+input[type='button'].btn-block {
+  width: 100%;
+}
 
 /* .fade {
   transition: opacity 0.15s linear;
