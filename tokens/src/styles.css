@@ -13,6 +13,7 @@
 @import '../../dropdown/src/form-select.css';
 @import '../../checks-radios/src/form-check.css';
 @import '../../input-group/src/input-group.css';
+@import '../../list-group/src/list-group.css';
 @import '../../navs-tabs/src/nav.css';
 @import '../../navbar/src/navbar.css';
 @import '../../table/src/table.css';
@@ -337,7 +338,7 @@ progress {
 }
 
 .blockquote-footer {
-  margin-top: -1rem;
+  /* margin-top: -1rem; */
   margin-bottom: 1rem;
   font-size: 0.875em;
   color: #6c757d;

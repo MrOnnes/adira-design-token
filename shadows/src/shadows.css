@@ -1,7 +1,7 @@
 .bg-light {
   background: var(--figma-color-background-base-light);
   border-radius: 10px;
-  padding: 16px;
+  /* padding: 16px; */
 }
 
 /* .shadow {
