@@ -214,6 +214,11 @@ textarea {
   line-height: inherit;
 }
 
+button,
+input {
+  overflow: visible;
+}
+
 [list]:not([type='date']):not([type='datetime-local']):not([type='month']):not(
     [type='week']
   ):not([type='time'])::-webkit-calendar-picker-indicator {
@@ -5599,5 +5604,12 @@ progress {
   }
   .d-print-none {
     display: none !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .mr-sm-2,
+  .mx-sm-2 {
+    margin-right: 0.5rem !important;
   }
 }

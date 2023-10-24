@@ -9,6 +9,13 @@ Latest Version :
 https://cdn.jsdelivr.net/gh/MrOnnes/adira-design-token@latest/tokens/src/styles.min.css
 ```
 
+Current Version :
+
+```
+<!-- CSS only -->
+https://cdn.jsdelivr.net/gh/MrOnnes/adira-design-token@1.2.33/tokens/src/styles.min.css
+```
+
 ---
 
 #### Add Bootstrap JS
