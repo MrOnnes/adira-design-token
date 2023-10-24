@@ -35,6 +35,12 @@ input[type='checkbox'][disabled] label.checkbox {
   color: var(--figma-color-text-disable);
 }
 
+input[type='checkbox'],
+input[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
 .checkbox.checkbox[disabled],
 .checkbox .checkmark::after {
   /* background-color: #fff; */
