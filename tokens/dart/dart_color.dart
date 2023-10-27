@@ -4,7 +4,7 @@
 //
 
 // Do not edit directly
-// Generated on Fri, 27 Oct 2023 08:01:28 GMT
+// Generated on Fri, 27 Oct 2023 08:12:17 GMT
 
 
 
@@ -66,7 +66,7 @@ class adrColor {
     static const textNormal = Color(0xFF344054);
     static const textSidebar = Color(0xFF344054);
     static const textSuccess = Color(0xFF12B76A);
-    static const textTest = Color(0xFF522FCC);
+    static const textTest = Color(0xFF02E816);
     static const textWarning = Color(0xFFF79009);
     static const textWhite = Color(0xFFFCFCFD);
 }
