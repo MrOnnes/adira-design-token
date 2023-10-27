@@ -21,6 +21,7 @@
 @import '../../flex/src/flex.css';
 @import '../../overflow/src/overflow.css';
 @import '../../shadows/src/shadows.css';
+@import '../../tooltip/src/tooltip.css';
 @import '../../tokens/variables.css';
 @import '../../modal/src/modal.css';
 @import '../../helpers/visually-hidden/src/visually-hidden.css';
@@ -212,6 +213,11 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+}
+
+button,
+input {
+  overflow: visible;
 }
 
 [list]:not([type='date']):not([type='datetime-local']):not([type='month']):not(
@@ -5599,5 +5605,12 @@ progress {
   }
   .d-print-none {
     display: none !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .mr-sm-2,
+  .mx-sm-2 {
+    margin-right: 0.5rem !important;
   }
 }

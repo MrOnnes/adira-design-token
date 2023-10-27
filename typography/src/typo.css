@@ -2,8 +2,8 @@ hr {
   margin: 1rem 0;
   color: inherit;
   border: 0;
-  border-top: 1px solid;
   /* border-top: var(--bs-border-width) solid; */
+  border-top: 1px solid;
   opacity: 0.25;
 }
 
@@ -276,6 +276,8 @@ label {
   word-spacing: var(--figma-font-label-paragraph-spacing);
   text-transform: var(--figma-font-label-text-case);
   text-decoration: var(--figma-font-label-text-decoration);
+
+  margin-bottom: 0.13rem;
 }
 .caption {
   font-family: var(--figma-font-caption-font-family);
