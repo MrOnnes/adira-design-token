@@ -21,6 +21,7 @@
 @import '../../flex/src/flex.css';
 @import '../../overflow/src/overflow.css';
 @import '../../shadows/src/shadows.css';
+@import '../../tooltip/src/tooltip.css';
 @import '../../tokens/variables.css';
 @import '../../modal/src/modal.css';
 @import '../../helpers/visually-hidden/src/visually-hidden.css';
