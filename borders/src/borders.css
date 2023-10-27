@@ -45,7 +45,8 @@
 .border-primary {
   --bs-border-opacity: 1;
   border-color: rgba(
-    var(--bs-primary-rgb),
+    /* var(--bs-primary-rgb), */ /* TODO: Buat warna border primary */
+      var(--figma-color-background-primary),
     var(--bs-border-opacity)
   ) !important;
 }
@@ -53,7 +54,7 @@
 .border-secondary {
   --bs-border-opacity: 1;
   border-color: rgba(
-    var(--bs-secondary-rgb),
+    /* var(--bs-secondary-rgb), */ var(--figma-color-border-link),
     var(--bs-border-opacity)
   ) !important;
 }
@@ -61,37 +62,52 @@
 .border-success {
   --bs-border-opacity: 1;
   border-color: rgba(
-    var(--bs-success-rgb),
+    /* var(--bs-success-rgb), */ var(--figma-color-border-success),
     var(--bs-border-opacity)
   ) !important;
 }
 
 .border-info {
   --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-info-rgb), var(--bs-border-opacity)) !important;
+  border-color: rgba(
+    /* var(--bs-info-rgb),  */ var(--figma-color-border-link),
+    var(--bs-border-opacity)
+  ) !important;
 }
 
 .border-warning {
   --bs-border-opacity: 1;
   border-color: rgba(
-    var(--bs-warning-rgb),
+    /* var(--bs-warning-rgb), */ /* TODO: buat border warning */
+      var(--figma-color-background-warning),
     var(--bs-border-opacity)
   ) !important;
 }
 
 .border-danger {
   --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-danger-rgb), var(--bs-border-opacity)) !important;
+  border-color: rgba(
+    /* var(--bs-danger-rgb),  */ var(--figma-color-border-button-error),
+    var(--bs-border-opacity)
+  ) !important;
 }
 
 .border-light {
   --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-light-rgb), var(--bs-border-opacity)) !important;
+  border-color: rgba(
+    /* var(--bs-light-rgb),  */ /* TODO: buat border light */
+      var(--figma-color-border-base),
+    var(--bs-border-opacity)
+  ) !important;
 }
 
 .border-dark {
   --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-dark-rgb), var(--bs-border-opacity)) !important;
+  border-color: rgba(
+    /* var(--bs-dark-rgb),  */ /* TODO: buat border dark */
+      var(--figma-color-border-base),
+    var(--bs-border-opacity)
+  ) !important;
 }
 
 .border-black {
